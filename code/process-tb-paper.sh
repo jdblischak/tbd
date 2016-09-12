@@ -12,7 +12,7 @@ sed -i s/μ/$\mu$/g ch02.tex
 # Pandoc converted [@ref1; @ref2] to {[}@ref1; @ref2{]}
 # Fix the beginning (single quotes required)
 # https://www.linuxquestions.org/questions/slackware-14/sed-command-to-replace-slash-with-backslash-136312/#post3166473
-sed -i 's/{\[}@/\\cite{/g' ch02.tex
+sed -i 's/{\[}@/\\citep{/g' ch02.tex
 # Fix the spacing
 sed -i s/"; @"/", "/g ch02.tex
 # Fix the end

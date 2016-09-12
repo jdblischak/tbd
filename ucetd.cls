@@ -197,7 +197,7 @@
 	\newpage
 	\addcontentsline{toc}{chapter}{References}
 	\begin{singlespace}
-		\bibliography{ft2,master,refs}
+		\bibliography{refs}
 		\bibliographystyle{plain}
 	\end{singlespace}
 }
