@@ -1,4 +1,4 @@
-NAME := thesis_template
+NAME := tbd
 
 all: pdf
 
