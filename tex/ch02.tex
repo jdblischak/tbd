@@ -140,7 +140,7 @@ related bacteria.
 
 \section{Results}\label{results}
 
-\subsubsection{Bacterial infection induces large changes in gene
+\subsection{Bacterial infection induces large changes in gene
 expression}\label{bacterial-infection-induces-large-changes-in-gene-expression}
 
 To learn about the immune response to infection with different bacteria,
@@ -240,7 +240,7 @@ with \emph{S.  epidermidis} (see Methods).
 \end{figure}
 
 
-\subsubsection{Joint analysis identifies bacteria-specific response
+\subsection{Joint analysis identifies bacteria-specific response
 genes}\label{joint-analysis-identifies-bacteria-specific-response-genes}
 
 In order to learn about variation in the innate immune response to
@@ -386,7 +386,7 @@ post-infection.
 \label{fig:joint-48h}
 \end{figure}
 
-\subsubsection{Infection-induced response eQTLs are shared across
+\subsection{Infection-induced response eQTLs are shared across
 bacterial
 infections}\label{infection-induced-response-eqtls-are-shared-across-bacterial-infections}
 
@@ -444,7 +444,7 @@ compared to the genes in the other two classes.
 
 \section{Discussion}\label{discussion}
 
-\subsubsection{Bayesian analysis identified mycobacteria-specific
+\subsection{Bayesian analysis identified mycobacteria-specific
 response
 genes}\label{bayesian-analysis-identified-mycobacteria-specific-response-genes}
 
@@ -597,7 +597,7 @@ post-infection with \emph{S. typhimurium} (q-value: 9\%) (Supplementary
 Fig. \ref{fig:dusp14}). Thus, our data lends further support for the role of
 \emph{DUSP14} as a TB susceptibility gene.
 
-\subsubsection{Little evidence for strain-specific transcriptional
+\subsection{Little evidence for strain-specific transcriptional
 response to
 infection}\label{little-evidence-for-strain-specific-transcriptional-response-to-infection}
 
@@ -637,7 +637,7 @@ Beijing strains are equally virulent \citep{Dormans2004, Sinsimer2008}
 and that MTB H37Rv is a laboratory-adapted strain that has evolved
 independently in different laboratories \citep{Ioerger2010}.
 
-\subsubsection{Differences in response to virulent versus attenuated
+\subsection{Differences in response to virulent versus attenuated
 pathogens are not
 mycobacteria-specific}\label{differences-in-response-to-virulent-versus-attenuated-pathogens-are-not-mycobacteria-specific}
 
@@ -683,7 +683,7 @@ We conclude that either a larger sample size or a different experimental
 system is required to find specific differences between the response to
 infection with MTB and BCG.
 
-\subsubsection{Previously identified response eQTLs affect response to
+\subsection{Previously identified response eQTLs affect response to
 bacterial infection in
 general}\label{previously-identified-response-eqtls-affect-response-to-bacterial-infection-in-general}
 
@@ -713,7 +713,7 @@ Johnson2013, Crespo2013}. We suggest that this gene is an
 interesting candidate for further understanding both MTB pathogenesis
 and inter-individual susceptibility to tuberculosis.
 
-\subsubsection{Conclusions}\label{conclusions}
+\subsection{Conclusions}\label{conclusions}
 
 By jointly considering data from multiple infection treatments, using a
 variety of bacteria, we have classified distinct innate immune
@@ -739,7 +739,7 @@ candidate for future studies of TB susceptibility.
 
 \section{Methods}\label{methods}
 
-\subsubsection{Ethics Statement}\label{ethics-statement}
+\subsection{Ethics Statement}\label{ethics-statement}
 
 Buffy coats were obtained from healthy donors after informed consent.
 The blood collection protocols were approved by both the French Ministry
@@ -747,7 +747,7 @@ of Research and a French Ethics Committee under the reference DC-2008-68
 collection 2. The blood collection was carried out in accordance with
 these approved protocols by the Etablissement Français du Sang.
 
-\subsubsection{Sample collection and macrophage
+\subsection{Sample collection and macrophage
 differentiation}\label{sample-collection-and-macrophage-differentiation}
 
 We collected buffy coats (\textasciitilde{}50 mL) from six healthy
@@ -758,7 +758,7 @@ monocytes via positive selection with beads containing CD14 antibodies
 macrophages by culturing for 6-7 days in RPMI buffer supplemented with
 macrophage colony-stimulating factor (M-CSF) \citep{Tailleux2003}.
 
-\subsubsection{Bacterial infection}\label{bacterial-infection}
+\subsection{Bacterial infection}\label{bacterial-infection}
 
 For each bacterial infection (Table \ref{tab:bacteria}), we treated the macrophages with
 a multiplicity of infection (MOI) of 2:1. After one hour, we washed the
@@ -776,7 +776,7 @@ epidermidis}. After escaping the macrophages upon cell death, sufficient
 gentmycin-supplemented medium to contiminate the entire well by 48 hours
 post-infection.
 
-\subsubsection{RNA extraction, library preparation, and
+\subsection{RNA extraction, library preparation, and
 sequencing}\label{rna-extraction-library-preparation-and-sequencing}
 
 We extracted RNA using the QIAgen miRNeasy kit. There were a total of 13
@@ -792,7 +792,7 @@ bacterial infections or between the timepoints (Supplementary Fig. \ref{fig:rin-
 TruSeq RNA Sample Preparation Kit v2) and sequenced 50 base pairs single
 end over multiple flow cells on the Illumina HiSeq 2500.
 
-\subsubsection{Mapping, counting, and
+\subsection{Mapping, counting, and
 normalization}\label{mapping-counting-and-normalization}
 
 We mapped the short reads to the human genome (hg19) using the Subread
@@ -809,7 +809,7 @@ To account for differences in the read counts at the extremes of the
 distribution, we normalized the samples using the weighted trimmed mean
 of M-values algorithm (TMM) \citep{Robinson2010}.
 
-\subsubsection{Differential expression
+\subsection{Differential expression
 analysis}\label{differential-expression-analysis}
 
 To assess the quality of the data, we performed principal components
@@ -884,7 +884,7 @@ Test, used the weight01 algorithm from topGO to account for the
 correlation among GO categories due to its graph structure, and
 considered significant any category with p-value less than 0.01.
 
-\subsubsection{Analysis using previously identified response
+\subsection{Analysis using previously identified response
 eQTLs}\label{analysis-using-previously-identified-response-eqtls}
 
 We downloaded the list of response eQTL genes from Supplementary Table 3
@@ -903,7 +903,7 @@ subsampling 1000 times (Figure 5B). Fourth, we performed t-tests to
 compare the distribution of response eQTL genes to either that of the
 general eQTL genes or the non-eQTL genes.
 
-\subsubsection{Data and code
+\subsection{Data and code
 availability}\label{data-and-code-availability}
 
 The data have been deposited in NCBI's Gene Expression Omnibus
