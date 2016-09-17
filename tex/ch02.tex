@@ -180,9 +180,10 @@ pathogen & Negative \\
 Staph & \emph{Staphylococcus epidermidis} & Extracellular pathogen &
 Positive \\ \bottomrule
 \end{tabular}
-\caption{Description of bacteria. *Mycobacteria are unable to be gram
-  stained due to the low permeability of their cell walls. They are
-  more closely related evolutionarily to gram-positive bacteria than
+\caption[Description of bacteria.]{\textbf{Description of bacteria.}
+  *Mycobacteria are unable to be gram stained due to the low
+  permeability of their cell walls. They are more closely related
+  evolutionarily to gram-positive bacteria than
   gram-negative. However, their thick cells walls share features of
   gram-negative bacteria, e.g. a ``pseudoperiplasm'' similar to the
   gram-negative periplasm \citep{Hett2008}.}
@@ -192,7 +193,7 @@ Positive \\ \bottomrule
 We infected monocyte-derived macrophages from six individuals with the
 bacteria described above (including a non-infected control) and
 extracted RNA at 4, 18, and 48 hours post-infection (see Methods;
-Supplementary Figure S1). We assessed RNA quality using the Agilent
+Supplementary Fig. \ref{fig:study-design}). We assessed RNA quality using the Agilent
 Bioanlyzer (Supplementary Table S6) and sequenced the RNA to estimate
 gene expression levels. Detailed descriptions of our data processing,
 quality control analyses, and statistical modeling are available in
@@ -202,7 +203,7 @@ discarded reads that mapped non-uniquely, and counted the number of
 reads mapped to each protein-coding gene. We normalized the read
 counts using the weighted trimmed mean of M-values algorithm (TMM)
 \citep{Robinson2010}, corrected for confounding ``batch'' effects
-(Supplementary Figure S2), and used limma+voom \citep{Smyth2004,
+(Supplementary Fig. \ref{fig:pca}), and used limma+voom \citep{Smyth2004,
   Smyth2005, Law2014} to test for differential expression (DE) between
 cultures infected with each bacteria and their time-matched controls
 (Supplementary Table S2). Using this approach we initially observed
@@ -222,20 +223,19 @@ with \emph{S.  epidermidis} (see Methods).
 \begin{figure}
 \centering
 \includegraphics[width=5in]{img/ch02/fig-01-differential-expression.pdf}
-\caption{Differential expression analysis. We tested for
-  differentially expressed genes for each bacterial infection by
-  comparing it to its time-matched control. (A) We classified genes
-  with q-value \textless{} 5\% as differentially expressed. The
-  mycobacteria are labeled in shades of green. (B) As expected, there
-  were large transcriptional changes 18 hours post-infection with MTB
-  H37Rv. Genes with q-value \textless{} 5\% and absolute
-  log\textsubscript{2} fold change greater than 0.5 are labeled green,
-  those with q-value \textless{} 5\% and absolute log 2 fold change
-  less than 0.5 are labeled grey, and non-differentially expressed
-  genes are labeled black. (C) The overlap in differentially expressed
-  genes identified at 4, 18, and 48 hours post-infection with MTB
-  H37Rv.
-}
+\caption[Differential expression analysis.]{\textbf{Differential
+    expression analysis.} We tested for differentially expressed genes
+  for each bacterial infection by comparing it to its time-matched
+  control. (A) We classified genes with q-value \textless{} 5\% as
+  differentially expressed. The mycobacteria are labeled in shades of
+  green. (B) As expected, there were large transcriptional changes 18
+  hours post-infection with MTB H37Rv. Genes with q-value \textless{}
+  5\% and absolute log\textsubscript{2} fold change greater than 0.5
+  are labeled green, those with q-value \textless{} 5\% and absolute
+  log 2 fold change less than 0.5 are labeled grey, and
+  non-differentially expressed genes are labeled black. (C) The
+  overlap in differentially expressed genes identified at 4, 18, and
+  48 hours post-infection with MTB H37Rv.  }
 \label{fig:differential-expression}
 \end{figure}
 
@@ -261,7 +261,7 @@ First, we examined the data across all the bacteria-time combinations.
 Initially we built a model that classified genes into one of 14 separate
 patterns based on their expression levels after each infection relative
 to their expression level in the non-infected control (Supplementary
-Figure S3). However, we found that a model with only six expression
+Fig. \ref{fig:joint-all-k14}). However, we found that a model with only six expression
 patterns (Fig. \ref{fig:joint-all}; Supplementary Tables S3,S4), where a subset of the
 original 14 patterns are combined, is more intuitive from a biological
 perspective; thus we proceeded with the reduced model. Broadly speaking,
@@ -297,19 +297,20 @@ related to type I interferon signaling (e.g. \emph{IRF1}, \emph{SOCS1},
 \emph{MCL1}).
 
 \begin{figure}
+\centering
 \includegraphics[width=5in]{img/ch02/fig-02-joint-all.pdf}
-\caption{Joint Bayesian analysis. (A) Joint analysis of gene
-  expression data from all three timepoints with Cormotif
-  \citep{Wei2015} identified six expression patterns: ``non-DE'',
-  ``Yers-Salm'', ``18 h'', ``48 h'', ``18 \& 48 h'', and ``All''. The
-  shading of each box represents the posterior probability that a gene
-  assigned to the expression pattern (row) is differentially expressed
-  in response to infection with a particular bacteria (column), with
-  black representing a high posterior probability and white a low
-  posterior probability. (B) Each data point is the mean
-  log\textsubscript{2} fold change in expression (absolute value) in
-  response to infection with the given bacteria for all the genes
-  assigned to the particular expression pattern.}
+\caption[Joint Bayesian analysis.]{\textbf{Joint Bayesian analysis.}
+  (A) Joint analysis of gene expression data from all three timepoints
+  with Cormotif \citep{Wei2015} identified six expression patterns:
+  ``non-DE'', ``Yers-Salm'', ``18 h'', ``48 h'', ``18 \& 48 h'', and
+  ``All''. The shading of each box represents the posterior
+  probability that a gene assigned to the expression pattern (row) is
+  differentially expressed in response to infection with a particular
+  bacteria (column), with black representing a high posterior
+  probability and white a low posterior probability. (B) Each data
+  point is the mean log\textsubscript{2} fold change in expression
+  (absolute value) in response to infection with the given bacteria
+  for all the genes assigned to the particular expression pattern.}
 \label{fig:joint-all}
 \end{figure}
 
@@ -342,12 +343,14 @@ after infection with \emph{Y. pseudotuberculosis} or \emph{S.
 typhimurium} (e.g. \emph{TLR8}, \emph{TGFB1}, \emph{IL18}).
 
 \begin{figure}
+\centering
 \includegraphics[width=5in]{img/ch02/fig-03-joint-18h.pdf}
-\caption{Joint Bayesian analysis - 18 hours post-infection. (A) Joint
-  analysis of gene expression data from 18 hours post-infection with
-  Cormotif identified five expression patterns: ``Yers-Salm'',
-  ``Virulent'', ``MTB'', ``non-DE'', and ``All''. (B) Example genes
-  from the different expression patterns.}
+\caption[Joint Bayesian analysis - 18 hours
+  post-infection.]{\textbf{Joint Bayesian analysis - 18 hours
+    post-infection.} (A) Joint analysis of gene expression data from
+  18 hours post-infection with Cormotif identified five expression
+  patterns: ``Yers-Salm'', ``Virulent'', ``MTB'', ``non-DE'', and
+  ``All''. (B) Example genes from the different expression patterns.}
 \label{fig:joint-18h}
 \end{figure}
 
@@ -372,12 +375,14 @@ one of these also belongs to the pattern ``Virulent'' at 18 hours
 post-infection.
 
 \begin{figure}
+\centering
 \includegraphics[width=5in]{img/ch02/fig-04-joint-48h.pdf}
-\caption{Joint Bayesian analysis - 48 hours post-infection. (A) Joint
-  analysis of gene expression data from 48 hours post-infection with
-  Cormotif identified five expression patterns: ``Yers-Salm'',
-  ``Virulent'', ``MTB'', ``non-DE'', and ``All''. (B) Example genes
-  from the different expression patterns.}
+\caption[Joint Bayesian analysis - 48 hours
+  post-infection.]{\textbf{Joint Bayesian analysis - 48 hours
+    post-infection.} (A) Joint analysis of gene expression data from
+  48 hours post-infection with Cormotif identified five expression
+  patterns: ``Yers-Salm'', ``Virulent'', ``MTB'', ``non-DE'', and
+  ``All''. (B) Example genes from the different expression patterns.}
 \label{fig:joint-48h}
 \end{figure}
 
@@ -405,7 +410,7 @@ not specifically the response to MTB H37Rv.
 
 To provide further broad support for the interpretation that the
 response eQTL genes are important for the innate response to bacterial
-infection in general, we considered the log\textsubscript{2} fold change
+nfection in general, we considered the log\textsubscript{2} fold change
 in expression values following infection (Fig. \ref{fig:differential-expression}). For each gene, we
 calculated the mean log\textsubscript{2} fold change in expression level
 across the eight bacterial infections at the 18 hour timepoint. Next, we
@@ -422,17 +427,18 @@ to a larger degree (significantly higher effect size; \emph{P}
 compared to the genes in the other two classes.
 
 \begin{figure}
+\centering
 \includegraphics[width=5in]{img/ch02/fig-05-response-eqtl.pdf}
-\caption{Response eQTLs at 18 hours post-infection. (A) We counted the
-  number of response eQTLs from Barreiro et al. \citep{Barreiro2012}
-  (179 out of the 198 were also expressed in our study) in each of the
-  five gene expression patterns at 18 hours post-infection (Fig. \ref{fig:joint-18h}).
-  (B) We compared the mean log\textsubscript{2} fold change in
-  expression across the 8 bacterial infections at the 18 hour
-  timepoint for three classes of genes: response eQTL genes (red),
-  general eQTL genes (purple), and non-eQTL genes (yellow) (see
-  Methods for details).
-}
+\caption[Response eQTLs at 18 hours post-infection.]{\textbf{Response
+    eQTLs at 18 hours post-infection.} (A) We counted the number of
+  response eQTLs from Barreiro et al. \citep{Barreiro2012} (179 out of
+  the 198 were also expressed in our study) in each of the five gene
+  expression patterns at 18 hours post-infection
+  (Fig. \ref{fig:joint-18h}).  (B) We compared the mean
+  log\textsubscript{2} fold change in expression across the 8
+  bacterial infections at the 18 hour timepoint for three classes of
+  genes: response eQTL genes (red), general eQTL genes (purple), and
+  non-eQTL genes (yellow) (see Methods for details).  }
 \label{fig:response-eqtl}
 \end{figure}
 
@@ -473,8 +479,7 @@ investigations.
 
 For example, when we focused on the mycobacteria-specific regulatory
 response 18 hours post-infection, we noticed an intriguing number of
-genes that are involved in phagosome maturation (Supplementary Figure
-S4). Broadly speaking, phagocytosed bacteria are killed by vesicular
+genes that are involved in phagosome maturation (Supplementary Fig. \ref{fig:phago}). Broadly speaking, phagocytosed bacteria are killed by vesicular
 proton pumps, which lower the pH inside the phagosome, and lysosomal
 fusion. This process occurs once a phagosome has matured through a
 series of steps mediated by the exchange of Rab GTPases \citep{Vergne2004,
@@ -515,7 +520,7 @@ vaccine before being diagnosed with CGD also develop the disease
 At 48 hours post-infection (Fig. \ref{fig:joint-48h}), the mycobacteria-specific
 response was enriched with genes annotated (based on GO) as having a
 role in ``response to vitamin D'' (Supplementary Table S5; Supplementary
-Figure S5). Individuals with low circulating levels of vitamin D are
+Figure \ref{fig:vitD}). Individuals with low circulating levels of vitamin D are
 more susceptible to developing tuberculosis \citep{Zodpey2007,
 Nnoaham2008}, and vitamin D has been investigated as a supplemental
 therapy for the treatment of tuberculosis, though with mixed results
@@ -589,7 +594,7 @@ response to infection with mycobacteria. Yet, \emph{DUSP14} was
 upregulated at 18 hours post-infection with MTB H37Rv (q-value: 16\%),
 MTB GC1237 (q-value: 3\%), and BCG (q-value: 9\%); and downregulated
 post-infection with \emph{S. typhimurium} (q-value: 9\%) (Supplementary
-Figure S6). Thus, our data lends further support for the role of
+Fig. \ref{fig:dusp14}). Thus, our data lends further support for the role of
 \emph{DUSP14} as a TB susceptibility gene.
 
 \subsubsection{Little evidence for strain-specific transcriptional
@@ -617,11 +622,11 @@ laboratory strains.
 
 In our study, albeit with a small sample size, we found no marked
 differences between the transcriptional response to infection with MTB
-H37Rv or MTB GC1237, a Beijing strain (Supplementary Figure S7;
+H37Rv or MTB GC1237, a Beijing strain (Supplementary Fig. \ref{fig:Rv-v-GC};
 Supplementary Table S8). Furthermore, the pro-inflammatory cytokines
 \emph{TNF} and \emph{IL6} and the anti-inflammatory cytokine \emph{IL10}
 were strongly upregulated in response to both strains of MTB
-(Supplementary Figure S8). This observation is in concordance with Wu et
+(Supplementary Fig. \ref{fig:ex-cytokines}). This observation is in concordance with Wu et
 al., who also reported no apparent difference in the transcriptional
 response of THP-1 cells to infection with MTB H37Rv versus multiple
 Beijing strains \citep{Wu2012}. Thus the increased virulence of the
@@ -783,8 +788,7 @@ of biases due to batch processing \citep{Auer2010}. To assess RNA
 quality, we measured the RNA Integrity Number (RIN) with the Agilent
 Bioanalyzer (Supplementary Table S6). Importantly, there were no
 significant differences in the RIN (mean of 7.8 $\pm$ 2.0) between the
-bacterial infections or between the timepoints (Supplementary Figure
-S9B). In batches of 12 samples, we added barcoded adapters (Illumina
+bacterial infections or between the timepoints (Supplementary Fig. \ref{fig:rin-and-reads}B). In batches of 12 samples, we added barcoded adapters (Illumina
 TruSeq RNA Sample Preparation Kit v2) and sequenced 50 base pairs single
 end over multiple flow cells on the Illumina HiSeq 2500.
 
@@ -799,7 +803,7 @@ sums the reads falling in the union of all exons of a gene and discards
 reads mapping to more than one gene \citep{Liao2013a}. There were no
 significant differences in the number of mapped exonic reads (mean of
 41.8 $\pm$ 21.2 million per sample) between the bacterial infections or
-between the timepoints (Supplementary Figure S9A). We removed genes with
+between the timepoints (Supplementary Fig. \ref{fig:rin-and-reads}A). We removed genes with
 fewer than one count per million exonic reads in fewer than six samples.
 To account for differences in the read counts at the extremes of the
 distribution, we normalized the samples using the weighted trimmed mean
@@ -812,16 +816,16 @@ To assess the quality of the data, we performed principal components
 analysis (PCA) of the TMM-normalized log\textsubscript{2}-transformed
 counts per million (CPM). PC2 separated the samples by timepoint, but
 PC1 was associated with the RIN score and the processing batch
-(Supplementary Figure S2A). After the effects of RIN score and
+(Supplementary Fig. \ref{fig:pca}A). After the effects of RIN score and
 processing batch were removed with the function removeBatchEffect from
 the limma package \citep{Ritchie2015}, PC1 separated the samples by
 timepoint and PC2 separated the infected and control samples
-(Supplementary Figure S2B). We protected the variables of interest
+(Supplementary Fig. \ref{fig:pca}B). We protected the variables of interest
 (individual, bacteria, timepoint) when regressing the effects of RIN
 score and processing batch by including them in the linear model used by
 removeBatchEffect. However, the result was similar if they were not
 protected since the variables of interest were partitioned across the
-processing batches (Supplementary Figure S2C). All figures displaying
+processing batches (Supplementary Fig. \ref{fig:pca}C). All figures displaying
 expression data were generated using the batch-corrected data.
 
 To confirm that the transcriptional response to MTB infection in our
@@ -832,7 +836,7 @@ samples and zero timepoint control from Tailleux et al., 2008
 gene expression (RNA-seq versus microarray) and the method used to
 isolate the macrophages (positive versus negative selection), we still
 observed a common transcriptional signature of infection using PCA
-(Supplementary Figure S10).
+(Supplementary Fig. \ref{fig:tailleux2008}).
 
 For the standard analysis, we tested for differential expression using
 limma+voom \citep{Smyth2004, Smyth2005, Law2014} because it has been
@@ -941,20 +945,23 @@ financial interests.
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=5in]{img/ch02/fig-S01-study-design.png}
-\caption{Study design. We infected monocyte-derived macrophages
-  isolated from six healthy donors with the bacteria described in
-  Table \ref{tab:bacteria}. We isolated RNA for sequencing at 4, 18,
-  and 48 hours post-infection.}
+\caption[Study design.]{\textbf{Study design.} We infected
+  monocyte-derived macrophages isolated from six healthy donors with
+  the bacteria described in Table \ref{tab:bacteria}. We isolated RNA
+  for sequencing at 4, 18, and 48 hours post-infection.}
+\label{fig:study-design}
 \end{figure}
 
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=5in]{img/ch02/fig-S02-pca.pdf}
-\caption{\textbf{Principal components analysis (PCA) of uncorrected
-    and batch-corrected expression values.} (A) PCA of the
-  TMM-normalized log\textsubscript{2}-transformed counts per million
-  (CPM). Infected and control samples are not well separated.  PC2
-  separates the samples by timepoint. (B) PCA of the TMM-normalized
+\caption[Principal components analysis (PCA) of uncorrected and
+  batch-corrected expression values.]{\textbf{Principal components
+    analysis (PCA) of uncorrected and batch-corrected expression
+    values.} (A) PCA of the TMM-normalized
+  log\textsubscript{2}-transformed counts per million (CPM). Infected
+  and control samples are not well separated.  PC2 separates the
+  samples by timepoint. (B) PCA of the TMM-normalized
   log\textsubscript{2}-transformed CPM after removing the effects of
   RIN score and processing batch. PC1 separates the samples by
   timepoint. PC2 separates the infected and control samples. (C) PCA
@@ -962,79 +969,86 @@ financial interests.
   removing the effects of RIN score and processing batch without
   protecting the variables of interest (individual, bacteria,
   timepoint).}
+\label{fig:pca}
 \end{figure}
 
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=5in]{img/ch02/fig-S03-joint-all-k14.pdf}
-\caption{\textbf{Joint Bayesian analysis with 14 expression
+\caption[Joint Bayesian analysis with 14 expression
+  patterns.]{\textbf{Joint Bayesian analysis with 14 expression
     patterns.} (A) Cormotif \citep{Wei2015} estimates the number of
-    expression patterns (i.e.~motifs, using their terminology) to use
-    by calculating the Bayesian information criterion (BIC) and the
-    Akaike information criterion (AIC). These criteria penalize models
-    for additional parameters to avoid overfitting. The model with the
-    lowest BIC/AIC is considered the best fit, which in this context
-    is the model with 14 expression patterns. (B) Joint analysis with
-    Cormotif. The shading of each box represents the posterior
-    probability that a gene assigned to the expression pattern (row)
-    is differentially expressed in response to infection with a
-    particular bacteria (column), with black representing a high
-    posterior probability and white a low posterior probability. The
-    expression patterns have the following interpretations: ``non-DE''
-    - Genes that do not respond to infection; ``Yers-Salm-4h'' - Genes
-    that respond 4 hours post-infection with
-    \emph{Y. pseudotuberculosis} or \emph{S. typhimurium};
-    ``Yers-Salm-18h'' - Genes that respond 18 hours post-infection
-    with \emph{Y. pseudotuberculosis} or \emph{S. typhimurium}; ``4h''
-    - Genes that respond to 4 hours post-infection with any bacteria;
-    ``non-MTB'' - Genes that respond at 4, 18, and 48 hours
-    post-infection to bacteria that are not MTB or BCG (attenuated
-    \emph{M. bovis}); ``Virulent-18h'' - Genes that respond 18 hours
-    post-infection with virulent bacteria;
-    ``Virulent-18h+Yers-Salm-4h'' - Genes that respond 18 hours
-    post-infection with virulent bacteria and 4 hours post-infection
-    with \emph{Y. pseudotuberculosis} or \emph{S. typhimurium};
-    ``18h+Yers-Salm-48h'' - Genes that respond 18 hours post-infection
-    with any bacteria and 48 hours post-infection with \emph{Y.
-      pseudotuberculosis} or \emph{S. typhimurium}; ``48h'' - Genes
-    that respond 48 hours post-infection with any bacteria;
-    ``48h+Yers-Salm-4h'' - Genes that respond 48 hours post-infection
-    with any bacteria and 4 hours post-infection with \emph{Y.
-      pseudotuberculosis} or \emph{S. typhimurium}; ``4\&18h'' - Genes
-    that respond 4 and 18 hours post-infection with any bacteria;
-    ``18\&48h'' - Genes that respond 18 and 48 hours post-infection
-    with any bacteria; ``18\&48h+Yers-Salm-4h'' - Genes that respond
-    18 and 48 hours post-infection with any bacteria and 4 hours
-    post-infection with \emph{Y. pseudotuberculosis} or
-    \emph{S. typhimurium}; ``All'' - Genes that respond at 4, 18, and
-    48 hours post-infection with any bacteria.  }
+  expression patterns (i.e.~motifs, using their terminology) to use by
+  calculating the Bayesian information criterion (BIC) and the Akaike
+  information criterion (AIC). These criteria penalize models for
+  additional parameters to avoid overfitting. The model with the
+  lowest BIC/AIC is considered the best fit, which in this context is
+  the model with 14 expression patterns. (B) Joint analysis with
+  Cormotif. The shading of each box represents the posterior
+  probability that a gene assigned to the expression pattern (row) is
+  differentially expressed in response to infection with a particular
+  bacteria (column), with black representing a high posterior
+  probability and white a low posterior probability. The expression
+  patterns have the following interpretations: ``non-DE'' - Genes that
+  do not respond to infection; ``Yers-Salm-4h'' - Genes that respond 4
+  hours post-infection with \emph{Y. pseudotuberculosis} or
+  \emph{S. typhimurium}; ``Yers-Salm-18h'' - Genes that respond 18
+  hours post-infection with \emph{Y. pseudotuberculosis} or
+  \emph{S. typhimurium}; ``4h'' - Genes that respond to 4 hours
+  post-infection with any bacteria; ``non-MTB'' - Genes that respond
+  at 4, 18, and 48 hours post-infection to bacteria that are not MTB
+  or BCG (attenuated \emph{M. bovis}); ``Virulent-18h'' - Genes that
+  respond 18 hours post-infection with virulent bacteria;
+  ``Virulent-18h+Yers-Salm-4h'' - Genes that respond 18 hours
+  post-infection with virulent bacteria and 4 hours post-infection
+  with \emph{Y. pseudotuberculosis} or \emph{S. typhimurium};
+  ``18h+Yers-Salm-48h'' - Genes that respond 18 hours post-infection
+  with any bacteria and 48 hours post-infection with \emph{Y.
+    pseudotuberculosis} or \emph{S. typhimurium}; ``48h'' - Genes that
+  respond 48 hours post-infection with any bacteria;
+  ``48h+Yers-Salm-4h'' - Genes that respond 48 hours post-infection
+  with any bacteria and 4 hours post-infection with \emph{Y.
+    pseudotuberculosis} or \emph{S. typhimurium}; ``4\&18h'' - Genes
+  that respond 4 and 18 hours post-infection with any bacteria;
+  ``18\&48h'' - Genes that respond 18 and 48 hours post-infection with
+  any bacteria; ``18\&48h+Yers-Salm-4h'' - Genes that respond 18 and
+  48 hours post-infection with any bacteria and 4 hours post-infection
+  with \emph{Y. pseudotuberculosis} or \emph{S. typhimurium}; ``All''
+  - Genes that respond at 4, 18, and 48 hours post-infection with any
+  bacteria.}
+\label{fig:joint-all-k14}
 \end{figure}
 
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=5in]{img/ch02/fig-S04-phago.pdf}
-\caption{\textbf{Expression of genes involved in phagosome
+\caption[Expression of genes involved in phagosome
+  maturation.]{\textbf{Expression of genes involved in phagosome
     maturation.} \emph{RAB22A}, \emph{RAP2A}, and \emph{ATP6V1D} are
   upregulated in response to infection with mycobacteria at 18 hours;
   whereas, \emph{RAB3A} and \emph{RAB33A} are downregulated (pattern
   ``MTB'' in Figure \ref{fig:joint-18h}).}
+\label{fig:phago}
 \end{figure}
 
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=5in]{img/ch02/fig-S05-vitD.pdf}
-\caption{\textbf{Expression of genes involved in vitamin D signaling.}
-  \emph{VDR} and \emph{CYP27B1} are upregulated at 48 hours
-  post-infection with all bacteria (pattern ``All'' in Figure
+\caption[Expression of genes involved in vitamin D
+  signaling.]{\textbf{Expression of genes involved in vitamin D
+    signaling.}  \emph{VDR} and \emph{CYP27B1} are upregulated at 48
+  hours post-infection with all bacteria (pattern ``All'' in Figure
   \ref{fig:joint-48h}). \emph{PIM1} and \emph{CXCL10} are upregulated
   at 48 hours post-infection with the mycobacteria (pattern ``MTB'' in
   Figure \ref{fig:joint-48h}).}
+\label{fig:vitD}
 \end{figure}
 
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=5in]{img/ch02/fig-S06-dusp14.pdf}
-\caption{\textbf{Expression of \emph{DUSP14} at 18 hours
+\caption[Expression of \emph{DUSP14} at 18 hours
+  post-infection.]{\textbf{Expression of \emph{DUSP14} at 18 hours
     post-infection.} \emph{DUSP14} is an example of an interesting
   gene not identified with our approach. At 18 hours, it is
   upregulated after infection with MTB H37Rv (q-value: 16\%), MTB
@@ -1044,58 +1058,67 @@ financial interests.
   it did not fit well into one of the main patterns of gene expression
   identified at 18 hours post-infection, it was classified as the
   ``non-DE'' pattern.}
+\label{fig:dusp14}
 \end{figure}
 
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=5in]{img/ch02/fig-S07-Rv-v-GC.pdf}
-\caption{\textbf{ Little difference in transcriptional response to
-    infections with different MTB strains.} Few statistically
-  significant differences were identified when explicitly testing gene
-  expression levels post-infection with MTB H37Rv and MTB GC1237 at 4,
-  18, or 48 hours post-infection (top, middle, and bottom panels,
-  respectively). The volcano plots (left) display the
-  -log\textsubscript{10} transformed p-value versus the
-  log\textsubscript{2} fold change in expression level. The MA plots
-  (right) display the log\textsubscript{2} fold change in expression
-  level versus the average expression level. Most of the genes are
-  labeled black indicating that their FDR value is greater than
-  5\%. Two genes (labeled green) at 4 hours post-infection had a
-  q-value \textless{} 0.05 and log\textsubscript{2} fold change
-  greater than 0.5 (see Supplementary Table S8).}
+\caption[Little difference in transcriptional response to infections
+  with different MTB strains.]{\textbf{Little difference in
+    transcriptional response to infections with different MTB
+    strains.} Few statistically significant differences were
+  identified when explicitly testing gene expression levels
+  post-infection with MTB H37Rv and MTB GC1237 at 4, 18, or 48 hours
+  post-infection (top, middle, and bottom panels, respectively). The
+  volcano plots (left) display the -log\textsubscript{10} transformed
+  p-value versus the log\textsubscript{2} fold change in expression
+  level. The MA plots (right) display the log\textsubscript{2} fold
+  change in expression level versus the average expression level. Most
+  of the genes are labeled black indicating that their FDR value is
+  greater than 5\%. Two genes (labeled green) at 4 hours
+  post-infection had a q-value \textless{} 0.05 and
+  log\textsubscript{2} fold change greater than 0.5 (see Supplementary
+  Table S8).}
+\label{fig:Rv-v-GC}
 \end{figure}
 
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=5in]{img/ch02/fig-S08-ex-cytokines.pdf}
-\caption{\textbf{Response of example cytokines to infection with
+\caption[Response of example cytokines to infection with different MTB
+  strains.]{\textbf{Response of example cytokines to infection with
     different MTB strains.} The log\textsubscript{2} fold change in
   expression of the pro-inflammatory cytokines \emph{TNF} and
   \emph{IL6} and the anti-inflammatory cytokine \emph{IL10} is similar
   post-infection with MTB H37Rv or MTB GC1237. \emph{TNF} and
   \emph{IL6} are upregulated at all three timepoints; whereas,
   \emph{IL10} is upregulated only at 4 hours post-infection.}
+\label{fig:ex-cytokines}
 \end{figure}
 
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=5in]{img/ch02/fig-S09-rin-and-reads.pdf}
-\caption{\textbf{ Distribution of the number of exonic reads and RNA
-    quality scores (RIN) across variables of interest.} (A) The number
-  of exonic reads is evenly distributed across the bacterial
-  infections, timepoints, and individuals. (B) The RIN scores are
-  evenly distributed across the bacterial infections and timepoints;
-  however, the RIN does vary between the individuals.  The p-values
-  are from an F-test.}
+\caption[Distribution of the number of exonic reads and RNA quality
+  scores (RIN) across variables of interest.]{\textbf{Distribution of
+    the number of exonic reads and RNA quality scores (RIN) across
+    variables of interest.} (A) The number of exonic reads is evenly
+  distributed across the bacterial infections, timepoints, and
+  individuals. (B) The RIN scores are evenly distributed across the
+  bacterial infections and timepoints; however, the RIN does vary
+  between the individuals.  The p-values are from an F-test.}
+\label{fig:rin-and-reads}
 \end{figure}
 
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=5in]{img/ch02/fig-S10-tailleux2008.pdf}
-\caption{\textbf{Comparison to Tailleux et al., 2008.} We compared our
-  RNA-seq data to the microarray data of Tailleux et al., 2008
-  \citep{Tailleux2008} to confirm a consistent signature of infection.
-  From our experiment, we used the batch-corrected TMM-normalized
+\caption[Comparison to Tailleux et al., 2008.]{\textbf{Comparison to
+    Tailleux et al., 2008.} We compared our RNA-seq data to the
+  microarray data of Tailleux et al., 2008 \citep{Tailleux2008} to
+  confirm a consistent signature of infection.  From our experiment,
+  we used the batch-corrected TMM-normalized
   log\textsubscript{2}-transformed counts per million (CPM) from the
   MTB H37Rv infected macrophages at 4, 18, and 48 hours post-infection
   and their time-matched controls. From their experiment, we used the
@@ -1113,4 +1136,5 @@ financial interests.
   studies cluster together. The quantile-normalized data from Tailleux
   et al., 2008 \citep{Tailleux2008} is available at
   https://bitbucket.org/jdblischak/tb-data.}
+\label{fig:tailleux2008}
 \end{figure}
