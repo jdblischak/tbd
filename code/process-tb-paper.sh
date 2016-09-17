@@ -20,3 +20,16 @@ sed -i s/{]//g ch02.tex
 
 # Download bibtex file
 wget -nc -O ch02.bib https://bitbucket.org/jdblischak/tb-paper/raw/d58bcaf2806440775bfa1bfea8b78fa6ec1319e0/refs.bib
+
+# Download supplement
+wget -nc -O ch02-supp.md https://bitbucket.org/jdblischak/tb-paper/raw/d58bcaf2806440775bfa1bfea8b78fa6ec1319e0/supplementary-information.md
+
+# Convert supplement to LaTeX
+pandoc -f markdown -t latex -o ch02-supp.tex ch02-supp.md
+
+# Fix citations
+sed -i 's/{\[}@/\\citep{/g' ch02-supp.tex
+# Fix the spacing
+sed -i s/"; @"/", "/g ch02-supp.tex
+# Fix the end
+sed -i s/{]//g ch02-supp.tex
