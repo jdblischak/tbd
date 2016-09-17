@@ -31,5 +31,5 @@ clean:
 	rm -f *~ *.aux *.log *.lof *.lot *.toc *.bbl *.blg
 
 clean-deep: clean
-	rm -f *.pdf *.docx *.html
+	rm -f *.pdf *.docx *.html tex/*.aux
 
