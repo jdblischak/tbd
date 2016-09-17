@@ -160,6 +160,35 @@ with \emph{Yersinia pseudotuberculosis} (gram-negative),
 \emph{Salmonella typhimurium} (gram-negative), or \emph{Staphylococcus
 epidermidis} (gram-positive).
 
+\begin{table}[]
+\centering
+\begin{tabular}{@{}llll@{}}
+\toprule
+Abbr. & Name & Description & Gram staining* \\ \midrule
+none & control & Mock infection & N/A \\
+Rv & MTB H37Rv & A common laboratory strain of MTB & acid-fast \\
+Rv+ & heat-inactivated MTB H37Rv & Dead MTB H37Rv & acid-fast \\
+GC & MTB GC1237 & More virulent strain of MTB & acid-fast \\
+BCG & bacillus Calmette-Guérin & Vaccine (attenuated \emph{M. bovis}) &
+acid-fast \\
+Smeg & \emph{Mycobacterium smegmatis} & Non-pathogenic mycobacterium &
+acid-fast \\
+Yers & \emph{Yersinia pseudotuberculosis} & Facultative intracellular
+pathogen & Negative \\
+Salm & \emph{Salmonella typhimurium} & Facultative intracellular
+pathogen & Negative \\
+Staph & \emph{Staphylococcus epidermidis} & Extracellular pathogen &
+Positive \\ \bottomrule
+\end{tabular}
+\caption{Description of bacteria. *Mycobacteria are unable to be gram
+  stained due to the low permeability of their cell walls. They are
+  more closely related evolutionarily to gram-positive bacteria than
+  gram-negative. However, their thick cells walls share features of
+  gram-negative bacteria, e.g. a ``pseudoperiplasm'' similar to the
+  gram-negative periplasm \citep{Hett2008}.}
+\label{tab:bacteria}
+\end{table}
+
 We infected monocyte-derived macrophages from six individuals with the
 bacteria described above (including a non-infected control) and
 extracted RNA at 4, 18, and 48 hours post-infection (see Methods;
@@ -186,6 +215,26 @@ many of the DE genes were not shared between the 18 and 48 hour
 timepoints (Figure 1C). Of note, at 48 hours post-infection we were
 unable to collect RNA from macrophages infected with \emph{S.
 epidermidis} (see Methods).
+
+\begin{figure}
+\label{fig:differential-expression}
+\includegraphics[width=5in]{img/ch02/fig-01-differential-expression.pdf}
+\caption{Differential expression analysis. We tested for
+  differentially expressed genes for each bacterial infection by
+  comparing it to its time-matched control. (A) We classified genes
+  with q-value \textless{} 5\% as differentially expressed. The
+  mycobacteria are labeled in shades of green. (B) As expected, there
+  were large transcriptional changes 18 hours post-infection with MTB
+  H37Rv. Genes with q-value \textless{} 5\% and absolute
+  log\textsubscript{2} fold change greater than 0.5 are labeled green,
+  those with q-value \textless{} 5\% and absolute log 2 fold change
+  less than 0.5 are labeled grey, and non-differentially expressed
+  genes are labeled black. (C) The overlap in differentially expressed
+  genes identified at 4, 18, and 48 hours post-infection with MTB
+  H37Rv.
+}
+\end{figure}
+
 
 \subsubsection{Joint analysis identifies bacteria-specific response
 genes}\label{joint-analysis-identifies-bacteria-specific-response-genes}
@@ -243,6 +292,23 @@ related to type I interferon signaling (e.g. \emph{IRF1}, \emph{SOCS1},
 \emph{LILRB1}), and apoptosis (e.g. \emph{IRF7}, \emph{BCL2A1},
 \emph{MCL1}).
 
+\begin{figure}
+\label{fig:joint-all}
+\includegraphics[width=5in]{img/ch02/fig-02-joint-all.pdf}
+\caption{Joint Bayesian analysis. (A) Joint analysis of gene
+  expression data from all three timepoints with Cormotif
+  \citep{Wei2015} identified six expression patterns: ``non-DE'',
+  ``Yers-Salm'', ``18 h'', ``48 h'', ``18 \& 48 h'', and ``All''. The
+  shading of each box represents the posterior probability that a gene
+  assigned to the expression pattern (row) is differentially expressed
+  in response to infection with a particular bacteria (column), with
+  black representing a high posterior probability and white a low
+  posterior probability. (B) Each data point is the mean
+  log\textsubscript{2} fold change in expression (absolute value) in
+  response to infection with the given bacteria for all the genes
+  assigned to the particular expression pattern.}
+\end{figure}
+
 Next, we tested for more specific patterns by performing Cormotif
 separately on the data from the middle (18 h) and late (48 h) stages of
 infection. At 18 hours post-infection, we identified five separate
@@ -271,6 +337,16 @@ includes 1,694 genes whose expression levels changed preferentially
 after infection with \emph{Y. pseudotuberculosis} or \emph{S.
 typhimurium} (e.g. \emph{TLR8}, \emph{TGFB1}, \emph{IL18}).
 
+\begin{figure}
+\label{fig:joint-18h}
+\includegraphics[width=5in]{img/ch02/fig-03-joint-18h.pdf}
+\caption{Joint Bayesian analysis - 18 hours post-infection. (A) Joint
+  analysis of gene expression data from 18 hours post-infection with
+  Cormotif identified five expression patterns: ``Yers-Salm'',
+  ``Virulent'', ``MTB'', ``non-DE'', and ``All''. (B) Example genes
+  from the different expression patterns.}
+\end{figure}
+
 At 48 hours post-infection, we also discovered five expression patterns
 (Figure 4; Supplementary Tables S3,S4). While many of the patterns have
 similar specificities to those observed at 18 hours post-infection,
@@ -290,6 +366,16 @@ infection with heat-inactivated MTB H37Rv or the attenuated vaccine
 strain BCG (e.g. \emph{MAP3K4}, \emph{SEMA4G}, \emph{BTG1}), and only
 one of these also belongs to the pattern ``Virulent'' at 18 hours
 post-infection.
+
+\begin{figure}
+\label{fig:joint-48h}
+\includegraphics[width=5in]{img/ch02/fig-04-joint-48h.pdf}
+\caption{Joint Bayesian analysis - 48 hours post-infection. (A) Joint
+  analysis of gene expression data from 48 hours post-infection with
+  Cormotif identified five expression patterns: ``Yers-Salm'',
+  ``Virulent'', ``MTB'', ``non-DE'', and ``All''. (B) Example genes
+  from the different expression patterns.}
+\end{figure}
 
 \subsubsection{Infection-induced response eQTLs are shared across
 bacterial
@@ -330,6 +416,21 @@ the expression level of genes associated with response eQTLs is altered
 to a larger degree (significantly higher effect size; \emph{P}
 \textless{} 2.2 x e\textsuperscript{-16}; Figure 5B) following infection
 compared to the genes in the other two classes.
+
+\begin{figure}
+\label{fig:response-eqtl}
+\includegraphics[width=5in]{img/ch02/fig-05-response-eqtl.pdf}
+\caption{Response eQTLs at 18 hours post-infection. (A) We counted the
+  number of response eQTLs from Barreiro et al. \citep{Barreiro2012}
+  (179 out of the 198 were also expressed in our study) in each of the
+  five gene expression patterns at 18 hours post-infection (Figure 3).
+  (B) We compared the mean log\textsubscript{2} fold change in
+  expression across the 8 bacterial infections at the 18 hour
+  timepoint for three classes of genes: response eQTL genes (red),
+  general eQTL genes (purple), and non-eQTL genes (yellow) (see
+  Methods for details).
+}
+\end{figure}
 
 \section{Discussion}\label{discussion}
 
@@ -825,141 +926,3 @@ the project. JDB and YG wrote the paper with input from all authors.
 
 \textbf{Competing financial interests:} The authors declare no competing
 financial interests.
-
-\section{Figure Legends}\label{figure-legends}
-
-\subsubsection{Figure 1. Differential expression
-analysis.}\label{figure-1.-differential-expression-analysis.}
-
-We tested for differentially expressed genes for each bacterial
-infection by comparing it to its time-matched control.
-
-\begin{enumerate}
-\def\labelenumi{(\Alph{enumi})}
-\itemsep1pt\parskip0pt\parsep0pt
-\item
-  We classified genes with q-value \textless{} 5\% as differentially
-  expressed. The mycobacteria are labeled in shades of green.
-\item
-  As expected, there were large transcriptional changes 18 hours
-  post-infection with MTB H37Rv. Genes with q-value \textless{} 5\% and
-  absolute log\textsubscript{2} fold change greater than 0.5 are labeled
-  green, those with q-value \textless{} 5\% and absolute log 2 fold
-  change less than 0.5 are labeled grey, and non-differentially
-  expressed genes are labeled black.
-\item
-  The overlap in differentially expressed genes identified at 4, 18, and
-  48 hours post-infection with MTB H37Rv.
-\end{enumerate}
-
-\subsubsection{Figure 2. Joint Bayesian
-analysis.}\label{figure-2.-joint-bayesian-analysis.}
-
-\begin{enumerate}
-\def\labelenumi{(\Alph{enumi})}
-\itemsep1pt\parskip0pt\parsep0pt
-\item
-  Joint analysis of gene expression data from all three timepoints with
-  Cormotif \citep{Wei2015} identified six expression patterns:
-  ``non-DE'', ``Yers-Salm'', ``18 h'', ``48 h'', ``18 \& 48 h'', and
-  ``All''. The shading of each box represents the posterior probability
-  that a gene assigned to the expression pattern (row) is differentially
-  expressed in response to infection with a particular bacteria
-  (column), with black representing a high posterior probability and
-  white a low posterior probability.
-\item
-  Each data point is the mean log\textsubscript{2} fold change in
-  expression (absolute value) in response to infection with the given
-  bacteria for all the genes assigned to the particular expression
-  pattern.
-\end{enumerate}
-
-\subsubsection{Figure 3. Joint Bayesian analysis - 18 hours
-post-infection.}\label{figure-3.-joint-bayesian-analysis---18-hours-post-infection.}
-
-\begin{enumerate}
-\def\labelenumi{(\Alph{enumi})}
-\itemsep1pt\parskip0pt\parsep0pt
-\item
-  Joint analysis of gene expression data from 18 hours post-infection
-  with Cormotif identified five expression patterns: ``Yers-Salm'',
-  ``Virulent'', ``MTB'', ``non-DE'', and ``All''.
-\item
-  Example genes from the different expression patterns.
-\end{enumerate}
-
-\subsubsection{Figure 4. Joint Bayesian analysis - 48 hours
-post-infection.}\label{figure-4.-joint-bayesian-analysis---48-hours-post-infection.}
-
-\begin{enumerate}
-\def\labelenumi{(\Alph{enumi})}
-\itemsep1pt\parskip0pt\parsep0pt
-\item
-  Joint analysis of gene expression data from 48 hours post-infection
-  with Cormotif identified five expression patterns: ``Yers-Salm'',
-  ``Virulent'', ``MTB'', ``non-DE'', and ``All''.
-\item
-  Example genes from the different expression patterns.
-\end{enumerate}
-
-\subsubsection{Figure 5. Response eQTLs at 18 hours
-post-infection.}\label{figure-5.-response-eqtls-at-18-hours-post-infection.}
-
-\begin{enumerate}
-\def\labelenumi{(\Alph{enumi})}
-\itemsep1pt\parskip0pt\parsep0pt
-\item
-  We counted the number of response eQTLs from Barreiro et al.
-  \citep{Barreiro2012} (179 out of the 198 were also expressed in our
-  study) in each of the five gene expression patterns at 18 hours
-  post-infection (Figure 3).
-\item
-  We compared the mean log\textsubscript{2} fold change in expression
-  across the 8 bacterial infections at the 18 hour timepoint for three
-  classes of genes: response eQTL genes (red), general eQTL genes
-  (purple), and non-eQTL genes (yellow) (see Methods for details).
-\end{enumerate}
-
-\section{Tables}\label{tables}
-
-\subsubsection{Table 1. Description of
-bacteria.}\label{table-1.-description-of-bacteria.}
-
-\begin{longtable}[c]{@{}llll@{}}
-\toprule\addlinespace
-Abbr. & Name & Description & Gram staining*
-\\\addlinespace
-\midrule\endhead
-none & control & Mock infection & N/A
-\\\addlinespace
-Rv & MTB H37Rv & A common laboratory strain of MTB & acid-fast
-\\\addlinespace
-Rv+ & heat-inactivated MTB H37Rv & Dead MTB H37Rv & acid-fast
-\\\addlinespace
-GC & MTB GC1237 & More virulent strain of MTB & acid-fast
-\\\addlinespace
-BCG & bacillus Calmette-Guérin & Vaccine (attenuated \emph{M. bovis}) &
-acid-fast
-\\\addlinespace
-Smeg & \emph{Mycobacterium smegmatis} & Non-pathogenic mycobacterium &
-acid-fast
-\\\addlinespace
-Yers & \emph{Yersinia pseudotuberculosis} & Facultative intracellular
-pathogen & Negative
-\\\addlinespace
-Salm & \emph{Salmonella typhimurium} & Facultative intracellular
-pathogen & Negative
-\\\addlinespace
-Staph & \emph{Staphylococcus epidermidis} & Extracellular pathogen &
-Positive
-\\\addlinespace
-\bottomrule
-\end{longtable}
-
-* Mycobacteria are unable to be gram stained due to the low permeability
-of their cell walls. They are more closely related evolutionarily to
-gram-positive bacteria than gram-negative. However, their thick cells
-walls share features of gram-negative bacteria, e.g.~a
-``pseudoperiplasm'' similar to the gram-negative periplasm
-\citep{Hett2008}.
-
