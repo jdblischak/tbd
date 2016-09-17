@@ -1,5 +1,5 @@
 NAME := tbd
-TEX := ch02.tex
+TEX := tex/preamble-custom.tex tex/ch02.tex
 
 all: pdf
 
