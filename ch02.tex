@@ -147,7 +147,7 @@ To learn about the immune response to infection with different bacteria,
 with a particular emphasis on \emph{Mycobacterium tuberculosis} (MTB),
 we investigated the \emph{in vitro} gene regulatory response of
 macrophages to infection with multiple MTB stains, related mycobacterial
-species, and other bacterial species (Table 1). Specifically, we
+species, and other bacterial species (Table \ref{tab:bacteria}). Specifically, we
 infected cultured macrophages with either MTB H37Rv, which is a common
 strain often used in laboratory experiments \citep{Rivero-Lezcano2012};
 MTB GC1237, which is a strain of the highly virulent Beijing family
@@ -195,29 +195,31 @@ extracted RNA at 4, 18, and 48 hours post-infection (see Methods;
 Supplementary Figure S1). We assessed RNA quality using the Agilent
 Bioanlyzer (Supplementary Table S6) and sequenced the RNA to estimate
 gene expression levels. Detailed descriptions of our data processing,
-quality control analyses, and statistical modeling are available in the
-Methods section. Briefly, we mapped the short RNA-seq reads to the human
-genome (hg19) using the Subread algorithm \citep{Liao2013}, discarded
-reads that mapped non-uniquely, and counted the number of reads mapped
-to each protein-coding gene. We normalized the read counts using the
-weighted trimmed mean of M-values algorithm (TMM) \citep{Robinson2010},
-corrected for confounding ``batch'' effects (Supplementary Figure S2),
-and used limma+voom \citep{Smyth2004, Smyth2005, Law2014} to test for
-differential expression (DE) between cultures infected with each
-bacteria and their time-matched controls (Supplementary Table S2). Using
-this approach we initially observed the following general patterns: at
-four hours post-infection, only \emph{Y. pseudotuberculosis} and
-\emph{S. typhimurium} elicitepd a strong transcriptional response (Figure
-1A); at 18 hours post-infection, all the bacteria had elicitepd a strong
-immune response (Figure 1A-B); and at 48 hours post-infection, all the
-bacteria continued stimulating the immune response (Figure 1A), however,
-many of the DE genes were not shared between the 18 and 48 hour
-timepoints (Figure 1C). Of note, at 48 hours post-infection we were
-unable to collect RNA from macrophages infected with \emph{S.
-epidermidis} (see Methods).
+quality control analyses, and statistical modeling are available in
+the Methods section. Briefly, we mapped the short RNA-seq reads to the
+human genome (hg19) using the Subread algorithm \citep{Liao2013},
+discarded reads that mapped non-uniquely, and counted the number of
+reads mapped to each protein-coding gene. We normalized the read
+counts using the weighted trimmed mean of M-values algorithm (TMM)
+\citep{Robinson2010}, corrected for confounding ``batch'' effects
+(Supplementary Figure S2), and used limma+voom \citep{Smyth2004,
+  Smyth2005, Law2014} to test for differential expression (DE) between
+cultures infected with each bacteria and their time-matched controls
+(Supplementary Table S2). Using this approach we initially observed
+the following general patterns: at four hours post-infection, only
+\emph{Y. pseudotuberculosis} and \emph{S. typhimurium} elicitepd a
+strong transcriptional response (Fig.
+\ref{fig:differential-expression}A); at 18 hours post-infection, all
+the bacteria had elicitepd a strong immune response
+(Fig. \ref{fig:differential-expression}A-B); and at 48 hours
+post-infection, all the bacteria continued stimulating the immune
+response (Fig. \ref{fig:differential-expression}A), however, many of
+the DE genes were not shared between the 18 and 48 hour timepoints
+(Fig. \ref{fig:differential-expression}C). Of note, at 48 hours
+post-infection we were unable to collect RNA from macrophages infected
+with \emph{S.  epidermidis} (see Methods).
 
 \begin{figure}
-\label{fig:differential-expression}
 \includegraphics[width=5in]{img/ch02/fig-01-differential-expression.pdf}
 \caption{Differential expression analysis. We tested for
   differentially expressed genes for each bacterial infection by
@@ -233,6 +235,7 @@ epidermidis} (see Methods).
   genes identified at 4, 18, and 48 hours post-infection with MTB
   H37Rv.
 }
+\label{fig:differential-expression}
 \end{figure}
 
 
@@ -258,7 +261,7 @@ Initially we built a model that classified genes into one of 14 separate
 patterns based on their expression levels after each infection relative
 to their expression level in the non-infected control (Supplementary
 Figure S3). However, we found that a model with only six expression
-patterns (Figure 2; Supplementary Tables S3,S4), where a subset of the
+patterns (Fig. \ref{fig:joint-all}; Supplementary Tables S3,S4), where a subset of the
 original 14 patterns are combined, is more intuitive from a biological
 perspective; thus we proceeded with the reduced model. Broadly speaking,
 we classified genes as responding in the early, middle, or late stages
@@ -293,7 +296,6 @@ related to type I interferon signaling (e.g. \emph{IRF1}, \emph{SOCS1},
 \emph{MCL1}).
 
 \begin{figure}
-\label{fig:joint-all}
 \includegraphics[width=5in]{img/ch02/fig-02-joint-all.pdf}
 \caption{Joint Bayesian analysis. (A) Joint analysis of gene
   expression data from all three timepoints with Cormotif
@@ -307,12 +309,13 @@ related to type I interferon signaling (e.g. \emph{IRF1}, \emph{SOCS1},
   log\textsubscript{2} fold change in expression (absolute value) in
   response to infection with the given bacteria for all the genes
   assigned to the particular expression pattern.}
+\label{fig:joint-all}
 \end{figure}
 
 Next, we tested for more specific patterns by performing Cormotif
 separately on the data from the middle (18 h) and late (48 h) stages of
 infection. At 18 hours post-infection, we identified five separate
-expression patterns (Figure 3; Supplementary Tables S3,S4). Pattern
+expression patterns (Fig. \ref{fig:joint-18h}; Supplementary Tables S3,S4). Pattern
 ``non-DE'' includes 5,268 genes whose expression levels were unchanged
 across all infections. Pattern ``All'' includes 4,424 genes whose
 expression levels were affected by all infections (e.g. \emph{IL24},
@@ -321,7 +324,7 @@ expression levels changed specifically in response to infection with
 mycobacteria (e.g. \emph{NCF2}, \emph{TNFSF13}, \emph{CSF1}). These
 genes had a high posterior probability of being DE 18 hours after
 infection with MTB H37Rv, heat-killed H37Rv, MTB GC1237, and BCG.
-Furthermore, the gray shading for \emph{M. Smegmatis} (Figure 3A)
+Furthermore, the gray shading for \emph{M. Smegmatis} (Fig. \ref{fig:joint-18h}A)
 signified an intermediate posterior probability for DE. In essence, this
 pattern is a merger of two sets of genes that were not large enough to
 be separated: one set that was DE across all five mycobacteria and
@@ -338,17 +341,17 @@ after infection with \emph{Y. pseudotuberculosis} or \emph{S.
 typhimurium} (e.g. \emph{TLR8}, \emph{TGFB1}, \emph{IL18}).
 
 \begin{figure}
-\label{fig:joint-18h}
 \includegraphics[width=5in]{img/ch02/fig-03-joint-18h.pdf}
 \caption{Joint Bayesian analysis - 18 hours post-infection. (A) Joint
   analysis of gene expression data from 18 hours post-infection with
   Cormotif identified five expression patterns: ``Yers-Salm'',
   ``Virulent'', ``MTB'', ``non-DE'', and ``All''. (B) Example genes
   from the different expression patterns.}
+\label{fig:joint-18h}
 \end{figure}
 
 At 48 hours post-infection, we also discovered five expression patterns
-(Figure 4; Supplementary Tables S3,S4). While many of the patterns have
+(Fig. \ref{fig:joint-48h}; Supplementary Tables S3,S4). While many of the patterns have
 similar specificities to those observed at 18 hours post-infection,
 there is only little overlap across timepoints with respect to the genes
 comprising the patterns. For example, pattern ``Yers-Salm'' at 48 hours
@@ -368,13 +371,13 @@ one of these also belongs to the pattern ``Virulent'' at 18 hours
 post-infection.
 
 \begin{figure}
-\label{fig:joint-48h}
 \includegraphics[width=5in]{img/ch02/fig-04-joint-48h.pdf}
 \caption{Joint Bayesian analysis - 48 hours post-infection. (A) Joint
   analysis of gene expression data from 48 hours post-infection with
   Cormotif identified five expression patterns: ``Yers-Salm'',
   ``Virulent'', ``MTB'', ``non-DE'', and ``All''. (B) Example genes
   from the different expression patterns.}
+\label{fig:joint-48h}
 \end{figure}
 
 \subsubsection{Infection-induced response eQTLs are shared across
@@ -402,7 +405,7 @@ not specifically the response to MTB H37Rv.
 To provide further broad support for the interpretation that the
 response eQTL genes are important for the innate response to bacterial
 infection in general, we considered the log\textsubscript{2} fold change
-in expression values following infection (Figure 1). For each gene, we
+in expression values following infection (Fig. \ref{fig:differential-expression}). For each gene, we
 calculated the mean log\textsubscript{2} fold change in expression level
 across the eight bacterial infections at the 18 hour timepoint. Next, we
 compared the absolute values of the log\textsubscript{2} fold change in
@@ -418,18 +421,18 @@ to a larger degree (significantly higher effect size; \emph{P}
 compared to the genes in the other two classes.
 
 \begin{figure}
-\label{fig:response-eqtl}
 \includegraphics[width=5in]{img/ch02/fig-05-response-eqtl.pdf}
 \caption{Response eQTLs at 18 hours post-infection. (A) We counted the
   number of response eQTLs from Barreiro et al. \citep{Barreiro2012}
   (179 out of the 198 were also expressed in our study) in each of the
-  five gene expression patterns at 18 hours post-infection (Figure 3).
+  five gene expression patterns at 18 hours post-infection (Fig. \ref{fig:joint-18h}).
   (B) We compared the mean log\textsubscript{2} fold change in
   expression across the 8 bacterial infections at the 18 hour
   timepoint for three classes of genes: response eQTL genes (red),
   general eQTL genes (purple), and non-eQTL genes (yellow) (see
   Methods for details).
 }
+\label{fig:response-eqtl}
 \end{figure}
 
 \section{Discussion}\label{discussion}
@@ -508,7 +511,7 @@ vaccine strain, BCG \citep{Deffert2014a}. Humans who are administered the
 vaccine before being diagnosed with CGD also develop the disease
 \citep{Deffert2014}.
 
-At 48 hours post-infection (Figure 4), the mycobacteria-specific
+At 48 hours post-infection (Fig. \ref{fig:joint-48h}), the mycobacteria-specific
 response was enriched with genes annotated (based on GO) as having a
 role in ``response to vitamin D'' (Supplementary Table S5; Supplementary
 Figure S5). Individuals with low circulating levels of vitamin D are
@@ -522,17 +525,17 @@ pathway for generic bactericidal activity \citep{Hewison2011}. Consistent
 with its role in the innate immune response, both the enzyme that
 converts vitamin D to its active form (\emph{CYP27B1}) and its receptor
 (\emph{VDR}) are upregulated in response to any of the infections
-(pattern ``All''; Figure 4). Yet, the regulation of other genes involved
+(pattern ``All''; Fig. \ref{fig:joint-48h}). Yet, the regulation of other genes involved
 in the response to vitamin D was only affected by infection with MTB.
 \emph{PIM1}, a serine/threonine kinase that binds the VDR and enhances
 transcription of its target genes \citep{Maier2012}, is upregulated in
-response to the mycobacteria (pattern ``MTB'', Figure 4). Interestingly,
+response to the mycobacteria (pattern ``MTB'', Fig. \ref{fig:joint-48h}). Interestingly,
 the increased expression level of \emph{PIM1} in T-cells was
 successfully used in a six-gene classifier of patients with active
 versus latent TB infections \citep{Jacobsen2011}. Another gene, the
 chemokine \emph{CXCL10} (also known as interferon gamma-induced protein
 10 or IP-10), is also upregulated in response to mycobacterial infection
-(pattern ``MTB'', Figure 4). Discordant with the observed increase in
+(pattern ``MTB'', Fig. \ref{fig:joint-48h}). Discordant with the observed increase in
 expression of \emph{CYP27B1}, \emph{VDR}, and \emph{PIM1} in response to
 infection, treatment with vitamin D usually leads to the reduction of
 \emph{CXCL10} expression and secretion in multiple cell types
@@ -553,7 +556,7 @@ mycobacterial infections.
 Another gene of interest from the mycobacteria-specific expression
 pattern at 48 hours post-infection is chemokine (C-C motif) ligand 1
 (\emph{CCL1}), which stimulates migration of human monocytes
-\citep{Miller1992} (Figure 4B). Thuong et al. identified \emph{CCL1} as
+\citep{Miller1992} (Fig. \ref{fig:joint-48h}B). Thuong et al. identified \emph{CCL1} as
 being induced to a greater extent in MTB-infected macrophages (4 hours
 post-infection) isolated from individuals with pulmonary TB compared to
 macrophages from individuals with latent TB infections
@@ -653,9 +656,9 @@ containing the ESX-1 secretion system, which is critical for MTB
 virulence \citep{Behr1999, Pym2002, Hsu2003, Simeone2009}. In our
 study we also observed differences between the response to virulent and
 attenuated mycobacteria. Specifically, there are 1,165 genes in the
-expression pattern ``Virulent'' at 18 hours post-infection (Figure 3)
+expression pattern ``Virulent'' at 18 hours post-infection (Fig. \ref{fig:joint-18h})
 and 14 genes that comprise of the ``Virulent'' pattern at 48 hours
-post-infection (Figure 4). Importantly, these genes are also
+post-infection (Fig. \ref{fig:joint-48h}). Importantly, these genes are also
 differentially expressed in response to the other virulent infections in
 our study, and thus they are not specifically due to the manipulations
 of the host cell by virulent mycobacteria.
@@ -751,7 +754,7 @@ macrophage colony-stimulating factor (M-CSF) \citep{Tailleux2003}.
 
 \subsubsection{Bacterial infection}\label{bacterial-infection}
 
-For each bacterial infection (Table 1), we treated the macrophages with
+For each bacterial infection (Table \ref{tab:bacteria}), we treated the macrophages with
 a multiplicity of infection (MOI) of 2:1. After one hour, we washed the
 macrophages five times with phosphate-buffered saline (PBS) and treated
 them with gentamycin (50 $mu$g/$mu$L) to kill all extracellular bacteria.
