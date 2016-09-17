@@ -1,5 +1,11 @@
+% Packages used by pandoc when converting Markdown to LaTeX
 \usepackage{fixltx2e}
 \usepackage{longtable}
 \usepackage{booktabs}
+% Make cross-references hyperlinks (also format URLs with \url).
+% Specify breaklinks so that titles in table of contents linewrap.
 \usepackage[breaklinks]{hyperref}
+% Fix to use hyperref with UCETD template (from Jason Torres)
 \renewcommand{\etdChapterHeadFormat}[1]{\uppercase{#1}}
+% Ability to split long captions across pages
+\usepackage{ccaption}
