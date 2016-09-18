@@ -1,0 +1,62 @@
+\chapter{Conclusion}\label{conclusion}
+
+In Chapter \ref{ch:tb}...
+
+It is known that the innate immune response is important for fighting
+MTB infections. Alveolar macrophages are the primary target of MTB,
+and they initiate the formation of granulomas to sequester
+MTB. Furthermore, vaccines against TB have had limited efficacy. To
+identify human genes which are important for the response to MTB
+infection, we isolated macrophages from 6 healthy donors and infected
+them with MTB, avirulent mycobacteria, and virulent
+non-mycobacteria. To account for incomplete power that would lead to
+false positive MTB-specific findings, I jointly analyzed the gene
+expression response data using a Bayesian framework implemented in the
+R/Bioconductor software package, Cormotif. Using this method, I
+identifed hundreds of genes that respond specifically to infection
+with MTB and closely related mycobacterial species. These genes are
+candidates for containing genetic variants which affect TB
+susceptibility. This study was published last year
+\citep{Blischak2015}.
+
+In Chapter \ref{ch:tb-suscept}...
+
+To investigate how the innate immune cells of susceptible individuals
+function compared to those of resistant individuals, we collected
+primary dendritic cells from individuals that had recovered from TB
+(i.e.~susceptible) and individuals that tested positive for latent MTB
+infections but had not developed TB (i.e.~putatively resistant). The
+dendritic cells were infected with MTB, and we performed RNA-seq on
+the infected and non-infected cells. I have identified hundreds of
+genes which are differentially expressed between susceptible and
+resistant individuals. Furthermore, I built a classifier to
+differentiate between suceptible and resistant individuals based on
+their gene expression profiles.
+
+In Chapter \ref{ch:singleCellSeq}...
+
+The previous studies were performed on bulk populations of cells,
+which lacked the resolution to observe the cell-to-cell heterogeneity
+in the immune response. Single cell RNA-sequencing (scRNA-seq)
+technology can capture the gene expression profile of individual
+cells. However, the technology is still relatively new, and best
+practices for study design have yet to be established. In this study,
+we collected 3 replicates of induced pluripotent stem cells (iPSCs)
+from 3 Yoruba individuals from the HapMap Project. We determined the
+minimum number of cells and sequencing depth required to resemble the
+bulk population and detect most expressed genes, identified the
+technical effects introduced by the batch processing, and developed a
+pre-processing pipeline to reduce the technical variation. Lastly, we
+provide a proof of concept for an efficient design for future single
+cell studies. By identifying the origin of a cell using the
+polymorphisms present in the RNA-seq reads, we could include cells
+from multiple individuals in each processing batch. This allows for
+accounting of technical batch effects while minimizing the total
+amount of replication. This study was recently posted as a pre-print
+on bioRxiv and submitted for review \citep{Tung2016}.
+
+I have identified hundreds of genes involved in fighting MTB
+infections.  More broadly, I have demonstrated that a joint Bayesian
+model is an effective tool for analyzing the large-scale multivariate
+data produced by genomic studies. Lastly, I have determined an
+effective study design for future single cell studies.

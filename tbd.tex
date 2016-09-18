@@ -9,10 +9,10 @@
 \input{tex/preamble-custom}
 
 %% Use these commands to set biographic information for the title page:
-\title{Thesis Title}
-\author{Thesis Author}
-\department{Thesis Department}
-\division{Thesis Division}
+\title{Transcriptomic approaches to investigate tuberculosis susceptibility}
+\author{John D. Blischak}
+\department{Committee on Genetics}
+\division{Biological Sciences Division}
 \degree{Type of Degree}
 \date{Graduation Date}
 
@@ -30,7 +30,7 @@
 % These lines can be commented out to disable the copyright/dedication/epigraph pages
 \makecopyright
 \makededication
-\makeepigraph
+%\makeepigraph
 
 
 %% Make the various tables of contents
@@ -41,8 +41,8 @@
 \acknowledgments
 % Enter Acknowledgements here
 
-\abstract
 % Enter Abstract here
+\include{tex/abstract}
 
 \mainmatter
 % Main body of text follows
@@ -53,12 +53,12 @@
 % Chapter 02
 \include{tex/ch02}
 
-\chapter{tb-suscept}
+\chapter{tb-suscept}\label{ch:tb-suscept}
 
 % Chapter 04
 \include{tex/ch04}
 
-\chapter{Conclusion}
+\include{tex/ch05}
 
 % Format a LaTeX bibliography
 \makebibliography

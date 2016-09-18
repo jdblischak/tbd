@@ -1,5 +1,6 @@
 NAME := tbd
-TEX := tex/preamble-custom.tex tex/ch02.tex tex/ch04.tex
+TEX := tex/preamble-custom.tex tex/abstract.tex tex/ch02.tex tex/ch04.tex
+BIB := refs.bib
 
 all: pdf
 
@@ -11,16 +12,17 @@ docx: $(NAME).docx
 
 ## Build paper
 
-$(NAME).pdf: $(NAME).tex $(TEX)
+$(NAME).pdf: $(NAME).tex $(TEX) $(BIB)
+	python code/format-bibtex.py $(BIB)
 	pdflatex $(NAME)
 	bibtex $(NAME)
 	pdflatex $(NAME)
 	pdflatex $(NAME)
 
-$(NAME).html: $(NAME).tex $(TEX)
+$(NAME).html: $(NAME).tex $(TEX) $(BIB)
 	pandoc $< --to html --output $@ --standalone --section-divs --toc --mathjax
 
-$(NAME).docx: $(NAME).tex $(TEX)
+$(NAME).docx: $(NAME).tex $(TEX) $(BIB)
 	pandoc $< --to docx --output $@
 
 ## Miscellaneous
@@ -32,4 +34,3 @@ clean:
 
 clean-deep: clean
 	rm -f *.pdf *.docx *.html tex/*.aux
-
