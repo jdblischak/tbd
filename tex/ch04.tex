@@ -117,7 +117,7 @@ We added ERCC spike-in controls to each sample, and used 5-bp random
 sequence UMIs to allow for the direct quantification of mRNA molecule
 numbers. For each of the YRI lines, we performed three independent C1
 collections; each replicate was accompanied by processing of a matching
-bulk sample using the same reagents. This study design (Fig. 1A and
+bulk sample using the same reagents. This study design (Fig. \ref{fig:study-design}A and
 Supplementary Table S1) allows us to estimate error and variability
 associated with the technical processing of the samples, independently
 from the biological variation across single cells of different
@@ -127,12 +127,13 @@ recapitulate the RNA-seq results from population bulk samples.
 \begin{figure}[htbp]
 \centering
 \includegraphics[trim=0 .5in 0 0,clip,width=5in]{img/ch04/Figure01.jpeg}
-\caption{\textbf{Figure 1. Experimental design and quality control of
+\caption[Experimental design and quality control of
+scRNA-seq.]{\textbf{Experimental design and quality control of
 scRNA-seq.} (A) Three C1 96 well-integrated fluidic circuit (IFC)
 replicates were collected from each of the three Yoruba individuals. A
 bulk sample was included in each batch. (B) Summary of the cutoffs used
 to remove data from low quality cells that might be ruptured or dead
-(See Supplementary Fig. S1 for details). (C-E) To assess the quality of
+(See Supplementary Fig. \ref{fig:s1} for details). (C-E) To assess the quality of
 the scRNA-seq data, the capture efficiency of cells and the faithfulness
 of mRNA fraction amplification were determined based on the proportion
 of unmapped reads, the number of detected genes, the numbers of total
@@ -149,6 +150,7 @@ number of molecules added to each sample, only including the 48 ERCC
 spike-in controls remaining after removal of genes with low abundance.
 Each red dot represents the mean +/- SEM of an ERCC spike-in across the
 564 high quality single cell samples.}
+\label{fig:study-design}
 \end{figure}
 
 In what follows, we describe data as originating from different samples
@@ -166,12 +168,12 @@ quality control analyses. As a first step, we estimated the proportion
 of ERCC spike-in reads from each sample. We found that, across samples,
 sequencing reads from practically all samples of the second replicate of
 individual NA19098 included unusually high ERCC content compared to all
-other samples and replicates (Supplementary Fig. S1). We concluded that
+other samples and replicates (Supplementary Fig. \ref{fig:s1}). We concluded that
 a pipetting error led to excess ERCC content in this replicate and we
 excluded the data from all samples of this replicate in subsequent
 analyses. With the exception of the excluded samples, data from all
 other replicates seem to have similar global properties (using general
-metrics; Fig. 1C-E and Supplementary Fig. S1).
+metrics; Fig. \ref{fig:study-design}C-E and Supplementary Fig. \ref{fig:s1}).
 
 We next examined the assumption that data from each sample correspond to
 data from a single cell. After the cell sorting was complete, but before
@@ -183,17 +185,17 @@ microfluidic plate is an important quality control step, but it is not
 infallible. We therefore filtered data from the remaining samples based
 on the number of total mapped reads, the percentage of unmapped reads,
 the percentage of ERCC spike-in reads, and the number of genes detected
-(Fig. 1B-E). We chose data-driven inclusion cutoffs for each metric,
+(Fig. \ref{fig:study-design}B-E). We chose data-driven inclusion cutoffs for each metric,
 based on the 95th percentile of the respective distributions for the 21
 libraries that were amplified from samples that did not include a cell
-based on visual inspection (Supplementary Fig. S1). Using this approach,
+based on visual inspection (Supplementary Fig. \ref{fig:s1}). Using this approach,
 we identified and removed data from 15 additional samples that were
 classified as originating from a single cell based on visual inspection,
 but whose data were more consistent with a multiple-cell origin based on
 the number of total molecules, the concentration of cDNA amplicons, and
 the read-to-molecule conversion efficiency (defined as the number of
 total molecules divided by the number of total reads; Supplementary Fig.
-S2). At the conclusion of these quality control analyses and exclusion
+\ref{fig:s2}). At the conclusion of these quality control analyses and exclusion
 steps, we retained data from 564 high quality samples, which correspond,
 with reasonable confidence, to 564 single cells, across eight replicates
 from three individuals (Supplementary Table S2).
@@ -203,7 +205,7 @@ sequencing read and molecule count data. We considered data from the 564
 high quality samples and compared gene specific counts of sequencing
 read and molecules. We found that while gene-specific reads and molecule
 counts are exceptionally highly correlated when we considered the ERCC
-spike-in data (r = 0.99; Fig. 1F), these counts are somewhat less
+spike-in data (r = 0.99; Fig. \ref{fig:study-design}F), these counts are somewhat less
 correlated when data from the endogenous genes are considered (r =
 0.92). Moreover, the gene-specific read and molecule counts correlation
 is noticeably lower for genes that are expressed at lower levels (Fig.
@@ -214,7 +216,8 @@ cell gene expression studies.
 \begin{figure}[htbp]
 \centering
 \includegraphics[trim=0 .3in 0 0,clip,width=5in]{img/ch04/Figure02.jpeg}
-\caption{\textbf{Figure 2. The effect of sequencing depth and cell
+\caption[The effect of sequencing depth and cell
+number on single cell UMI estimates.]{\textbf{The effect of sequencing depth and cell
 number on single cell UMI estimates.} Sequencing reads from the entire
 data set were subsampled to the indicated sequencing depth and cell
 number, and subsequently converted to molecules using the UMIs. Each
@@ -228,6 +231,7 @@ detected with at least one molecule in at least one of the single cells.
 (C) Pearson correlation of cell-to-cell gene expression variance
 estimates from subsets of single cells compared to the full single cell
 data set.}
+\label{fig:subsample}
 \end{figure}
 
 We proceeded by investigating the effect of sequencing depth and the
@@ -245,12 +249,12 @@ sequencing depth of 1.5 million reads (which corresponds to
 sufficient for effectively quantifying even the lower 50\% of expressed
 genes. At this level of subsampling for individual NA19239, we were able
 to detect a mean of 6068 genes out of 6097 genes expressed in the bulk
-samples (the bottom 50\%; Fig. 2B); the estimated single cell expression
+samples (the bottom 50\%; Fig. \ref{fig:subsample}B); the estimated single cell expression
 levels of these genes (summed across all cells) correlated with the bulk
 sample gene expression levels with a mean Pearson coefficient of 0.8
-(Fig. 2A), and the estimated cell-to-cell variation in gene expression
+(Fig. \ref{fig:subsample}A), and the estimated cell-to-cell variation in gene expression
 levels was correlated with the variation estimated from the full data
-set with a mean Pearson coefficient of 0.95 (Fig. 2C).
+set with a mean Pearson coefficient of 0.95 (Fig. \ref{fig:subsample}C).
 
 \subsection{Batch effects associated with UMI-based single cell
 data}\label{batch-effects-associated-with-umi-based-single-cell-data}
@@ -262,7 +266,7 @@ effects associated with the independent capturing and sequencing of each
 C1 replicate. We designed our study with multiple technical replicates
 per biological condition (individual) in order to directly and
 explicitly estimate the batch effect associated with independent C1
-preparations (Fig. 1A).
+preparations (Fig. \ref{fig:study-design}A).
 
 As a first step in exploring batch effects, we examined the gene
 expression profiles across all single cells that passed our quality
@@ -270,10 +274,10 @@ checks (as reported above) using raw molecule counts (without
 standardization). Using principal component analysis (PCA) for
 visualization, we observed -- as expected - that the major source of
 variation in data from single cells is the individual origin of the
-sample (Fig. 4A). Specifically, we found that the proportion of variance
+sample (Fig. \ref{fig:normalization}A). Specifically, we found that the proportion of variance
 due to individual was larger (median: 8\%) than variance due to C1 batch
 (median: 4\%; Kruskal-Wallis test; \emph{P} \textless{} 0.001,
-Supplementary Fig. S3; see Methods for details of the variance component
+Supplementary Fig. \ref{fig:s3}; see Methods for details of the variance component
 analysis). Yet, variation due to C1 batch is also substantial - data
 from single cell samples within a batch are more correlated than that
 from single cells from the same individual but different batches
@@ -292,12 +296,12 @@ the individual assignment. Indeed, we observed that total ERCC
 molecule-counts are significantly different between C1 batches (F-test;
 \emph{P} \textless{} 0.001). However, total ERCC molecule-counts are
 also quite different across individuals, when variation between batches
-is taken into account (LRT; \emph{P} = 0.08; Fig. 3A). This observation
+is taken into account (LRT; \emph{P} = 0.08; Fig. \ref{fig:batch}A). This observation
 suggests that both technical and biological variation affect total ERCC
 molecule-counts. In addition, while we observed a positive relationship
 between total ERCC molecule-counts and total endogenous molecule-counts
 per sample, this correlation pattern differed across C1 batches and
-across individuals (F-test; \emph{P} \textless{} 0.001; Fig. 3B).
+across individuals (F-test; \emph{P} \textless{} 0.001; Fig. \ref{fig:batch}B).
 
 To more carefully examine the technical and biological variation of ERCC
 spike-in controls, we assessed the ERCC per-gene expression profile. We
@@ -306,7 +310,7 @@ batch were more correlated than data from samples across batches
 (Kruskal-Wallis test; Chi-squared \emph{P} \textless{} 0.001). However,
 the proportion of variance explained by the individual was significantly
 larger than the variance due to C1 batch (median: 9\% vs.~5\%,
-Chi-squared test; \emph{P} \textless{} 0.001, Supplementary Fig. S3),
+Chi-squared test; \emph{P} \textless{} 0.001, Supplementary Fig. \ref{fig:s3}),
 lending further support to the notion that biological variation affects
 the ERCC spike in data. Based on these analyses, we concluded that ERCC
 spike-in controls cannot be used to effectively account for the batch
@@ -315,7 +319,8 @@ effect associated with independent C1 preparations.
 \begin{figure}[htbp]
 \centering
 \includegraphics[trim=0 .5in 0 0,clip,width=5in]{img/ch04/Figure03.jpeg}
-\caption{\textbf{Figure 3. Batch effect of scRNA-seq data using the C1
+\caption[Batch effect of scRNA-seq data using the C1
+platform.]{\textbf{Batch effect of scRNA-seq data using the C1
 platform.} (A) Violin plots of the number of total ERCC spike-in
 molecule-counts in single cell samples per C1 replicate. (B) Scatterplot
 of the total ERCC molecule-counts and total gene molecule-counts. The
@@ -330,6 +335,7 @@ genes (\emph{P} \textless{} 0.001) and ERCC spike-ins (\emph{P}
 \textless{} 0.05). The differences across C1 replicates per individual
 of endogenous genes and ERCC spike-ins were also evaluated (both
 \emph{P} \textless{} 0.01).}
+\label{fig:batch}
 \end{figure}
 
 We explored potential reasons for the observed batch effects, and in
@@ -339,15 +345,15 @@ i.e.~the rates at which sequencing reads are converted to molecule
 counts based on the UMI sequences. We defined read-to-molecule
 conversion efficiency as the total molecule-counts divided by the total
 reads-counts in each sample, considering separately the reads/molecules
-that correspond to endogenous genes or ERCC spike-ins (Fig. 3C and 3D).
+that correspond to endogenous genes or ERCC spike-ins (Fig. \ref{fig:batch}C and \ref{fig:batch}D).
 We observed a significant batch effect in the read-to-molecule
 conversion efficiency of both ERCC (F-test; \emph{P} \textless{} 0.05)
 and endogenous genes (F-test; \emph{P} \textless{} 0.001) across C1
 replicates from the same individual. Moreover, the difference in
 read-to-molecule conversion efficiency across the three individuals was
 significant not only for endogenous genes (LRT; \emph{P} \textless{}
-0.01, Fig. 3C) but also in the ERCC spike-ins (LRT; \emph{P} \textless{}
-0.01, Fig. 3D). We reason that the difference in read to molecule
+0.01, Fig. \ref{fig:batch}C) but also in the ERCC spike-ins (LRT; \emph{P} \textless{}
+0.01, Fig. \ref{fig:batch}D). We reason that the difference in read to molecule
 conversion efficiency across C1 preparations may contribute to the
 observed batch effect in this platform.
 
@@ -370,7 +376,8 @@ step resulted in the exclusion of data from 6 mitochondrial genes.
 \begin{figure}[htbp]
 \centering
 \includegraphics[trim=0 .5in 0 0,clip,width=5in]{img/ch04/Figure04.jpeg}
-\caption{\textbf{Figure 4. Normalization and removal of technical
+\caption[Normalization and removal of technical
+variability.]{\textbf{Normalization and removal of technical
 variability.} Principal component (PC) 1 versus PC2 of the (A) raw
 molecule counts, (B) log\textsubscript{2} counts per million (cpm), (C)
 Poisson transformed expression levels (accounting for technical
@@ -378,18 +385,19 @@ variability modeled by the ERCC spike-ins), and (D) batch-corrected
 expression levels. The colors represent the three individuals (NA19098
 in red, NA19101 in green, and NA19239 in blue). Data from different C1
 replicates is plotted in different shapes.}
+\label{fig:normalization}
 \end{figure}
 
 We next incorporated a standardization step by computing log transformed
 counts-per-million (cpm) to remove the effect of different sequencing
 depths, as is the common practice for the analysis of bulk RNA-seq data
-(Fig. 4A and 4B). We used a Poisson generalized linear model to
+(Fig. \ref{fig:normalization}A and \ref{fig:normalization}B). We used a Poisson generalized linear model to
 normalize the endogenous molecule log\textsubscript{2} cpm values by the
 observed molecule counts of ERCC spike-ins across samples. While we do
 not expect this step to account for the batch effect (as discussed
 above), we reasoned that the spike-ins allow us to account for a subset
 of technical differences between samples, for example, those that arise
-from differences in RNA concentration (Fig. 4C).
+from differences in RNA concentration (Fig. \ref{fig:normalization}C).
 
 Finally, to account for the technical batch effect, we modeled
 between-sample correlations in gene expression within C1 replicates (see
@@ -402,7 +410,7 @@ for each gene, which includes a fixed effect for individual and a random
 effect for batch. The batch effect is specific to each C1 replicate, and
 is independent of biological variation across individuals. We use this
 approach to estimate and remove the batch effect associated with
-different C1 preparations (Fig. 4D).
+different C1 preparations (Fig. \ref{fig:normalization}D).
 
 Once we removed the unwanted technical variability, we focused on
 analyzing biological variation in gene expression between single cells.
@@ -413,7 +421,7 @@ regulatory noise \citep{Raser2005}. In this context, regulatory noise is
 generally defined as the coefficient of variation (CV) of the gene
 expression levels of single cells \citep{Fehrmann2013}. In the following,
 we used the standardized, normalized, batch-corrected molecule count
-gene expression data to estimate regulatory noise (Fig. 4D). To account
+gene expression data to estimate regulatory noise (Fig. \ref{fig:normalization}D). To account
 for heteroscedasticity from Poisson sampling, we adjusted the CV values
 by the average gene-specific expression level across cells of the same
 individual. The adjusted CV is robust both to differences in gene
@@ -432,44 +440,44 @@ individual differences (LRT; \emph{P} \textless{}
 individuals in more than 10\% (1,214 of 13,058) of expressed endogenous
 genes. As expected, the expression levels, and the estimated variation
 in expression levels across cells, are both associated with
-gene-specific dropout rates (Supplementary Fig. S4). However,
+gene-specific dropout rates (Supplementary Fig. \ref{fig:s4}). However,
 importantly, adjusted CVs are not associated with dropout rates
-(Spearman's correlation = 0.04; Supplementary Fig. S4), indicating that
+(Spearman's correlation = 0.04; Supplementary Fig. \ref{fig:s4}), indicating that
 adjusted CV measurements are not confounded by the dynamic range of
 single-cell gene expression levels.
 
 We thus estimated mean expression levels and regulatory noise (using
-adjusted CV) for each gene, by either including (Fig. 5A) or excluding
-(Fig. 5B) samples in which the gene was not detected/expressed. We first
+adjusted CV) for each gene, by either including (Fig. \ref{fig:variation}A) or excluding
+(Fig. \ref{fig:variation}B) samples in which the gene was not detected/expressed. We first
 focused on general trends in the data. We ranked genes in each
 individual by their mean expression level as well as by their estimated
 level of variation across single cells. When we considered samples in
 which a gene was expressed, we found that 887 of the 1,000 most highly
 expressed genes in each individual are common to all three individuals
-(Fig. 5C). In contrast, only 103 of the 1,000 most highly variable
+(Fig. \ref{fig:variation}C). In contrast, only 103 of the 1,000 most highly variable
 (noisy) genes in each individual were common to all three individuals
-(Fig. 5D). We found similar results when we considered data from all
+(Fig. \ref{fig:variation}D). We found similar results when we considered data from all
 single cells, regardless of whether the gene was detected as expressed
-(Fig. 5E and 5F).
+(Fig. \ref{fig:variation}E and \ref{fig:variation}F).
 
 Next, we identified genes whose estimated regulatory noise (based on the
 adjusted CV) is significantly different between individuals. For the
 purpose of this analysis, we only included data from cells in which the
 gene was detected as expressed. Based on permutations (Supplementary
-Fig. S5), we classified the estimates of regulatory noise of 560 genes
+Fig. \ref{fig:s5}), we classified the estimates of regulatory noise of 560 genes
 as significantly different across individuals (empirical \emph{P}
-\textless{} .0001, Supplementary Fig. S6 for examples; Supplementary
+\textless{} .0001, Supplementary Fig. \ref{fig:s6} for examples; Supplementary
 Table S3 for gene list). These 560 genes are enriched for genes involved
 in protein translation, protein disassembly, and various biosynthetic
 processes (Supplementary Table S4). Interestingly, among the genes whose
 regulatory noise estimates differ between individuals, we found two
 pluripotency genes, \emph{KLF4} and \emph{DPPA2} (Supplementary Fig.
-S7).
+\ref{fig:s7}).
 
 \begin{figure}[htbp]
 \centering
 \includegraphics[trim=0 .5in 0 0,clip,width=5in]{img/ch04/Figure05.jpeg}
-\caption{\textbf{Figure 5. Cell-to-cell variation in gene expression.}
+\caption[Cell-to-cell variation in gene expression.]{\textbf{Cell-to-cell variation in gene expression.}
 Adjusted CV plotted against average molecule counts across all cells in
 (A) and across only the cells in which the gene is expressed (B),
 including data from all three individuals. Each dot represents a gene,
@@ -481,6 +489,7 @@ based on mean expression level in (C) and based on adjusted CV values in
 F) Similarly, Venn diagrams showing the overlaps of top 1000 genes
 across individuals based on mean expression level in (E) and based on
 adjusted CV values in (F), across all cells.}
+\label{fig:variation}
 \end{figure}
 
 \section{Discussion}\label{discussion}
@@ -499,7 +508,7 @@ differences in gene expression levels. We believe that our observations
 indicate that future studies should avoid confounding C1 batch and
 individual source of single cell samples. Instead, we recommend a
 balanced study design consisting of multiple individuals within a C1
-plate and multiple C1 replicates (for example, Supplementary Fig. S8).
+plate and multiple C1 replicates (for example, Supplementary Fig. \ref{fig:s8}).
 The origin of each cell can then be identified using the RNA sequencing
 data. Indeed, using a method originally developed for detecting sample
 swaps in DNA sequencing experiments \citep{Jun2012}, we were able to
@@ -507,7 +516,7 @@ correctly identify the correct YRI individual of origin for all the
 single cells from the current experiment by comparing the polymorphisms
 identified using the RNA-seq reads to the known genotypes for all 120
 YRI individuals of the International HapMap Project
-\citep{HapMapConsortium2005} (Supplementary Fig. S8). The
+\citep{HapMapConsortium2005} (Supplementary Fig. \ref{fig:s8}). The
 mixed-individual-plate is an attractive study design because it allows
 one to account for the batch effect without the requirement to
 explicitly spend additional resources on purely technical replication
@@ -542,13 +551,13 @@ had a higher percentage of reads mapping to the ERCC controls, as
 expected. However, there was no clear difference between low and high
 quality samples in the percentage of ERCC reads or molecules, and thus
 any arbitrarily chosen cutoff would be associated with considerable
-error (Fig. 1E). With respect to inferring the absolute total number of
+error (Fig. \ref{fig:study-design}E). With respect to inferring the absolute total number of
 molecules per cell, we observed that the biological covariate of
 interest (difference between the three YRI individuals), rather than
 batch, explained a large proportion of the variance in the ERCC counts
-(Supplementary Fig. S3), and furthermore that the ERCC controls were
+(Supplementary Fig. \ref{fig:s3}), and furthermore that the ERCC controls were
 also affected by the individual-specific effect on the read-to-molecule
-conversion rate (Fig. 3D). Thus ERCC-based corrected estimates of total
+conversion rate (Fig. \ref{fig:batch}D). Thus ERCC-based corrected estimates of total
 number of molecules per cell, across technical or biological replicates,
 are expected to be biased. Because the batch effects associated with the
 ERCC controls are driven by the biological covariate of interest, they
@@ -723,7 +732,7 @@ We performed multiple quality control analyses to detect and remove data
 from low quality cells. In an initial analysis investigating the
 percentage of reads mapping to the ERCC spike-in controls, we observed
 that replicate 2 of individual NA19098 was a clear outlier
-(Supplementary Fig. S1). It appeared that too much ERCC spike-in mix was
+(Supplementary Fig. \ref{fig:s1}). It appeared that too much ERCC spike-in mix was
 added to this batch, which violated the assumption that the same amount
 of ERCC molecules was added to each cell. Thus, we removed this batch
 from all of our analyses.
@@ -758,7 +767,7 @@ misidentified single-cell wells using linear discriminant analysis
 one-cell, and two-cell using the discriminant functions of 1) sample
 concentration and the number of gene molecules, and 2) endogenous and
 ERCC gene read to molecule conversion efficiency (Supplementary Fig.
-S2). After filtering, we maintained 564 high quality single cells
+\ref{fig:s2}). After filtering, we maintained 564 high quality single cells
 (NA19098: 142, NA19101: 201, NA19239: 221).
 
 The quality control analyses were performed using all protein-coding
@@ -767,7 +776,7 @@ the high quality single cells, we further removed genes with low
 expression levels for downstream analyses. We removed all genes with a
 mean log\textsubscript{2} cpm less than 2, which did not affect the
 relative differences in the proportion of genes detected across batches
-(Supplementary Fig. S9). We also removed genes with molecule counts
+(Supplementary Fig. \ref{fig:s9}). We also removed genes with molecule counts
 larger than 1,024 for the correction of collision probability. In the
 end we kept 13,058 endogenous genes and 48 ERCC spike-in genes.
 
@@ -782,7 +791,7 @@ sample. Since the relative concentrations of the ERCC genes were
 provided by the manufacturer, we were able to calculate the molecule
 number of each ERCC gene added to each sample. We observed that the
 levels of ERCC spike-ins strongly correlated with the input quantities
-(r = 0.9914, Fig. 1G). The capture efficiency, defined as the fraction
+(r = 0.9914, Fig. \ref{fig:study-design}G). The capture efficiency, defined as the fraction
 of total input molecules being successfully detected in each high
 quality cell, had an average of 6.1\%.
 
@@ -813,7 +822,7 @@ calculated the following three statistics:
   estimates using the full single cell data set.
 \end{enumerate}
 
-Each data point in Fig. 2 represents the mean +/- the standard error of
+Each data point in Fig. \ref{fig:subsample} represents the mean +/- the standard error of
 the mean (SEM) of 10 random subsamples of cells. We split the genes by
 expression level into two groups (6,097 genes each) to highlight that
 most of the improvement with increased sequencing depth and number of
@@ -874,7 +883,7 @@ levels}\label{estimating-variance-components-for-per-gene-expression-levels}
 To assess the relative contributions of individual and technical
 variation, we analyzed per-gene expression profiles and computed
 variance component estimates for the effects of individual and C1 batch
-(Supplementary Fig. S3). The goal here was to quantify the proportion of
+(Supplementary Fig. \ref{fig:s3}). The goal here was to quantify the proportion of
 cell-to-cell variance due to individual (biological) effect and to C1
 batch (technical) at the per-gene level. Note that the goal here was
 different from that of the previous section, where we simply tested for
@@ -983,7 +992,7 @@ replicates, we found that the CV of molecule counts among endogenous
 genes and ERCC spike-in controls suggested similar expression
 variability patterns. Both endogenous and ERCC spike-in control CV
 patterns approximately followed an over-dispersed Poisson distribution
-(Supplementary Fig. S10), which is consistent with previous studies
+(Supplementary Fig. \ref{fig:s10}), which is consistent with previous studies
 \citep{Islam2014, Brennecke2013}. We computed a measure of gene
 expression noise that is independent of RNA abundance across individuals
 \citep{Kolodziejczyk2015, Newman2006}. First, squared coefficients of
@@ -1010,7 +1019,7 @@ follows:
   windows. The computation was performed with the rollapply function of
   the R zoo package \citep{Zeileis2005}. After this transformation step,
   CV no longer had a polynomial relationship with mean gene molecule
-  count (Supplementary Fig. S10).
+  count (Supplementary Fig. \ref{fig:s10}).
 \end{enumerate}
 
 \subsection{Identification of genes associated with inter-individual
@@ -1062,7 +1071,7 @@ only 311,848 SNPs which passed its default thresholds (greater than 1\%
 minor allele frequency and greater than 50\% call rate). Using the
 option --best to return the best matching individual, we obtained 100\%
 accuracy identifying the single cells of all three individuals
-(Supplementary Fig. S8).
+(Supplementary Fig. \ref{fig:s8}).
 
 \subsection{Data and code
 availability}\label{data-and-code-availability}
@@ -1106,7 +1115,8 @@ The authors declare no competing financial interests.
 \begin{figure}[htbp]
 \centering
 \includegraphics[trim=0 .5in 0 0,clip,width=5in]{img/ch04/Figure06.jpeg}
-\caption{\textbf{Supplementary Figure S1. Removal of low quality
+\caption[Removal of low quality
+samples.]{\textbf{Removal of low quality
 samples.} Violin plots of the total read-counts of ERCC spike-in
 controls in (A) and the total molecule-counts in (B) in single cell
 samples. The three colors represent the three individuals (NA19098 in
@@ -1115,12 +1125,14 @@ distributions of the total mapped reads in (C), the percentage of
 unmapped reads in (D), the percentage of ERCC reads in (E), and the
 number of detected genes in (F). The dash lines indicate the cutoffs
 based on the 95th percentile of the samples with no cells.}
+\label{fig:s1}
 \end{figure}
 
 \begin{figure}[htbp]
 \centering
 \includegraphics[trim=0 3.5in 0 0,clip,width=5in]{img/ch04/Figure07.jpeg}
-\caption{\textbf{Supplementary Figure S2. Removal of samples with
+\caption[Removal of samples with
+multiple cells.]{\textbf{Removal of samples with
 multiple cells.} Scatterplots of the three groups of samples (no cell in
 green, single-cell in orange, and two or more cells in purple) before
 (A) and after (B) the linear discriminant analysis (LDA) using sample
@@ -1131,24 +1143,28 @@ multi-cell samples using the read-to-molecule conversion efficiency
 endogenous genes and ERCC spike-in controls. Scatterplots of before and
 after the LDA in (C) and (D), respectively. The numbers indicate the
 number of cells observed in each cell capture site.}
+\label{fig:s2}
 \end{figure}
 
 \begin{figure}[htbp]
 \centering
 \includegraphics[trim=0 9in 0 0,clip,width=5in]{img/ch04/Figure08.jpeg}
-\caption{\textbf{Supplementary Figure S3. Sources of cell-to-cell
+\caption[Sources of cell-to-cell
+variance in per-gene expression profile.]{\textbf{Sources of cell-to-cell
 variance in per-gene expression profile.} Violin plots of the proportion
 of per-gene cell-to-cell variance that was due to individual sample of
 origin, different C1 replicates, and other single cell sample
 differences. These results were calculated from the molecule counts
 before normalization and batch correction. Endogenous genes are shown in
 (A) and the ERCC spike-in controls in (B).}
+\label{fig:s3}
 \end{figure}
 
 \begin{figure}[htbp]
 \centering
 \includegraphics[trim=0 10.5in 0 0,clip,width=5in]{img/ch04/Figure09.jpeg}
-\caption{\textbf{Supplementary Figure S4. The gene-specific dropout
+\caption[The gene-specific dropout
+rate.]{\textbf{The gene-specific dropout
 rate.} The gene-specific dropout rate (the proportion of cells in which
 the gene is undetected) and its relationship with log\textsubscript{10}
 mean expression in (A), with log\textsubscript{10} variance of
@@ -1156,12 +1172,14 @@ expression in (B), and with the CV in (C) of the cells in which the gene
 is expressed (cells in which at least one molecule of the given gene was
 detected). Each point represents a gene, and red lines indicate the
 predicted values using locally weighted scatterplot smoothing (LOESS).}
+\label{fig:s4}
 \end{figure}
 
 \begin{figure}[htbp]
 \centering
 \includegraphics[trim=0 3.5in 0 0,clip,width=5in]{img/ch04/Figure10.jpeg}
-\caption{\textbf{Supplementary Figure S5. Permutation-based
+\caption[Permutation-based
+\emph{P}-value.]{\textbf{Permutation-based
 \emph{P}-value.} (A) Histogram of empirical \emph{P}-values based on
 300,000 permutations. (B) -log\textsubscript{10} empirical
 \emph{P}-values are plotted against average gene expression levels. Blue
@@ -1173,12 +1191,14 @@ genes versus average gene expression levels. Green line indicates the
 fitted relationship (LOESS) between the MAD values and average
 log\textsubscript{2} gene expression levels of cells in which the gene
 was detected as expressed.}
+\label{fig:s5}
 \end{figure}
 
 \begin{figure}[htbp]
 \centering
 \includegraphics[trim=0 .5in 0 0,clip,width=5in]{img/ch04/Figure11.jpeg}
-\caption{\textbf{Supplementary Figure S6. Inter-individual differences
+\caption[Inter-individual differences
+in regulatory noise.]{\textbf{Inter-individual differences
 in regulatory noise.} These 5 example genes illustrate various patterns
 of cell-to-cell gene expression variance. For each gene, the left panel
 shows the distribution of the log\textsubscript{2} gene expression
@@ -1191,48 +1211,56 @@ gene-specific MAD (median of absolute deviation) value and
 \emph{P}-value. The three colors in the upper and lower panel represent
 the individuals (NA19098 in red, NA19101 in green, and NA19239 in
 blue).}
+\label{fig:s6}
 \end{figure}
 
 \begin{figure}[htbp]
 \centering
 \includegraphics[trim=0 .5in 0 0,clip,width=5in]{img/ch04/Figure12.jpeg}
-\caption{\textbf{Supplementary Figure S7. Cell-to-cell variation of
+\caption[Cell-to-cell variation of
+pluripotency genes.]{\textbf{Cell-to-cell variation of
 pluripotency genes.} Density plots of the distribution of
 log\textsubscript{2} gene expression of key pluripotency genes across
 all single cells by individual. The peaks with lower gene expression
 values (log2 around 4) represent the cells in which the gene is
 undetected. The three colors represent the three individuals (NA19098 is
 in red, NA19101 in green, and NA19239 in blue).}
+\label{fig:s7}
 \end{figure}
 
 \begin{figure}[htbp]
 \centering
 \includegraphics[trim=0 10in 0 0,clip,width=5in]{img/ch04/Figure13.jpeg}
-\caption{\textbf{Supplementary Figure S8. Proposed study design for
+\caption[Proposed study design for
+scRNA-seq using C1 platform.]{\textbf{Proposed study design for
 scRNA-seq using C1 platform.} (A) A balanced study design consisting of
 multiple individuals within a C1 plate and multiple C1 replicates to
 fully capture the batch effect across C1 plates and further retrieve the
 maximum amount of biological information. (B) The correct identity of
 each single cell sample was determined by examining the SNPs present in
 their RNA sequencing reads.}
+\label{fig:s8}
 \end{figure}
 
 \begin{figure}[htbp]
 \centering
 \includegraphics[trim=0 8.5in 0 0,clip,width=5in]{img/ch04/Figure14.jpeg}
-\caption{\textbf{Supplementary Figure S9. The proportion of genes
+\caption[The proportion of genes
+detected in single cell samples.]{\textbf{The proportion of genes
 detected in single cell samples.} Violin plots of the proportion of
 genes detected, computed by the total number of detected genes in each
 single cell divided by the total number of genes detected across all
 single cells, before in (A) and after in (B) the removal of genes with
 low expression. The three colors represent the three individuals
 (NA19098 is in red, NA19101 in green, and NA19239 in blue).}
+\label{fig:s9}
 \end{figure}
 
 \begin{figure}[htbp]
 \centering
 \includegraphics[trim=0 3in 0 0,clip,width=5in]{img/ch04/Figure15.jpeg}
-\caption{\textbf{Supplementary Figure S10. Coefficients of variation
+\caption[Coefficients of variation
+(CV) before and after adjusting for gene mean abundance.]{\textbf{Coefficients of variation
 (CV) before and after adjusting for gene mean abundance.} (A-C) CV
 plotted against average molecule counts across all cells for each
 individual \citep{Islam2014}. Grey points represent endogenous genes, and
@@ -1246,6 +1274,7 @@ distribution for which standard deviation is three times the ERCC
 spike-in controls. (D-F) Adjusted CV values of each gene including all
 cells are plotted against log\textsubscript{10} of the average molecule
 counts for each individual.}
+\label{fig:s10}
 \end{figure}
 
 \clearpage
