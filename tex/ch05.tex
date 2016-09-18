@@ -1,8 +1,17 @@
 \chapter{Conclusion}\label{conclusion}
 
-In Chapter \ref{ch:tb}, I described my work investigating the innate
-immune response to \emph{Mycobacterium tuberculosis} (MTB)
-\citep{Blischak2015}. Previous studies had identified the genes which
+In Chapter \ref{ch:tb}, I described my work investigating the innate immune
+response to \emph{Mycobacterium tuberculosis} (MTB) \citep{Blischak2015}. It is
+known that the innate immune response is important for fighting MTB
+infections. Alveolar macrophages are the primary target of MTB, and they
+initiate the formation of granulomas to sequester MTB. Furthermore, vaccines
+against TB have had limited efficacy. To identify human genes which are
+important for the response to MTB infection, we isolated macrophages from 6
+healthy donors, infected them with MTB and other bacteria, and measured
+genome-wide gene expression levels using RNA-seq at 4, 18, and 48 hours
+post-infection.
+
+Previous studies had identified the genes which
 are differentially expressed upon infection with MTB, and some have
 even compared the differences between the reponse to strains of MTB
 that vary in their virulence. The first novelty of our study was to
@@ -37,22 +46,87 @@ comparisons also decreases the ability to interpret the results. A
 3-way Venn diagram (and perhaps a 4- or 5-way) can be interpreted, but
 this approach breaks down with additional comparisons.
 
-It is known that the innate immune response is important for fighting
-MTB infections. Alveolar macrophages are the primary target of MTB,
-and they initiate the formation of granulomas to sequester
-MTB. Furthermore, vaccines against TB have had limited efficacy. To
-identify human genes which are important for the response to MTB
-infection, we isolated macrophages from 6 healthy donors and infected
-them with MTB, avirulent mycobacteria, and virulent
-non-mycobacteria. To account for incomplete power that would lead to
-false positive MTB-specific findings, I jointly analyzed the gene
-expression response data using a Bayesian framework implemented in the
-R/Bioconductor software package, Cormotif. Using this method, I
-identifed hundreds of genes that respond specifically to infection
-with MTB and closely related mycobacterial species. These genes are
-candidates for containing genetic variants which affect TB
-susceptibility. This study was published last year
-\citep{Blischak2015}.
+Another approach would be to directly compare the effect of infection between
+two different groups of bacteria, e.g. compare the mycobacteria versus the
+non-mycobacteria or virulent versus non-virulent bacteria. The advantage of this
+approach is that it explicitly models the comparison and returns a p-value,
+unlike the Venn diagram overlap approach. However, there are two main
+downsides. First, statistical significance can be driven by outliers. For
+example, most of the most significantly differentially expressed between
+mycobacteria and non-mycobacteria were actually genes which were simply
+differentially expressed in response to infection with \emph{S. typhimurium} and
+\emph{S. epidermidis}. Second, this limits the results to the \emph{a priori}
+ideas of the analyst and is not driven by the patterns in the actual data.
+
+On the other end of the spectrum, a very data-driven approach would be to use a
+clustering method such as hierarchical or k-means clustering. These multivariate
+methods are able to find the patterns of gene expression in the data, both
+expected and unexpected; however, since they are not accompanied by any formal
+hypothesis test, it is difficult to interpret which clusters of co-expressed
+genes are the most interesting to report.
+
+Since none of the standard genomics approaches were adequate for properly
+comparing 8 bacterial infections, I instead used a joint Bayesian model,
+implemented in the software package Cormotif, to analyze the data. Conceptually,
+Cormotif combines the clustering and pairwise testing approaches described
+above. Just like the pairwise testing approach, the input to Cormotif are the
+pairwise comparisons between each bacterial infection and the control
+condition. However, to account for incomplete power, Cormotif models the gene
+expression levels across all the pairwise comparisons to identify the main gene
+expression patterns, conceptually similar to a clustering analysis.
+
+The Cormotif results for my study were informative. Most of the genes were
+either differentially expressed or not after infection with any of the
+bacteria. The two most interesting patterns in regards to understanding the
+innate immune response to MTB were MTB and Virulent.  The MTB pattern included
+those genes which had a high posterior probability of being differentially
+expressed to any of the MTB or closely related species and a medium posterior
+probability of being differentially expressed to \emph{M. smegmatis}, the
+nonvirulent mycobacteria. The Virulent pattern included genes which had a high
+posterior probability of being differentially expressed in response to infection
+with any of the bacteria except heat-inactivated MTB or BCG.
+
+In terms of better understanding TB susceptibility, the main takeaway from this
+study was the identification of hundreds of genes which are differentially
+expressed in response specifically to infection with MTB and related species but
+not other virulent bacteria. These genes are candidates for containing genetic
+variants which affect TB susceptibility. Furthermore, these genes could be
+targets for future functional studies of how the innate immune system fights MTB
+and also could give context to future results from genetic and functional
+genomics studies of MTB infection. More generally, our results are informative
+to all future functional genomics studies. We were only able to confidently
+isolate the effects of MTB infection by including multiple other bacterial
+infections as comparison. Had we only infected the macrophages with MTB and
+heat-inactivated MTB, we would have made multiple misclassifications. We would
+have assigned differences between the two infections as specific to a live,
+virulent MTB; however, these gene expression changes were also induced by other
+live bacteria. Similarly, we would never have known that a subset of the genes
+which were differentially expressed in response to both MTB and heat-inactivated
+MTB were actually specific to mycobacteria in general. Not only was it important
+to include multiple bacterial infections, but it was also critical to properly
+analyze the results. Because the innate immune system is largely a general
+response to infection, we expected most of the induced gene expression changes
+to be similar across bacteria. Had we performed the straight-forward approach of
+overlapping lists of differentially expressed genes from comparing the
+individual infections to their controls, we would have had identified lots of
+spurious differences in the innate immune response caused by incomplete
+power. In contrast, by jointly modeling the data with Cormotif, we were able to
+identify the shared gene expression patterns in response to related bacteria. In
+support of the generality of this approach, the Cormotif approach was
+successfully applied to distinguish the effects of vitamin D and bacterial
+lipopolysaccharide on the innate immune response between individuals of
+African-American and European-American ancestry (note: I was a co-author of the
+study) \citep{Kariuki2016}.
+
+It should be noted that this method also has its caveats. First, its strength of
+sharing information across the pairwise comparisons can also be a negative
+because it will not identify genes with unique expression patterns. While useful
+for projects with the aim of broadly characterizing the genome-wide gene
+expression patterns for a given phenomenon, it is not well-suited for
+identifying outlier genes. Second, because the algorithm is not deterministic,
+Cormotif must be run multiple times to obtain the model with the highest log
+likelihood. Because of this added complexity, using Cormotif is more difficult
+to implement than more standard differential expression approaches.
 
 In Chapter \ref{ch:tb-suscept}...
 
