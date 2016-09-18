@@ -1,5 +1,5 @@
 NAME := tbd
-TEX := tex/preamble-custom.tex tex/abstract.tex tex/ch02.tex tex/ch04.tex
+TEX := tex/preamble-custom.tex tex/abstract.tex tex/ch02.tex tex/ch04.tex tex/ch05.tex
 BIB := refs.bib
 
 all: pdf

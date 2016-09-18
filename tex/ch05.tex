@@ -1,6 +1,41 @@
 \chapter{Conclusion}\label{conclusion}
 
-In Chapter \ref{ch:tb}...
+In Chapter \ref{ch:tb}, I described my work investigating the innate
+immune response to \emph{Mycobacterium tuberculosis} (MTB)
+\citep{Blischak2015}. Previous studies had identified the genes which
+are differentially expressed upon infection with MTB, and some have
+even compared the differences between the reponse to strains of MTB
+that vary in their virulence. The first novelty of our study was to
+include other bacteria in the infection experiments. Specifically, we
+included the following Mycobacteria: two strains of virulent MTB,
+avirulent (heat-inavtivated) MTB, the attentuated \emph{Mycobacterium
+  bovis} (used as a vaccine), and the avirulent \emph{Mycobacterium
+  smegmatis}. The non-mycobacteria species we included were
+\emph{Yersinia pseudotuberculosis}, \emph{Salmonella typhimurium}, and
+\emph{Staphylococcus epidermidis}. This allowed us to distinguish
+between the innate immune response to MTB versus other virulent
+bacteria, MTB versus avirulent mycobacteria, amd MTB versus deceased
+MTB.
+
+This novel study design comparing many bacterial infections to isolate
+the innate immune respone to MTB also posed analytical
+challenges. Standard differential expression analyses (or in general
+any large scale testing of thousands or more genomic features) are
+well-suited for experiments with a few conditions. For example, the
+most common approach is to perform pairwise differential expression
+tests and then overlap the lists of differentially expressed
+genes. These results are always biased by incomplete power. Because
+hypothesis testing uses an arbitrary p-value threshold to determine
+statistical significance, a gene with a p-value below this threshold
+for one comparison but a p-value slightly above this threshold for a
+separate comparison will be classified as specific to the first when
+in reality the gene is behaving similarly in both. As the number of
+pairwise comparisons increases, the problem of incomplete power is
+exacerbated, i.e. a gene is more likely to be statistically
+significant for some susbset of comparisons. This increase in
+comparisons also decreases the ability to interpret the results. A
+3-way Venn diagram (and perhaps a 4- or 5-way) can be interpreted, but
+this approach breaks down with additional comparisons.
 
 It is known that the innate immune response is important for fighting
 MTB infections. Alveolar macrophages are the primary target of MTB,
