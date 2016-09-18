@@ -1,3 +1,4 @@
+\chapter{Batch effects and the effective design of single-cell gene expression studies}
 
 Single-cell RNA sequencing (scRNA-seq) can be used to characterize
 variation in gene expression levels at high resolution. However, the
@@ -15,7 +16,7 @@ indicating that UMI counts are not an unbiased estimator of gene
 expression levels. Based on our results, we suggest a framework for
 effective scRNA-seq studies.
 
-\subsection{Introduction}\label{introduction}
+\section{Introduction}\label{introduction}
 
 Single-cell genomic technologies can be used to study the regulation of
 gene expression at unprecedented resolution \citep{Macaulay2014,
@@ -105,9 +106,9 @@ these data, we were able to elucidate technical variability both within
 and between C1 batches and thus provide a deep characterization of
 cell-to-cell variation in gene expression levels across individuals.
 
-\subsection{Results}\label{results}
+\section{Results}\label{results}
 
-\subsubsection{Study design and quality
+\subsection{Study design and quality
 control}\label{study-design-and-quality-control}
 
 We collected single cell RNA-seq (scRNA-seq) data from three YRI iPSC
@@ -125,7 +126,7 @@ recapitulate the RNA-seq results from population bulk samples.
 
 \begin{figure}[htbp]
 \centering
-\includegraphics{figure/Figure01.jpeg}
+\includegraphics[width=5in]{img/ch04/Figure01.jpeg}
 \caption{\textbf{Figure 1. Experimental design and quality control of
 scRNA-seq.} (A) Three C1 96 well-integrated fluidic circuit (IFC)
 replicates were collected from each of the three Yoruba individuals. A
@@ -212,7 +213,7 @@ cell gene expression studies.
 
 \begin{figure}[htbp]
 \centering
-\includegraphics{figure/Figure02.jpeg}
+\includegraphics[width=5in]{img/ch04/Figure02.jpeg}
 \caption{\textbf{Figure 2. The effect of sequencing depth and cell
 number on single cell UMI estimates.} Sequencing reads from the entire
 data set were subsampled to the indicated sequencing depth and cell
@@ -251,7 +252,7 @@ sample gene expression levels with a mean Pearson coefficient of 0.8
 levels was correlated with the variation estimated from the full data
 set with a mean Pearson coefficient of 0.95 (Fig. 2C).
 
-\subsubsection{Batch effects associated with UMI-based single cell
+\subsection{Batch effects associated with UMI-based single cell
 data}\label{batch-effects-associated-with-umi-based-single-cell-data}
 
 In the context of the C1 platform, typical study designs make use of a
@@ -313,7 +314,7 @@ effect associated with independent C1 preparations.
 
 \begin{figure}[htbp]
 \centering
-\includegraphics{figure/Figure03.jpeg}
+\includegraphics[width=5in]{img/ch04/Figure03.jpeg}
 \caption{\textbf{Figure 3. Batch effect of scRNA-seq data using the C1
 platform.} (A) Violin plots of the number of total ERCC spike-in
 molecule-counts in single cell samples per C1 replicate. (B) Scatterplot
@@ -350,7 +351,7 @@ significant not only for endogenous genes (LRT; \emph{P} \textless{}
 conversion efficiency across C1 preparations may contribute to the
 observed batch effect in this platform.
 
-\subsubsection{Measuring regulatory noise in single-cell gene expression
+\subsection{Measuring regulatory noise in single-cell gene expression
 data}\label{measuring-regulatory-noise-in-single-cell-gene-expression-data}
 
 Our analysis indicated that there is a considerable batch effect in the
@@ -368,7 +369,7 @@ step resulted in the exclusion of data from 6 mitochondrial genes.
 
 \begin{figure}[htbp]
 \centering
-\includegraphics{figure/Figure04.jpeg}
+\includegraphics[width=5in]{img/ch04/Figure04.jpeg}
 \caption{\textbf{Figure 4. Normalization and removal of technical
 variability.} Principal component (PC) 1 versus PC2 of the (A) raw
 molecule counts, (B) log\textsubscript{2} counts per million (cpm), (C)
@@ -467,7 +468,7 @@ S7).
 
 \begin{figure}[htbp]
 \centering
-\includegraphics{figure/Figure05.jpeg}
+\includegraphics[width=5in]{img/ch04/Figure05.jpeg}
 \caption{\textbf{Figure 5. Cell-to-cell variation in gene expression.}
 Adjusted CV plotted against average molecule counts across all cells in
 (A) and across only the cells in which the gene is expressed (B),
@@ -482,9 +483,9 @@ across individuals based on mean expression level in (E) and based on
 adjusted CV values in (F), across all cells.}
 \end{figure}
 
-\subsection{Discussion}\label{discussion}
+\section{Discussion}\label{discussion}
 
-\subsubsection{Study design and sample size for
+\subsection{Study design and sample size for
 scRNA-seq}\label{study-design-and-sample-size-for-scrna-seq}
 
 Our nested study design allowed us to explicitly estimate technical
@@ -527,7 +528,7 @@ recommend sequencing at least 75 high quality cells per biological
 condition with a minimum of 1.5 million raw reads per cell to obtain
 optimal performance of these three metrics.
 
-\subsubsection{The limitations of the ERCC spike-in
+\subsection{The limitations of the ERCC spike-in
 controls}\label{the-limitations-of-the-ercc-spike-in-controls}
 
 The ERCC spike-in controls have been used in previous scRNA-seq studies
@@ -570,7 +571,7 @@ Our recommendation is to include total RNA from a distant species, for
 example using RNA from \emph{Drosophila} \emph{melanogaster} in studies
 of single cells from humans.
 
-\subsubsection{Outlook}\label{outlook}
+\subsection{Outlook}\label{outlook}
 
 Single cell experiments are ideally suited to study gene regulatory
 noise and robustness \citep{Borel2015, Finak2015}. Yet, in order to
@@ -585,9 +586,9 @@ noise is properly accounted for, even in this small pilot study, our
 findings indicate pervasive inter-individual differences in gene
 regulatory noise, independently of the overall gene expression level.
 
-\subsection{Methods}\label{methods}
+\section{Methods}\label{methods}
 
-\subsubsection{Ethics statement}\label{ethics-statement}
+\subsection{Ethics statement}\label{ethics-statement}
 
 The YRI cell lines were purchased from CCR. The original samples were
 collected by the HapMap project between 2001-2005. All of the samples
@@ -599,7 +600,7 @@ extensive genotyping and sequencing, gene expression and proteomics
 studies, and all other types of genetic variation research, with the
 data publicly released.
 
-\subsubsection{Cell culture of iPSCs}\label{cell-culture-of-ipscs}
+\subsection{Cell culture of iPSCs}\label{cell-culture-of-ipscs}
 
 Undifferentiated feeder-free iPSCs reprogrammed from LCLs of Yoruba
 individuals in Ibadan, Nigeria (abbreviation: YRI)
@@ -615,7 +616,7 @@ then measured by the Automated Cell Counter (Bio-Rad) to generate
 resuspension densities of 2.5 X 105 cells/mL in E8 medium for C1 cell
 capture.
 
-\subsubsection{Single cell capture and library
+\subsection{Single cell capture and library
 preparation}\label{single-cell-capture-and-library-preparation}
 
 Single cell loading and capture were performed following the Fluidigm
@@ -661,7 +662,7 @@ different indices in order to get sufficient material for sequencing.
 All 18 bulk libraries were then pooled and labeled as the ``bulk'' for
 sequencing.
 
-\subsubsection{Illumina high-throughput
+\subsection{Illumina high-throughput
 sequencing}\label{illumina-high-throughput-sequencing}
 
 The scRNA-seq libraries generated from the 96 single cell samples of
@@ -680,7 +681,7 @@ corresponding to the cell-specific barcodes. We did not observe any
 obvious technical effects due to sequencing lane or flow cell that
 confounded the inter-individual and inter-replicate comparisons.
 
-\subsubsection{Read mapping}\label{read-mapping}
+\subsection{Read mapping}\label{read-mapping}
 
 To assess read quality, we ran FastQC
 (\url{http://www.bioinformatics.babraham.ac.uk/projects/fastqc}) and
@@ -715,7 +716,7 @@ is counted as a unique molecule, and then it and all connected nodes are
 removed from the network. This is repeated until all nodes have been
 counted or removed.
 
-\subsubsection{Filtering cells and
+\subsection{Filtering cells and
 genes}\label{filtering-cells-and-genes}
 
 We performed multiple quality control analyses to detect and remove data
@@ -770,7 +771,7 @@ relative differences in the proportion of genes detected across batches
 larger than 1,024 for the correction of collision probability. In the
 end we kept 13,058 endogenous genes and 48 ERCC spike-in genes.
 
-\subsubsection{Calculate the input molecule quantities of ERCC
+\subsection{Calculate the input molecule quantities of ERCC
 spiked-ins}\label{calculate-the-input-molecule-quantities-of-ercc-spiked-ins}
 
 According to the information provided by Fluidigm, each of the 96
@@ -785,7 +786,7 @@ levels of ERCC spike-ins strongly correlated with the input quantities
 of total input molecules being successfully detected in each high
 quality cell, had an average of 6.1\%.
 
-\subsubsection{Subsampling}\label{subsampling}
+\subsection{Subsampling}\label{subsampling}
 
 We simulated different sequencing depths by randomly subsampling reads
 and processing the subsampled data through the same pipeline described
@@ -821,7 +822,7 @@ The data shown is for individual NA19239, but the results were
 consistent for individuals NA19098 and NA19101. Only high quality single
 cells (Supplementary Table S2) were included in this analysis.
 
-\subsubsection{A framework for testing individual and batch
+\subsection{A framework for testing individual and batch
 effects}\label{a-framework-for-testing-individual-and-batch-effects}
 
 Individual effect and batch effect between the single cell samples were
@@ -867,7 +868,7 @@ samples after quality control and filtering.
   and for the endogenous genes.
 \end{enumerate}
 
-\subsubsection{Estimating variance components for per-gene expression
+\subsection{Estimating variance components for per-gene expression
 levels}\label{estimating-variance-components-for-per-gene-expression-levels}
 
 To assess the relative contributions of individual and technical
@@ -901,7 +902,7 @@ proportions of variance due to the individual effect and the batch
 effect, across genes, using a non-parametric one-way analysis of
 variance (Kruskal-Wallis rank sum test).
 
-\subsubsection{Normalization}\label{normalization}
+\subsection{Normalization}\label{normalization}
 
 We transformed the single cell molecule counts in multiple steps (Fig.
 4). First, we corrected for the collision probability using a method
@@ -935,7 +936,7 @@ contained UMIs. Because these samples contained RNA molecules from
 were sufficient for tagging such a large number of molecules. We
 standardized the read counts to log\textsubscript{2} cpm.
 
-\subsubsection{Removal of technical batch
+\subsection{Removal of technical batch
 effects}\label{removal-of-technical-batch-effects}
 
 Our last normalization step adjusted the transformed
@@ -973,7 +974,7 @@ where $\widehat{b}_{g,ij}$ are the least-squares estimates. The
 computations in this step were done with the gls.series function of the
 limma package \citep{limma}.
 
-\subsubsection{Measurement of gene expression
+\subsection{Measurement of gene expression
 noise}\label{measurement-of-gene-expression-noise}
 
 While examining gene expression noise (using the coefficient of
@@ -1012,7 +1013,7 @@ follows:
   count (Supplementary Fig. S10).
 \end{enumerate}
 
-\subsubsection{Identification of genes associated with inter-individual
+\subsection{Identification of genes associated with inter-individual
 differences in regulatory
 noise}\label{identification-of-genes-associated-with-inter-individual-differences-in-regulatory-noise}
 
@@ -1035,13 +1036,13 @@ values greater than the observed MAD value, and \emph{m} is the number
 of permutations. Adding 1 to \emph{b} avoided an empirical
 \emph{P}-value of zero \citep{Phipson2010}.
 
-\subsubsection{Gene enrichment analysis}\label{gene-enrichment-analysis}
+\subsection{Gene enrichment analysis}\label{gene-enrichment-analysis}
 
 We used ConsensusPATHDB \citep{Kamburov2011} to identify GO terms that
 are over-represented for genes whose variation in single cell expression
 levels were significantly difference between individuals.
 
-\subsubsection{Individual assignment based on scRNA-seq
+\subsection{Individual assignment based on scRNA-seq
 reads}\label{individual-assignment-based-on-scrna-seq-reads}
 
 We were able to successfully determine the correct identity of each
@@ -1063,7 +1064,7 @@ option --best to return the best matching individual, we obtained 100\%
 accuracy identifying the single cells of all three individuals
 (Supplementary Fig. S8).
 
-\subsubsection{Data and code
+\subsection{Data and code
 availability}\label{data-and-code-availability}
 
 The data have been deposited in NCBI's Gene Expression Omnibus
@@ -1075,7 +1076,7 @@ code and processed data are available at
 analyses are viewable at
 \url{https://jdblischak.github.io/singleCellSeq/analysis}.
 
-\subsection{Acknowledgments}\label{acknowledgments}
+\section{Acknowledgments}\label{acknowledgments}
 
 We thank members of the Pritchard, Gilad, and Stephens laboratories for
 valuable discussions during the preparation of this manuscript. This
@@ -1085,23 +1086,23 @@ The content is solely the responsibility of the authors and does not
 necessarily represent the official views of the National Institutes of
 Health.
 
-\subsection{Author Contributions}\label{author-contributions}
+\section{Author Contributions}\label{author-contributions}
 
 YG and JKP conceived of the study, designed the experiments, and
 supervised the project. PT and JEB performed the experiments. PT, JDB,
 CH, and DAK analyzed the results. PT, JDB, CH, and YG wrote the original
 draft. All authors reviewed the final manuscript.
 
-\subsection{Competing financial
+\section{Competing financial
 interests}\label{competing-financial-interests}
 
 The authors declare no competing financial interests.
 
-\subsection{Supplementary Figures}\label{supplementary-figures}
+\section{Supplementary Figures}\label{supplementary-figures}
 
 \begin{figure}[htbp]
 \centering
-\includegraphics{figure/Figure06.jpeg}
+\includegraphics[width=5in]{img/ch04/Figure06.jpeg}
 \caption{\textbf{Supplementary Figure S1. Removal of low quality
 samples.} Violin plots of the total read-counts of ERCC spike-in
 controls in (A) and the total molecule-counts in (B) in single cell
@@ -1115,7 +1116,7 @@ based on the 95th percentile of the samples with no cells.}
 
 \begin{figure}[htbp]
 \centering
-\includegraphics{figure/Figure07.jpeg}
+\includegraphics[width=5in]{img/ch04/Figure07.jpeg}
 \caption{\textbf{Supplementary Figure S2. Removal of samples with
 multiple cells.} Scatterplots of the three groups of samples (no cell in
 green, single-cell in orange, and two or more cells in purple) before
@@ -1131,7 +1132,7 @@ number of cells observed in each cell capture site.}
 
 \begin{figure}[htbp]
 \centering
-\includegraphics{figure/Figure08.jpeg}
+\includegraphics[width=5in]{img/ch04/Figure08.jpeg}
 \caption{\textbf{Supplementary Figure S3. Sources of cell-to-cell
 variance in per-gene expression profile.} Violin plots of the proportion
 of per-gene cell-to-cell variance that was due to individual sample of
@@ -1143,7 +1144,7 @@ before normalization and batch correction. Endogenous genes are shown in
 
 \begin{figure}[htbp]
 \centering
-\includegraphics{figure/Figure09.jpeg}
+\includegraphics[width=5in]{img/ch04/Figure09.jpeg}
 \caption{\textbf{Supplementary Figure S4. The gene-specific dropout
 rate.} The gene-specific dropout rate (the proportion of cells in which
 the gene is undetected) and its relationship with log\textsubscript{10}
@@ -1156,7 +1157,7 @@ predicted values using locally weighted scatterplot smoothing (LOESS).}
 
 \begin{figure}[htbp]
 \centering
-\includegraphics{figure/Figure10.jpeg}
+\includegraphics[width=5in]{img/ch04/Figure10.jpeg}
 \caption{\textbf{Supplementary Figure S5. Permutation-based
 \emph{P}-value.} (A) Histogram of empirical \emph{P}-values based on
 300,000 permutations. (B) -log\textsubscript{10} empirical
@@ -1173,7 +1174,7 @@ was detected as expressed.}
 
 \begin{figure}[htbp]
 \centering
-\includegraphics{figure/Figure11.jpeg}
+\includegraphics[width=5in]{img/ch04/Figure11.jpeg}
 \caption{\textbf{Supplementary Figure S6. Inter-individual differences
 in regulatory noise.} These 5 example genes illustrate various patterns
 of cell-to-cell gene expression variance. For each gene, the left panel
@@ -1191,7 +1192,7 @@ blue).}
 
 \begin{figure}[htbp]
 \centering
-\includegraphics{figure/Figure12.jpeg}
+\includegraphics[width=5in]{img/ch04/Figure12.jpeg}
 \caption{\textbf{Supplementary Figure S7. Cell-to-cell variation of
 pluripotency genes.} Density plots of the distribution of
 log\textsubscript{2} gene expression of key pluripotency genes across
@@ -1203,7 +1204,7 @@ in red, NA19101 in green, and NA19239 in blue).}
 
 \begin{figure}[htbp]
 \centering
-\includegraphics{figure/Figure13.jpeg}
+\includegraphics[width=5in]{img/ch04/Figure13.jpeg}
 \caption{\textbf{Supplementary Figure S8. Proposed study design for
 scRNA-seq using C1 platform.} (A) A balanced study design consisting of
 multiple individuals within a C1 plate and multiple C1 replicates to
@@ -1215,7 +1216,7 @@ their RNA sequencing reads.}
 
 \begin{figure}[htbp]
 \centering
-\includegraphics{figure/Figure14.jpeg}
+\includegraphics[width=5in]{img/ch04/Figure14.jpeg}
 \caption{\textbf{Supplementary Figure S9. The proportion of genes
 detected in single cell samples.} Violin plots of the proportion of
 genes detected, computed by the total number of detected genes in each
@@ -1227,7 +1228,7 @@ low expression. The three colors represent the three individuals
 
 \begin{figure}[htbp]
 \centering
-\includegraphics{figure/Figure15.jpeg}
+\includegraphics[width=5in]{img/ch04/Figure15.jpeg}
 \caption{\textbf{Supplementary Figure S10. Coefficients of variation
 (CV) before and after adjusting for gene mean abundance.} (A-C) CV
 plotted against average molecule counts across all cells for each
@@ -1244,9 +1245,9 @@ cells are plotted against log\textsubscript{10} of the average molecule
 counts for each individual.}
 \end{figure}
 
-\subsection{Supplementary Tables}\label{supplementary-tables}
+\section{Supplementary Tables}\label{supplementary-tables}
 
-\subsubsection{Supplementary Table S1. Data
+\subsection{Supplementary Table S1. Data
 collection.}\label{supplementary-table-s1.-data-collection.}
 
 (A) iPSCs were sorted using the 10-17 $\mu$m IFC plates with the
@@ -1259,15 +1260,15 @@ assigned across the four 8-lane flowcells.
 
 \begin{figure}[htbp]
 \centering
-\includegraphics{figure/Figure16.jpeg}
+\includegraphics[width=5in]{img/ch04/Figure16.jpeg}
 \end{figure}
 
-\subsubsection{Supplementary Table S2. High quality single cell
+\subsection{Supplementary Table S2. High quality single cell
 samples.}\label{supplementary-table-s2.-high-quality-single-cell-samples.}
 
 List of the 564 high quality single cell samples.
 
-\subsubsection{Supplementary Table S3. Genes associated with
+\subsection{Supplementary Table S3. Genes associated with
 inter-individual differences in regulatory
 noise.}\label{supplementary-table-s3.-genes-associated-with-inter-individual-differences-in-regulatory-noise.}
 
@@ -1276,8 +1277,7 @@ significantly different across individuals (empirical permutation
 \emph{P} \textless{} 10\textsuperscript{-4}). There are a total of 560
 genes.
 
-\subsubsection{Supplementary Table S4. Gene ontology analysis of the
+\subsection{Supplementary Table S4. Gene ontology analysis of the
 genes associated with inter-individual differences in regulatory
 noise.}\label{supplementary-table-s4.-gene-ontology-analysis-of-the-genes-associated-with-inter-individual-differences-in-regulatory-noise.}
 
-\subsection{References}\label{references}
