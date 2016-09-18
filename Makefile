@@ -28,7 +28,7 @@ $(NAME).docx: $(NAME).tex $(TEX)
 .PHONY: clean clean-deep
 
 clean:
-	rm -f *~ *.aux *.log *.lof *.lot *.toc *.bbl *.blg
+	rm -f *~ *.aux *.blg *.bbl *.lof *.log *.lot *.out *.toc
 
 clean-deep: clean
 	rm -f *.pdf *.docx *.html tex/*.aux

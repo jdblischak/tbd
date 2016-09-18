@@ -1,8 +1,11 @@
 .DS_Store
 *.aux
+*.blg
+*.bbl
 *.lof
 *.log
 *.lot
+*.out
 *.pdf
 *.synctex.gz
 *.toc
