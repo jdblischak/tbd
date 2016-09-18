@@ -118,7 +118,7 @@ sequence UMIs to allow for the direct quantification of mRNA molecule
 numbers. For each of the YRI lines, we performed three independent C1
 collections; each replicate was accompanied by processing of a matching
 bulk sample using the same reagents. This study design (Fig. \ref{fig:study-design}A and
-Supplementary Table S1) allows us to estimate error and variability
+Supplementary Table \ref{tab:s1}) allows us to estimate error and variability
 associated with the technical processing of the samples, independently
 from the biological variation across single cells of different
 individuals. We were also able to estimate how well scRNA-seq data can
@@ -198,7 +198,7 @@ total molecules divided by the number of total reads; Supplementary Fig.
 \ref{fig:s2}). At the conclusion of these quality control analyses and exclusion
 steps, we retained data from 564 high quality samples, which correspond,
 with reasonable confidence, to 564 single cells, across eight replicates
-from three individuals (Supplementary Table S2).
+from three individuals (Supplementary Table \ref{tab:s2}).
 
 Our final quality check focused on the different properties of
 sequencing read and molecule count data. We considered data from the 564
@@ -467,9 +467,9 @@ gene was detected as expressed. Based on permutations (Supplementary
 Fig. \ref{fig:s5}), we classified the estimates of regulatory noise of 560 genes
 as significantly different across individuals (empirical \emph{P}
 \textless{} .0001, Supplementary Fig. \ref{fig:s6} for examples; Supplementary
-Table S3 for gene list). These 560 genes are enriched for genes involved
+Table \ref{tab:s3} for gene list). These 560 genes are enriched for genes involved
 in protein translation, protein disassembly, and various biosynthetic
-processes (Supplementary Table S4). Interestingly, among the genes whose
+processes (Supplementary Table \ref{tab:s4}). Interestingly, among the genes whose
 regulatory noise estimates differ between individuals, we found two
 pluripotency genes, \emph{KLF4} and \emph{DPPA2} (Supplementary Fig.
 \ref{fig:s7}).
@@ -638,7 +638,7 @@ the manufacturer's instructions. Using the standard staining script, the
 iPSCs were stained with StainAlive TRA-1-60 Antibody (Stemgent, PN
 09-0068). The capture efficiency and TRA-1-60 staining were then
 inspected using the EVOS FL Cell Imaging System (Thermo Fisher)
-(Supplementary Table S1).
+(Supplementary Table \ref{tab:s1}).
 
 Immediately after imaging, reverse transcription and cDNA amplification
 were performed in the C1 system using the SMARTer PCR cDNA Synthesis kit
@@ -653,7 +653,7 @@ When the run finished, full-length, amplified, single-cell cDNA
 libraries were harvested in a total of approximately 13 $\mu$l C1
 Harvesting Reagent and quantified using the DNA High Sensitivity LabChip
 (Caliper). The average yield of samples per C1 plate ranged from
-1.26-1.88 ng per microliter (Supplementary Table S1). A bulk sample, a
+1.26-1.88 ng per microliter (Supplementary Table \ref{tab:s1}). A bulk sample, a
 40 $\mu$l aliquot of \textasciitilde{}10,000 cells, was collected in
 parallel with each C1 chip using the same reaction mixes following the
 C1 protocol (PN 100-7168, Appendix A).
@@ -684,7 +684,7 @@ following the UMI protocol \citep{Islam2014}.
 The master mixes, one mix with all the bulk samples and nine mixes
 corresponding to the three replicates for the three individuals, were
 sequenced across four flowcells using a design aimed to minimize the
-introduction of technical batch effects (Supplementary Table S1).
+introduction of technical batch effects (Supplementary Table \ref{tab:s1}).
 Single-end 100 bp reads were generated along with 8-bp index reads
 corresponding to the cell-specific barcodes. We did not observe any
 obvious technical effects due to sequencing lane or flow cell that
@@ -756,7 +756,7 @@ following criteria:
 
 We chose the above criteria based on the distribution of these metrics
 in the empty wells (the cutoff is the 95th percentile, Supplementary
-Fig. S1). In addition, we observed that some wells classified as
+Fig. \ref{fig:s1}). In addition, we observed that some wells classified as
 containing only one cell were clustered with multi-cell wells when
 plotting 1) the number of gene molecules versus the concentration of the
 samples, and 2) the read to molecule conversion efficiency (total
@@ -829,7 +829,7 @@ most of the improvement with increased sequencing depth and number of
 cells was driven by the estimates of the lower half of expressed genes.
 The data shown is for individual NA19239, but the results were
 consistent for individuals NA19098 and NA19101. Only high quality single
-cells (Supplementary Table S2) were included in this analysis.
+cells (Supplementary Table \ref{tab:s2}) were included in this analysis.
 
 \subsection{A framework for testing individual and batch
 effects}\label{a-framework-for-testing-individual-and-batch-effects}
@@ -1278,40 +1278,45 @@ counts for each individual.}
 \end{figure}
 
 \clearpage
-\section{Supplementary Tables}\label{supplementary-tables}
+\subsection{Supplementary Tables}\label{supplementary-tables}
 
-\subsection{Supplementary Table S1. Data
-collection.}\label{supplementary-table-s1.-data-collection.}
-
-(A) iPSCs were sorted using the 10-17 $\mu$m IFC plates with the
-staining of the pluripotency marker, TRA1-60. Single cell occupancy is
-the percentage of occupied capture sites containing one single cell. The
-average cDNA concentration was measured by the HT DNA high sensitivity
-LabChip (Caliper). (B) The 96 single cell libraries from one C1 plate
-were pooled and sequenced in three HiSeq lanes. The pooled samples were
-assigned across the four 8-lane flowcells.
-
-\begin{figure}[htbp]
+\begin{table}
 \centering
 \includegraphics[trim=0 2.5in 0 0,clip,width=5in]{img/ch04/Figure16.jpeg}
-\end{figure}
+\caption[Data collection.]{\textbf{Data collection.} (A) iPSCs were
+ sorted using the 10-17 $\mu$m IFC plates with the staining of the
+ pluripotency marker, TRA1-60. Single cell occupancy is the percentage
+ of occupied capture sites containing one single cell. The average cDNA
+ concentration was measured by the HT DNA high sensitivity LabChip
+ (Caliper). (B) The 96 single cell libraries from one C1 plate were
+ pooled and sequenced in three HiSeq lanes. The pooled samples were
+ assigned across the four 8-lane flowcells.}
+\label{tab:s1}
+\end{table}
 \clearpage
 
-\subsection{Supplementary Table S2. High quality single cell
-samples.}\label{supplementary-table-s2.-high-quality-single-cell-samples.}
+\begin{table}
+\caption[High quality single cell samples.]{\textbf{ High quality single cell
+samples.} (see supplementary file associated with this dissertation)
+List of the 564 high quality single cell samples.}
+\label{tab:s2}
+\end{table}
 
-List of the 564 high quality single cell samples.
+\begin{table}
+\caption[Genes associated with inter-individual differences in regulatory noise.]{
+\textbf{Genes associated with inter-individual differences in regulatory noise.}
+ (see supplementary file associated with this dissertation) List of
+ genes that we classified the estimates of regulatory noise as
+ significantly different across individuals (empirical permutation
+ \emph{P} \textless{} 10\textsuperscript{-4}). There are a total of 560
+ genes.}
+\label{tab:s3}
+\end{table}
 
-\subsection{Supplementary Table S3. Genes associated with
-inter-individual differences in regulatory
-noise.}\label{supplementary-table-s3.-genes-associated-with-inter-individual-differences-in-regulatory-noise.}
-
-List of genes that we classified the estimates of regulatory noise as
-significantly different across individuals (empirical permutation
-\emph{P} \textless{} 10\textsuperscript{-4}). There are a total of 560
-genes.
-
-\subsection{Supplementary Table S4. Gene ontology analysis of the
-genes associated with inter-individual differences in regulatory
-noise.}\label{supplementary-table-s4.-gene-ontology-analysis-of-the-genes-associated-with-inter-individual-differences-in-regulatory-noise.}
-
+\begin{table}
+\caption[Gene ontology analysis of the genes associated with inter-individual
+ differences in regulatory noise.]{\textbf{Gene ontology analysis of the
+ genes associated with inter-individual differences in regulatory noise.}
+ (see supplementary file associated with this dissertation)}
+\label{tab:s4}
+\end{table}
