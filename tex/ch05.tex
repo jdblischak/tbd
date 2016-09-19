@@ -142,27 +142,98 @@ resistant individuals. Furthermore, I built a classifier to
 differentiate between suceptible and resistant individuals based on
 their gene expression profiles.
 
-In Chapter \ref{ch:singleCellSeq}...
+In Chapter \ref{ch:singleCellSeq}, I described my work on single cell
+RNA sequencing (scRNA-seq) \citep{Tung2016}. scRNA-seq is a relatively
+new technique that enables the investigation of gene regulatory
+changes at a much finer resolution than the bulk RNA-seq projects I
+performed in Chapters \ref{ch:tb} and \ref{ch:tb-suscept}. While this
+new technology is exciting, we must exercise the same caution as when
+performing any large-scale genomics experiment. Early studies of the
+Fluidigm C1 system for scRNA-seq that focused on the technical sources
+of variation largely focused on the variation from well to well within
+just one C1 chip; whereas, the studies investigating biological
+phenomena tended to use multiple C1 chips without addressing the
+obvious confounding batch effects (this problem is nicely highlighted
+by \citep{Hicks2015}). Before conducting large scale scRNA-seq
+experiments, we first aimed to better understand the technical factors
+affecting the design of such studies. To do so, we performed scRNA-seq
+of three C1 chip replicates of three HapMap Yoruba individuals.
 
-The previous studies were performed on bulk populations of cells,
-which lacked the resolution to observe the cell-to-cell heterogeneity
-in the immune response. Single cell RNA-sequencing (scRNA-seq)
-technology can capture the gene expression profile of individual
-cells. However, the technology is still relatively new, and best
-practices for study design have yet to be established. In this study,
-we collected 3 replicates of induced pluripotent stem cells (iPSCs)
-from 3 Yoruba individuals from the HapMap Project. We determined the
-minimum number of cells and sequencing depth required to resemble the
-bulk population and detect most expressed genes, identified the
-technical effects introduced by the batch processing, and developed a
-pre-processing pipeline to reduce the technical variation. Lastly, we
-provide a proof of concept for an efficient design for future single
-cell studies. By identifying the origin of a cell using the
-polymorphisms present in the RNA-seq reads, we could include cells
-from multiple individuals in each processing batch. This allows for
-accounting of technical batch effects while minimizing the total
-amount of replication. This study was recently posted as a pre-print
-on bioRxiv and submitted for review \citep{Tung2016}.
+From these data, we learned many important lessons. First, by
+performing subsampling analyses, we determined that sequencing
+approximately 1.5 million reads for at least 75 cells from a given
+individual was sufficient for detecting most expressed genes,
+achieving a high correlation between the sum of the gene expression
+levels across the single cells and the gene expression levels from
+bulk sequencing of 10,000 cells, and achieving a high correlation
+between the cell-to-cell variance in the gene expression levels across
+the subset of single cells and the cell-to-cell variance measured in
+all the single cells we collected for an individual (which ranged from
+142 to 221). Second, we observed technical variation introduced from
+the processing of the C1 batches. While this was expected, we also
+observed unexpected aspects of this batch effect. The ERCC spike-in
+controls which were added to each well and could potentially be used
+to correct for this effect across C1 chips was affected not only by
+technical variation but also by the biological variation (differences
+between individuals). This entanglement of the technical and
+biological sources of variation renders the spike-ins insufficient for
+modeling technical variation between C1 chips (however they can still
+be used to model technical variation between wells of the same C1
+chip). This confounder occurred despite our use of unique molecular
+identifiers (UMIs) to account for the bias introduced by amplifying
+RNA from a small original source of just one cell. In fact, we found
+that the conversion of reads to unique molecules was affected by
+inter-individual differences. Third, even with our small sample size
+of only three individuals, we were able to identify inter-individual
+differences in the cell-to-cell gene expression variance, or gene
+expression noise. This lends further support to the notion that gene
+expression noise is a relevant factor that can affect biological
+processes. Fourth, we demonstrated that we can use the single
+nucleotide polymorphisms (SNPs) present in the RNA-seq reads to
+identify the individual of origin for a given single cell. This
+enables us to use a crossed-design where single cells from multiple
+individuals are included on the same C1 chip and later each well is
+assigned to each individual based on the RNA-seq reads obtained. Our
+initial nested design was inefficient because we collected hundreds of
+single cells per individual across the multiple technical
+replicates. From our subsampling we knew that collecting 75 high
+quality single cells was sufficient. With a crossed design, we can
+obtain about one C1 chip worth of wells (96) while still modeling the
+technical variation across C1 chips.
+
+Given the promising results from our first study, our next study will
+aim to further investigate the impact of genetic variation on gene
+expression noise by measuring single cell gene expression levels in 60
+individuals. The design of the study is informed by our previous
+findings. First, we will put single cells from multiple individuals on
+each C1 chip because we know we can identify the individual based on
+the RNA-seq reads. Second, we will repeat each individual across C1
+chips until they obtain on average 96 wells (e.g. one C1 chip) because
+this will get us close to our target of 75 single cells after removing
+low quality cells. Third, we will replace the ERCC spike-ins with RNA
+from a distantly related model organism. With many more technical
+spike-ins gene to measure, these will be more useful for modeling
+technical variation \citep{Risso2014}. Using this study design, we’ll
+be able to efficiently measure gene expression noise from many
+individuals while still properly accounting for technical variation.
+
+Returning to the \emph{in vitro} models of bacterial infection from my
+other studies, I can imagine future single cell studies that shed
+further light on the innate immune response. While we infect the cells
+at a multiplicity of infection of 1:1, some cells will still be
+infected by multiple bacteria and others not infected at
+all. Furthermore, there could be variation in this distribution of the
+number of bacteria per cell across individuals. In order to
+efficiently measure single cell gene expression in response to
+infection, I would put uninfected cells from one individual on the
+same C1 chip as the infected cells from a different individual. Also,
+since the MTB H37Rv strain we typically use has a GFP tag, we could
+use high-throughput fluorescence microscopy of each well to count the
+number of bacteria per cell. With this high resolution data, we could
+differentiate between inter-individual differences in the innate
+immune response due to differences in the number of infected cells (or
+the number of bacteria per cell) or differences in the innate immune
+response in the infected cells.
 
 I have identified hundreds of genes involved in fighting MTB
 infections.  More broadly, I have demonstrated that a joint Bayesian
