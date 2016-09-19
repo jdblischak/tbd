@@ -128,19 +128,77 @@ Cormotif must be run multiple times to obtain the model with the highest log
 likelihood. Because of this added complexity, using Cormotif is more difficult
 to implement than more standard differential expression approaches.
 
-In Chapter \ref{ch:tb-suscept}...
-
-To investigate how the innate immune cells of susceptible individuals
+In Chapter \ref{ch:tb-suscept}, I described my work investigating the
+role of gene regulation in the innate immune system on TB
+susceptibility (not yet published). Specifically, in order to
+investigate how the innate immune cells of susceptible individuals
 function compared to those of resistant individuals, we collected
-primary dendritic cells from individuals that had recovered from TB
-(i.e.~susceptible) and individuals that tested positive for latent MTB
-infections but had not developed TB (i.e.~putatively resistant). The
-dendritic cells were infected with MTB, and we performed RNA-seq on
-the infected and non-infected cells. I have identified hundreds of
-genes which are differentially expressed between susceptible and
-resistant individuals. Furthermore, I built a classifier to
-differentiate between suceptible and resistant individuals based on
-their gene expression profiles.
+primary dendritic cells (DCs) from individuals that had recovered from
+TB (i.e. susceptible) and individuals that tested positive for latent
+MTB infections but had not developed TB (i.e. resistant). We infected
+the DCs with MTB and performed RNA-seq on the infected and
+non-infected cells.
+
+There were 3 main conclusions from this work. First, the differences
+in gene expression levels between resistant and susceptible
+individuals were primarily present in the noninfected state and not 18
+hours post-infection with MTB. This suggests that these gene
+expression differences primarily affect the very early response to MTB
+infection. Second, we discovered that the effect sizes measured in our
+\emph{in vitro} experiment, whether comparing between resistant and
+susceptible individuals or between the infected and noninfected
+states, were negatively correlated with lower p-values from two genome
+wide association studies (GWAS) of TB susceptibility. This suggests
+that our \emph{in vitro} system is a useful model for investigating
+the genetic basis of TB susceptibility. Third, we trained a classifier
+based on the gene expression levels in the noninfected state. Using
+the threshold required to obtain a 100\% false negative rate in the
+training data, we found that 11\% of healthy individuals from an
+independent study were predicted to be susceptible to TB, very close
+to the estimated population average of 10\%. This suggests that
+isolating innate immune cells and performing gene expression profiling
+could be a feasible test for TB susceptibility.  The most obvious
+extension of this work is to conduct a larger study with more
+susceptible individuals. Our current results are only a
+proof-of-principle. With a larger study, we could properly split the
+data into training and test sets to assure that the model is not
+overfitting the data. On the one hand, since we identified that the
+gene expression differences are only present in the noninfected state
+and that these are sufficient for the performance of the classifier,
+this future study would be simplified by not having to perform the MTB
+infections. On the other hand, collecting a large number of patient
+samples is always difficult, and it is even worse when the individuals
+are currently healthy and thus not regularly visiting the doctor like
+those recovered from a past case of active TB. Hopefully these initial
+successful results will provide the impetus for larger scale sample
+collection.
+
+Another fruitful direction for future experiments would be to further
+investigate the role of \emph{CCL1} in the innate immune response to
+MTB and its role in TB susceptibility. While studies of this gene have
+had mixed results, all the studies, including my own, have had small
+sample sizes. In the first study of \emph{in vitro} differences in
+gene expression between susceptible and resistant individuals,
+\emph{CCL1} was found to be differentially expressed based on
+susceptibility status \citep{Thuoung2008}. Furthermore, the same study
+found that SNPs nearby \emph{CCL1}were associated with TB
+susceptibility in an independent cohort. In Chapter \ref{ch:tb}, I
+found that \emph{CCL1} was one of the genes which changed expression
+level specifically in response to infection with mycobacteria. In
+Chapter \ref{ch:tb-suscept}, I found that \emph{CCL1} was one of two
+genes which had an effect size greater than 2 between susceptible and
+resistant individuals in the noninfected state and also a p-value less
+than 0.01 in two GWAS studies of TB susceptibility. There were many
+differences between these studies (e.g. cell type, ethnicity of
+donors, timepoints RNA was collected post-infection), yet \emph{CCL1}
+was still a top hit in all three studies. I believe this warrants
+further investigation. As an example, one could you CRISPR/Cas to
+modify individual SNPs in THP-1 cells (a common cell line model of
+monocytes) and test for differences in the response to MTB
+infection. Another idea, since \emph{CCL1} is a secreted chemokine,
+would be to add varying amounts of exogenous \emph{CCL1} to the
+\emph{in vitro} system to detect an effect on the innate immune
+response.
 
 In Chapter \ref{ch:singleCellSeq}, I described my work on single cell
 RNA sequencing (scRNA-seq) \citep{Tung2016}. scRNA-seq is a relatively
