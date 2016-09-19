@@ -23,6 +23,7 @@
 	\null\vfill
 	\centerline{Copyright \copyright\ \number\year\ by \@author}
 	\centerline{All Rights Reserved}
+	\center{Freely available under a \href{https://creativecommons.org/licenses/by/4.0/}{CC-BY 4.0 International license}}
 	\vskip 15pt\relax
 }
 
