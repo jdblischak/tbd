@@ -293,6 +293,63 @@ immune response due to differences in the number of infected cells (or
 the number of bacteria per cell) or differences in the innate immune
 response in the infected cells.
 
+A common theme of all my projects is accounting for technical
+biases. Although only Chapter \ref{ch:singleCellSeq} has a main focus
+on mitigating batch effects, all my projects required close attention
+to this problem. This is because all genomics studies need to account
+for batch effects in both the design and analysis of the data,
+otherwise the results are meaningless. There will signal in any large
+data set, but it will only inform biological insight if the signal
+arises from the biological processes being studied.
+
+In Chapter \ref{ch:tb}, we collected a total of 156 RNA-seq
+samples. During the batch processing, we ensured that the biological
+factors of interest (bacterial infection, timepoint, individual) were
+balanced to avoid introducing spurious signal. Furthermore, upon data
+exploration, we observed that the processing batch and the RNA quality
+score (RIN) were correlated with the first principal component. After
+regressing these two variables, the first principal component was the
+effect of timepoint and the second PC was the effect of
+infection. Importantly, we obtained similar results whether we
+protected the variables of interest in the linear model or not when
+regressing the technical variables. This was a result of the careful
+planning of the batch processing to avoid confounding biological and
+technical variables.
+
+In Chapter \ref{ch:tb-suscept}, I once again designed the batch
+processing to balance the biological factors of interest
+(susceptibility status, treatment, individual). Conveniently, this
+project did not have large scale batch effects, likely due to the
+smaller overall sample size of 48. However, accounting for a batch
+effect was critical for training a classifier on the current data set
+and testing it on an independent data set. Not only were the studies
+performed years apart, but the gene expression levels were measured
+using different technologies. Thus I was only able to compare the two
+studies after normalizing each sample and removing the large batch
+effect by regressing the first principal component of the combined
+data set. Testing the classifier without accounting for the batch
+effect would have given poor results simply due to technical reasons.
+
+In Chapter \ref{ch:singleCellSeq}, one of the main motivations for the
+study was understanding the magnitude of the batch effect of
+collecting scRNA-seq on separate C1 chips. While the technical effect
+of C1 batch was smaller in magnitude compared to the biological effect
+of individual (assessed using variance components analysis), not
+including technical replicates would attribute the substantial
+technical effect to the biological effect. Just as we require
+replication for established genomic protocols, it is also necessary to
+replicate scRNA-seq experiments, especially since the standard ERCC
+spike-ins appear to be affected by both biological and technical
+factors. Fortunately, we were able to devise a strategy to reduce the
+required number of C1 replicates by combining single cells from
+multiple individuals onto each C1 chip and then replicating the
+multiple individuals across multiple chips. This crossed design
+accounts for batch effects while minimizing the required replication.
+
+In summary, technical batch effects need to be considered from the
+initial design of a genomics experiments through to the data analysis
+and interpretation of the results.
+
 I have identified hundreds of genes involved in fighting MTB
 infections.  More broadly, I have demonstrated that a joint Bayesian
 model is an effective tool for analyzing the large-scale multivariate
