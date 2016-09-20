@@ -20,7 +20,7 @@ macrophage chemotaxis, and sialic acid synthesis. We suggest that
 genetic variants that affect the function or regulation of these genes
 should be considered candidate loci for explaining TB susceptibility.
 
-\section{Introduction}\label{introduction}
+\section{Introduction}\label{ch02-introduction}
 
 The innate immune system provides the first line of defense against
 microbial pathogens. Broadly speaking, innate immune cells recognize
@@ -138,7 +138,7 @@ from a panel of six healthy individuals with a variety of bacteria. In
 addition to MTB, we chose both related mycobacteria and more distantly
 related bacteria.
 
-\section{Results}\label{results}
+\section{Results}\label{ch02-results}
 
 \subsection{Bacterial infection induces large changes in gene
 expression}\label{bacterial-infection-induces-large-changes-in-gene-expression}
@@ -193,8 +193,8 @@ Positive \\ \bottomrule
 We infected monocyte-derived macrophages from six individuals with the
 bacteria described above (including a non-infected control) and
 extracted RNA at 4, 18, and 48 hours post-infection (see Methods;
-Supplementary Fig. \ref{fig:study-design}). We assessed RNA quality using the Agilent
-Bioanlyzer (Supplementary Table \ref{tab:s6}) and sequenced the RNA to estimate
+Supplementary Fig. \ref{fig:ch02-study-design}). We assessed RNA quality using the Agilent
+Bioanlyzer (Supplementary Table \ref{tab:ch02-s6}) and sequenced the RNA to estimate
 gene expression levels. Detailed descriptions of our data processing,
 quality control analyses, and statistical modeling are available in
 the Methods section. Briefly, we mapped the short RNA-seq reads to the
@@ -206,7 +206,7 @@ counts using the weighted trimmed mean of M-values algorithm (TMM)
 (Supplementary Fig. \ref{fig:pca}), and used limma+voom \citep{Smyth2004,
   Smyth2005, Law2014} to test for differential expression (DE) between
 cultures infected with each bacteria and their time-matched controls
-(Supplementary Table \ref{tab:s2}). Using this approach we initially observed
+(Supplementary Table \ref{tab:ch02-s2}). Using this approach we initially observed
 the following general patterns: at four hours post-infection, only
 \emph{Y. pseudotuberculosis} and \emph{S. typhimurium} elicitepd a
 strong transcriptional response (Fig.
@@ -247,7 +247,7 @@ In order to learn about variation in the innate immune response to
 bacterial infection, we identified genes whose regulation was altered by
 treatment with specific bacteria at specific timepoints. We first used a
 naïve approach whereby we determined all the pairwise overlaps between
-lists of DE genes across treatments (Supplementary Table \ref{tab:s7}). The caveat
+lists of DE genes across treatments (Supplementary Table \ref{tab:ch02-s7}). The caveat
 of this strategy is that incomplete power can result in overestimating
 the difference between treatments. In order to account for incomplete
 power to detect DE genes when performing multiple pairwise comparisons,
@@ -262,7 +262,7 @@ Initially we built a model that classified genes into one of 14 separate
 patterns based on their expression levels after each infection relative
 to their expression level in the non-infected control (Supplementary
 Fig. \ref{fig:joint-all-k14}). However, we found that a model with only six expression
-patterns (Fig. \ref{fig:joint-all}; Supplementary Tables \ref{tab:s3},\ref{tab:s4}), where a subset of the
+patterns (Fig. \ref{fig:joint-all}; Supplementary Tables \ref{tab:ch02-s3},\ref{tab:ch02-s4}), where a subset of the
 original 14 patterns are combined, is more intuitive from a biological
 perspective; thus we proceeded with the reduced model. Broadly speaking,
 we classified genes as responding in the early, middle, or late stages
@@ -276,7 +276,7 @@ genes in this pattern are enriched for gene ontology (GO) annotations
 related to type I interferon signaling (e.g. \emph{SP100}, \emph{IFI35},
 \emph{STAT2}), antigen presentation (\emph{HLA-A}, \emph{PSME1},
 \emph{CTSS}), and apoptosis (\emph{CASP8}, \emph{TRADD}, \emph{FADD})
-(Supplementary Table \ref{tab:s5}). Pattern ``18 h'' includes 3,201 middle
+(Supplementary Table \ref{tab:ch02-s5}). Pattern ``18 h'' includes 3,201 middle
 response genes whose expression levels changed exclusively at 18 hours
 post-infection in response to all bacteria and is enriched for GO
 annotations related to apoptosis (e.g. \emph{E2F1}, \emph{TP53},
@@ -317,7 +317,7 @@ related to type I interferon signaling (e.g. \emph{IRF1}, \emph{SOCS1},
 Next, we tested for more specific patterns by performing Cormotif
 separately on the data from the middle (18 h) and late (48 h) stages of
 infection. At 18 hours post-infection, we identified five separate
-expression patterns (Fig. \ref{fig:joint-18h}; Supplementary Tables \ref{tab:s3},\ref{tab:s4}). Pattern
+expression patterns (Fig. \ref{fig:joint-18h}; Supplementary Tables \ref{tab:ch02-s3},\ref{tab:ch02-s4}). Pattern
 ``non-DE'' includes 5,268 genes whose expression levels were unchanged
 across all infections. Pattern ``All'' includes 4,424 genes whose
 expression levels were affected by all infections (e.g. \emph{IL24},
@@ -355,7 +355,7 @@ typhimurium} (e.g. \emph{TLR8}, \emph{TGFB1}, \emph{IL18}).
 \end{figure}
 
 At 48 hours post-infection, we also discovered five expression patterns
-(Fig. \ref{fig:joint-48h}; Supplementary Tables \ref{tab:s3},\ref{tab:s4}). While many of the patterns have
+(Fig. \ref{fig:joint-48h}; Supplementary Tables \ref{tab:ch02-s3},\ref{tab:ch02-s4}). While many of the patterns have
 similar specificities to those observed at 18 hours post-infection,
 there is only little overlap across timepoints with respect to the genes
 comprising the patterns. For example, pattern ``Yers-Salm'' at 48 hours
@@ -442,7 +442,7 @@ compared to the genes in the other two classes.
 \label{fig:response-eqtl}
 \end{figure}
 
-\section{Discussion}\label{discussion}
+\section{Discussion}\label{ch02-discussion}
 
 \subsection{Bayesian analysis identified mycobacteria-specific
 response
@@ -488,7 +488,7 @@ to survive inside the macrophage by inhibiting phagosome maturation
 \citep{Hestvik2005}. As part of this strategy, the bacterium recruits
 \emph{RAB22A} to MTB-containing phagosomes \citep{Roberts2006}. Indeed,
 we found the \emph{RAB22A} gene to be upregulated in response to
-infection with mycobacteria (Supplementary Table \ref{tab:s4}). Similar GTPases
+infection with mycobacteria (Supplementary Table \ref{tab:ch02-s4}). Similar GTPases
 whose regulation was altered following mycobacterial infections include
 \emph{RAP2A} (upregulated), \emph{RAB3A} and \emph{RAB33A} (both
 downregulated). In addition, the vesicular (v)-ATPase subunit
@@ -519,7 +519,7 @@ vaccine before being diagnosed with CGD also develop the disease
 
 At 48 hours post-infection (Fig. \ref{fig:joint-48h}), the mycobacteria-specific
 response was enriched with genes annotated (based on GO) as having a
-role in ``response to vitamin D'' (Supplementary Table \ref{tab:s5}; Supplementary
+role in ``response to vitamin D'' (Supplementary Table \ref{tab:ch02-s5}; Supplementary
 Figure \ref{fig:vitD}). Individuals with low circulating levels of vitamin D are
 more susceptible to developing tuberculosis \citep{Zodpey2007,
 Nnoaham2008}, and vitamin D has been investigated as a supplemental
@@ -623,7 +623,7 @@ laboratory strains.
 In our study, albeit with a small sample size, we found no marked
 differences between the transcriptional response to infection with MTB
 H37Rv or MTB GC1237, a Beijing strain (Supplementary Fig. \ref{fig:Rv-v-GC};
-Supplementary Table \ref{tab:s8}). Furthermore, the pro-inflammatory cytokines
+Supplementary Table \ref{tab:ch02-s8}). Furthermore, the pro-inflammatory cytokines
 \emph{TNF} and \emph{IL6} and the anti-inflammatory cytokine \emph{IL10}
 were strongly upregulated in response to both strains of MTB
 (Supplementary Fig. \ref{fig:ex-cytokines}). This observation is in concordance with Wu et
@@ -674,7 +674,7 @@ represented differences in virulence only in the mycobacteria, yet we
 never saw such a pattern. It is important to note that had we simply
 performed a simple pairwise analysis of the overlap of DE genes between
 MTB and BCG infections, our results would be quite different
-(Supplementary Table \ref{tab:s7}). Yet, a pairwise analysis is misleading in the
+(Supplementary Table \ref{tab:ch02-s7}). Yet, a pairwise analysis is misleading in the
 context of the entire study. Indeed, by accounting for incomplete power
 by using the joint Bayesian model and including other bacterial species,
 we avoided attributing many differentially expressed genes specifically
@@ -713,7 +713,7 @@ Johnson2013, Crespo2013}. We suggest that this gene is an
 interesting candidate for further understanding both MTB pathogenesis
 and inter-individual susceptibility to tuberculosis.
 
-\subsection{Conclusions}\label{conclusions}
+\subsection{Conclusions}\label{ch02-conclusions}
 
 By jointly considering data from multiple infection treatments, using a
 variety of bacteria, we have classified distinct innate immune
@@ -737,9 +737,9 @@ infection, and whose regulation is altered specifically when we infected
 the cells with mycobacteria. This gene is thus an especially promising
 candidate for future studies of TB susceptibility.
 
-\section{Methods}\label{methods}
+\section{Methods}\label{ch02-methods}
 
-\subsection{Ethics Statement}\label{ethics-statement}
+\subsection{Ethics Statement}\label{ch02-ethics-statement}
 
 Buffy coats were obtained from healthy donors after informed consent.
 The blood collection protocols were approved by both the French Ministry
@@ -786,7 +786,7 @@ the batches to maximally partition the variables of interest
 (individual, condition, timepoint) in order to minimize the introduction
 of biases due to batch processing \citep{Auer2010}. To assess RNA
 quality, we measured the RNA Integrity Number (RIN) with the Agilent
-Bioanalyzer (Supplementary Table \ref{tab:s6}). Importantly, there were no
+Bioanalyzer (Supplementary Table \ref{tab:ch02-s6}). Importantly, there were no
 significant differences in the RIN (mean of 7.8 $\pm$ 2.0) between the
 bacterial infections or between the timepoints (Supplementary Fig. \ref{fig:rin-and-reads}B). In batches of 12 samples, we added barcoded adapters (Illumina
 TruSeq RNA Sample Preparation Kit v2) and sequenced 50 base pairs single
@@ -858,7 +858,7 @@ does not distinguish the direction of the effect across infections. In
 other words, a gene that is assigned to an expression pattern could be
 differentially expressed in different directions across the infections.
 However, in this data set, this was rarely observed (Supplementary Table
-\ref{tab:s9}).
+\ref{tab:ch02-s9}).
 
 In practice, we had to make several modifications when using Cormotif.
 First, since the method was developed for microarray data, we used the
@@ -904,18 +904,18 @@ compare the distribution of response eQTL genes to either that of the
 general eQTL genes or the non-eQTL genes.
 
 \subsection{Data and code
-availability}\label{data-and-code-availability}
+availability}\label{ch02-data-and-code-availability}
 
 The data have been deposited in NCBI's Gene Expression Omnibus
 \citep{Edgar2002} and are accessible through GEO Series accession number
 GSE67427 (http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE67427).
-Supplementary Table \ref{tab:s1}, which contains the gene expression data, and
-Supplementary Table \ref{tab:s2}, which contains the differential expression
+Supplementary Table \ref{tab:ch02-s1}, which contains the gene expression data, and
+Supplementary Table \ref{tab:ch02-s2}, which contains the differential expression
 results from limma, are available from our lab website:
 http://giladlab.uchicago.edu. The code is available at
 https://bitbucket.org/jdblischak/tb.
 
-\section{Acknowledgments}\label{acknowledgments}
+\section{Acknowledgments}\label{ch02-acknowledgments}
 
 We thank Matthew Stephens and Bryce van de Geijn for advice on the
 statistical analyses, and all members of the Gilad lab for helpful
@@ -923,21 +923,21 @@ discussions. This work was supported by grant AI087658 to YG and LT. JDB
 was partially supported by National Institutes of Health Grant T32
 GM007197.
 
-\section{Author Contributions}\label{author-contributions}
+\section{Author Contributions}\label{ch02-author-contributions}
 
 YG, LT, and LBB conceived of the study and designed the experiments. LT
 performed the infection experiments. JDB extracted the RNA and analyzed
 the data. AM prepared the sequencing libraries. LBB and YG supervised
 the project. JDB and YG wrote the paper with input from all authors.
 
-\section{Additional Information}\label{additional-information}
+\section{Additional Information}\label{ch02-additional-information}
 
 \textbf{Competing financial interests:} The authors declare no competing
 financial interests.
 
-\section{Supplementary Information}\label{supplementary-information}
+\section{Supplementary Information}\label{ch02-supplementary-information}
 
-\subsection{Supplementary Tables}\label{supplementary-tables}
+\subsection{Supplementary Tables}\label{ch02-supplementary-tables}
 
 \begin{table}
 \caption[Gene expression matrix.]{\textbf{Gene expression matrix.}
@@ -948,7 +948,7 @@ financial interests.
   ``individual.infection.time''. It can also be downloaded from
   \url{http://giladlab.uchicago.edu} or
   \url{https://bitbucket.org/jdblischak/tb-data}.}
-\label{tab:s1}
+\label{tab:ch02-s1}
 \end{table}
 
 \begin{table}
@@ -962,7 +962,7 @@ financial interests.
   comparison. It can also be downloaded from
   \url{http://giladlab.uchicago.edu} or
   \url{https://bitbucket.org/jdblischak/tb-data}.}
-\label{tab:s2}
+\label{tab:ch02-s2}
 \end{table}
 
 \begin{table}
@@ -975,7 +975,7 @@ financial interests.
   ``time\_18h'', and ``time\_48h'' correspond to Figures
   \ref{fig:joint-all}, \ref{fig:joint-18h}, and \ref{fig:joint-48h},
   respectively.}
-\label{tab:s3}
+\label{tab:ch02-s3}
 \end{table}
 
 \begin{table}
@@ -986,10 +986,10 @@ financial interests.
   12,728 Ensembl genes analyzed in this study for each of the three
   analyses in Figures \ref{fig:joint-all}, \ref{fig:joint-18h}, and
   \ref{fig:joint-48h}. It is the same information as Supplementary
-  Table \ref{tab:s3}, but with the genes from each pattern from each
+  Table \ref{tab:ch02-s3}, but with the genes from each pattern from each
   of the three Figures in its own sheet of the workbook. Furthermore,
   it contains the gene descriptions from Ensembl.}
-\label{tab:s4}
+\label{tab:ch02-s4}
 \end{table}
 
 \begin{table}
@@ -998,7 +998,7 @@ financial interests.
   gene ontology results for each of the expression patterns for the
   three analyses in Figures \ref{fig:joint-all}, \ref{fig:joint-18h},
   and \ref{fig:joint-48h}.}
-\label{tab:s5}
+\label{tab:ch02-s5}
 \end{table}
 
 \begin{table}
@@ -1006,7 +1006,7 @@ financial interests.
   associated with this dissertation) Contains the RNA Integrity Number
   (RIN) and molarity (nmol/L) measured with a Bioanalyzer (Agilent)
   for each of the 156 samples.}
-\label{tab:s6}
+\label{tab:ch02-s6}
 \end{table}
 
 \begin{table}
@@ -1016,7 +1016,7 @@ financial interests.
   this dissertation) Contains the results of intersecting lists of
   differentially expressed genes for all pairwise comparisons (within
   each of the three timepoints).}
-\label{tab:s7}
+\label{tab:ch02-s7}
 \end{table}
 
 \begin{table}
@@ -1026,7 +1026,7 @@ financial interests.
   dissertation) Contains the number of differentially expressed genes
   when performing all pairwise tests between bacterial infections for
   each of the three timepoints.}
-\label{tab:s8}
+\label{tab:ch02-s8}
 \end{table}
 
 \begin{table}
@@ -1050,11 +1050,11 @@ financial interests.
   expression pattern that are not 100\%
   concordant. ``mean\_perc\_concord'' is the mean percent concordance
   of all the genes in that expression pattern.}
-\label{tab:s9}
+\label{tab:ch02-s9}
 \end{table}
 
 \clearpage
-\subsection{Supplementary Figures}\label{supplementary-figures}
+\subsection{Supplementary Figures}\label{ch02-supplementary-figures}
 
 \begin{figure}[htbp]
 \centering
@@ -1063,7 +1063,7 @@ financial interests.
   monocyte-derived macrophages isolated from six healthy donors with
   the bacteria described in Table \ref{tab:bacteria}. We isolated RNA
   for sequencing at 4, 18, and 48 hours post-infection.}
-\label{fig:study-design}
+\label{fig:ch02-study-design}
 \end{figure}
 
 \begin{figure}[htbp]
@@ -1198,7 +1198,7 @@ financial interests.
   greater than 5\%. Two genes (labeled green) at 4 hours
   post-infection had a q-value \textless{} 0.05 and
   log\textsubscript{2} fold change greater than 0.5 (see Supplementary
-  Table \ref{tab:s8}).}
+  Table \ref{tab:ch02-s8}).}
 \label{fig:Rv-v-GC}
 \end{figure}
 
