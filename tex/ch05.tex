@@ -1,5 +1,28 @@
 \chapter{Conclusion}\label{conclusion}
 
+Traditional genetics approaches have been unable to identify variants
+which can be used to predict susceptiblity to tuberculosis (TB),
+likely due to the highly polygenic architecture of this complex trait.
+Thus I performed experiments to interrogate a higher level phenotype,
+gene expression levels, for which the effect of many variants of small
+effect size can manifest in aggregrate. In my first approach, I
+identified genes in innate immune cells whose gene expression levels
+change in response to infection with \emph{Mycobacterium tuberculosis}
+(MTB) but not other bacteria, highlighting their potential importance
+for mycobacterial diseases. In my second approach, I measured gene
+expression levels in innate immune cells from individuals either
+susceptible and resistant to develop active TB and devoped a
+classifier to predict susceptibility to TB. These first two
+experiments measured gene expression levels in average across many
+cells, and thus they miss any cell-to-cell heterogeneity in the innate
+immune system. In my third approach, I established principles for the
+effective design of studies to measure gene expression levels in
+single cells. Given the success of my first two experiments, I expect
+many more discoveries will be made by interrogating gene expression
+measurements in single cells of the innate immune system.
+
+\section{A joint Bayesian model provides a general framework for analyzing functional genomics studies with many conditions}
+
 In Chapter \ref{ch:tb}, I described my work investigating the innate immune
 response to \emph{Mycobacterium tuberculosis} (MTB) \citep{Blischak2015}. It is
 known that the innate immune response is important for fighting MTB
@@ -128,6 +151,8 @@ Cormotif must be run multiple times to obtain the model with the highest log
 likelihood. Because of this added complexity, using Cormotif is more difficult
 to implement than more standard differential expression approaches.
 
+\section{Initial success classifying individuals susceptible to tuberculsosis and future directions}
+
 In Chapter \ref{ch:tb-suscept}, I described my work investigating the
 role of gene regulation in the innate immune system on TB
 susceptibility (not yet published). Specifically, in order to
@@ -199,6 +224,8 @@ infection. Another idea, since \emph{CCL1} is a secreted chemokine,
 would be to add varying amounts of exogenous \emph{CCL1} to the
 \emph{in vitro} system to detect an effect on the innate immune
 response.
+
+\section{Incorporating lessons from single cell pilot study for future studies of the genetic basis of gene expression noise and the response to bacterial infection}
 
 In Chapter \ref{ch:singleCellSeq}, I described my work on single cell
 RNA sequencing (scRNA-seq) \citep{Tung2016}. scRNA-seq is a relatively
@@ -293,6 +320,8 @@ immune response due to differences in the number of infected cells (or
 the number of bacteria per cell) or differences in the innate immune
 response in the infected cells.
 
+\section{The importance of mitigating batch effects in any genomics experiment}
+
 A common theme of all my projects is accounting for technical
 biases. Although only Chapter \ref{ch:singleCellSeq} has a main focus
 on mitigating batch effects, all my projects required close attention
@@ -350,8 +379,17 @@ In summary, technical batch effects need to be considered from the
 initial design of a genomics experiments through to the data analysis
 and interpretation of the results.
 
-I have identified hundreds of genes involved in fighting MTB
-infections.  More broadly, I have demonstrated that a joint Bayesian
-model is an effective tool for analyzing the large-scale multivariate
-data produced by genomic studies. Lastly, I have determined an
-effective study design for future single cell studies.
+\section{Concluding remarks}
+
+First, I have identified hundreds of genes specifically involved in
+fighting MTB infections. More broadly, I have demonstrated that a
+joint Bayesian model is an effective tool for analyzing the results of
+genomic studies with many conditions. Second, I have demonstrated that
+the gene expression levels in non-infected DCs may be able to predict
+susceptiblity to TB. Third, I have determined an effective study
+design for future single cell studies that accounts for technical
+batch effects while simultaneously decreasing the necessary sample
+size. Overall my results are informative not only for understanding
+how differences in the innate immune response confer susceptibility or
+resistance to TB, but also inform the design and analysis of any
+functional genomics experiment.
