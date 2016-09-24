@@ -1,0 +1,228 @@
+\chapter{Introduction}
+
+The field of Human Genetics aims to discover the genetic basis of the
+variation observed in human phenotypes. The difficulty of this goal
+depends on the genetic architecture of the phenotype. On the one hand
+are monogenic traits (also referred to as Mendelian traits), which are
+caused by mutations in a single gene. Isolating the causal gene is
+relatively tractable. On the other hand are polygenic (or complex)
+traits, which are the result of many genes acting in
+concert. Furthermore, the genes can interact with each other in
+non-additive manner (gene-gene interactions, or epistasis) and the
+environment can play a significant role (gene-environment
+interactions).
+
+As an example, consider human height. A disabling mutation in just one
+gene, the growth hormone receptor (HGR), nullifies the effect of
+growth hormone leading to very short stature and other metabolic
+abnormalities (Laron Syndrome). Because of its easy to identify
+phenotype and single gene origin, the genetic basis of Laron Syndrome
+was discovered in the late 1980s using a small number of pedigrees. In
+contrast, the considerable variability in height in the human
+population is not caused by rare mutations in a single or few genes,
+but instead is due to the aggregate effect of many mutations of small
+effect size interacting with each other and the environment
+(e.g. diet, pollution, etc.). Thus although height has been determined
+to be highly heritable, genetic studies involving hundreds of
+thousands of individuals that identified thousands of associated
+variants which affect height still only explain a small percentage of
+the heritable variation. Larger studies with increased power will only
+continue to find associated variants with even smaller effect size (or
+otherwise they would have already been discovered), thus the genetic
+basis of a highly polygenic trait subject to millennia of natural
+selection may unsatisfyingly be that most of the genome makes a minute
+contribution to the height of an individual.
+
+The current state-of-the-art technique of mapping genetic variants
+that affect a polygenic trait is the genome-wide association study
+(GWAS). This technique was made possible by the sequencing of the
+human genome and the cataloging of the common genetic variation
+segregating in the human population (the latter done via the
+International HapMap Project). For a GWAS, individuals are phenotyped
+(e.g. height is measured) and genotyped at millions of common single
+nucleotide polymorphisms (SNPs).  Then each SNP is tested individually
+for an association with the trait measurements via a linear regression
+or related statistical technique. Similarly, for a binary trait such
+as cases with a disease versus controls without a disease, the
+phenotype is the presence or absence of a disease and each SNP is
+tested for association with a logistic regression or related
+statistical technique. GWAS have identified many genetic variants
+affecting a diverse set of human polygenic traits, especially as the
+sample sizes for GWAS increased into the hundreds of
+thousands. Nevertheless, their results have several limitations.
+
+As mentioned above, one of the main issues with GWAS results is the
+small effect size of the associated SNPs on the trait of interest. The
+hope of finding these SNPs is that they will be useful for predicting
+the trait (e.g. how likely are you to develop diabetes). However, with
+such small effect sizes, they have little predictive power and thus
+are generally not clinically actionable. These disappointing results
+could be due to limitations in our knowledge when designing the study
+and modeling the data. For example, when recruiting study
+participants, it is impossible to record every possible environmental
+factor that could have contributed to each person’s trait
+value. Furthermore, in case-control studies, the controls will likely
+include a subset of individuals that have yet to develop the
+disease. Similarly, when modeling the genetic associations, most
+models assume an isolated additive effect of each variant on the
+trait. This simplifying assumption is made such that the statistical
+test is tractable and interpretable. However, it is missing the
+contribution of any gene-gene or gene-environment interactions. On the
+other hand, the disappointing results of GWAS may not be due to
+limitations of the approach, but simply reflect the actual biology of
+polygenic traits. Mutations with strong effect, such as those that
+disable the GHR and cause Laron Syndrome, are often disruptive to the
+complex network of biochemical reactions that sustain a living
+individual. For this reason, they face strong negative selection and
+are often rare in the population. In contrast, mutations with small
+effect on a trait are more likely to be neutral or slight favorable,
+and thus are able to rise to higher allele frequencies in the
+population. Over millions of years of evolution, the many variants of
+small effect could give rise to the large variation in phenotypes
+observed today, e.g. the difference in height between a 5 foot person
+and a 7 foot person. Supporting this view, when all SNPs assayed in an
+experiment are used to explain heritability, known as the “chip”
+heritability, this estimate is close to the observed
+heritability. This suggests that highly polygenic traits like human
+height are indeed the result of millions of variants of small effect
+size.
+
+Beyond the ability to predict a disease outcome or trait value,
+another goal of GWAS is to elucidate the underlying biological
+mechanisms which ultimately determine the trait. This has proven
+difficult because most GWAS hits do not affect the protein-coding
+sequence of a gene, for which it would be straightforward to predict
+and test the effect this would have on gene function, but instead the
+associated SNPs are located in non-coding regions of the genome. It is
+much more difficult to predict the effect of these variants because
+there is no simple code to translate changes in non-coding
+sequence. This has motivated the study of gene regulation in the field
+of Human Genetics.
+
+Gene regulation refers to how cells control which genes are turned on
+and to what extent. This is critical because all cells in the human
+body contain the same genomic material (ignoring the complications of
+somatic recombination in certain immune cells and somatic mutations in
+general). Thus in order for a liver cell to function differently than
+a skin cell, the two cells must have different gene expression
+levels. These gene regulatory differences are established during
+development as an organism grows from an initial single
+cell. Signaling molecules, initially from the mother but subsequently
+produced by the offspring’s cells, bind to the receptors of a cell to
+initiate signal transduction cascades that ultimately lead to
+activation of a transcription factor which binds to DNA at its
+degenerate binding sites across the genome to modulate the expression
+of many genes. As development continues and cells differentiate into
+their final tissue type, the gene expression levels are maintained by
+the gene regulatory network established by the transcription factors
+active in that cell type.
+
+Just as differences in gene regulation generates extreme diversity in
+cellular function among cells with identical genomes in a given
+organism, a long standing hypothesis is that differences among humans
+and the differences between humans and our closest evolutionary
+relatives, the great apes, are due to mutations that affect not the
+protein-coding sequence but instead mutations which affect the
+spatiotemporal expression of genes. This theory was originally
+proposed because of the high similarity of protein-coding sequences
+between humans and chimpanzees, and is supported by the finding of
+mainly non-coding SNPs from GWAS.
+
+Understanding which transcription factors establish and maintain a
+given cellular identity is quite difficult. However, even without this
+knowledge, it is possible to learn about the regulatory state of a
+given cell type. First, it is possible to measure genome-wide gene
+expression levels using technologies like microarrays or RNA
+sequencing (more on that below). Second, it is possible to interrogate
+the non-coding regions of the genome by measuring chromatin
+marks. Chromatin marks are deposited by chromatin-remodeling enzymes
+which are recruited by the transcription factors active in the
+cell. The most common are methylation of the cysteine base in CpG
+dinucleotides (DNA methylation) or chemical modification of the tails
+of the protein octamers (histones) which DNA is wrapped around. These
+marks signal the state of the region, e.g. active or repressed, and
+help to maintain the current state. Histone marks can be assayed with
+chromatin immunoprecipitation followed by sequencing (ChIP-seq), and
+DNA methylation can be assayed with specialized microarrays or
+bisulphite sequencing. Using these technologies, it is possible to
+learn about the function of the non-coding SNPs discovered by GWAS.
+
+As an aside, it should be noted that there is a lot of confusion about
+the role of chromatin marks and their effect on gene
+expression. Chromatin marks are not causal. Instead, they are signs of
+a given chromatin state, and at best help maintain that state. As an
+analogy, consider viewing a stretch of highway from a helicopter. If
+you observe orange signs and barrels, you can conclude that this
+section of the highway is a construction zone. Furthermore, because
+they notify the motorists to slow down and to merge into one lane, you
+can conclude that the constructions signs and barrels help this
+section to maintain the characteristics of a construction
+zone. However, you would not conclude that the signs and barrels
+caused this section of highway to be a construction zone. The decision
+to work on this section of road was made by local government officials
+and contractors after observing the conditions of the road and
+receiving complaints from citizens. In gene regulation, the chromatin
+marks are the constructions signs and barrels. If you observe
+activating chromatin marks, you can conclude that the nearby gene is
+expressed and that the chromatin marks are helping maintain this
+transcriptional activity. However, it is the result of transcription
+factors receiving input from outside the cell that caused these active
+chromatin marks to be established and the gene to be expressed.
+
+Thus using these chromatin marks enables the deciphering of the
+non-coding regions of the genome. While not as easy initially
+envisioning a readable “histone code,” much progress has been
+made. The ENCODE Project assayed the gene expression and many
+chromatin marks in a large variety of cell types. Using a hidden
+Markov model (HMM), they were able to define distinct regions of the
+genome in each of the cell types they collected. This now provides the
+context-specificity required to predict and test the effect of
+non-coding SNPs identified in GWAS. For example, a GWAS hit for type
+II diabetes could be potentially affecting gene expression in the
+liver, adipose tissue, brain, or beta cells of the pancreas. If
+chromatin profiling reveals that SNP is located in an enhancer region
+in only one of those tissues, that would inform the follow-up
+experiments to perform. Encouragingly, this sort of relationship is
+observed generally. That is, GWAS hits for given disease are more
+likely to be found in gene regulatory regions of the genome specific
+to tissues relevant to the disease pathogenesis. Furthermore,
+knowledge of these genomic annotations has been successfully used as
+prior information to increase the power to detect associations in a
+GWAS \citep{Wang2016}.
+
+While knowing that an associated SNP is located in an enhancer region
+in a particular cell type is extremely helpful for generating testable
+hypotheses, it still leaves many unanswered questions. While it is
+usually assumed that a variant is affecting the most nearby gene,
+there is no guarantee this is true. And even if that assumption is
+true, it is unknown which allele is associated with higher
+expression. A direct method for addressing these uncertainties is
+expression quantitative trait loci (eQTL) mapping (note that the name
+is a misnomer; early eQTL studies were performed using linkage in
+pedigrees, but current eQTL studies are tests of association in
+unrelated individuals like a typical GWAS). In this approach the
+phenotype of interest is the expression level of a gene. To reduce the
+multiple testing burden (and also because regulatory variants are
+often closer to the gene they affect), most eQTL studies test for
+eQTLs nearby the transcription start site of each gene. To date, eQTL
+studies have been performed in many cell types. Reassuringly, eQTLs
+are more likely to be GWAS associated SNPs, consistent with the idea
+that GWAS hits in non-coding regions are affecting gene
+expression. Furthermore, by combining eQTL results from many tissues
+collected by the GTEx Consortium with GWAS results, it is possible to
+determine the tissue(s) most affecting a given disease by finding
+which tissue is enriched for tissue-specific eQTLs that are also GWAS
+hits for the disease \citep{Ongen2016}.
+
+A common functional genomics technique is RNA sequencing (RNA-seq). It
+is an efficient method for interrogating cellular function by
+measuring genome-wide gene expression levels. RNA-seq has multiple
+advantages over its predecessor, gene expression microarrays. For
+example, it is not as limited by genome annotations and has a higher
+dynamic range. Most importantly for Human Genetics applications, any
+polymorphisms present in the coding regions in a population being
+studied will be present in the RNA-seq reads. These can be used to
+verify the identity of the individual being sequenced (i.e. avoid
+sample swaps and contamination), and also to increase power in eQTL
+studies by comparing the allele-specific expression measurements to
+the eQTL effects.
