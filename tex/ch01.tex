@@ -257,3 +257,49 @@ example, a GWAS of the auto-immune disorder inflammatory bowel disease
 and not only other immune-related disorders, but also with
 susceptibility loci for infection with \emph{Mycobacterium leprae}
 (which causes leprosy) \citep{Jostins2012}.
+
+\section{Single cell sequencing technology and the future of functional genomics}
+
+The previous functional genomics techniques discussed above,
+e.g. RNA-seq and ChIP-seq, measure averages across many cells. Thus
+they are unable to detect the cell-to-cell heterogeneity due to
+stochastic noise, different subpopulations of cells, or differences in
+the surrounding environment. In recent years, many new technologies
+have been developed for assaying genome-wide measurements in single
+cells. Most enable measuring gene expression levels via single cell
+RNA-seq (scRNA-seq), but techniques have also been developed to
+measure DNA methylation, chromatin accessibility, and protein levels
+\citep{Genshaft2016} in single cells. The increased resolution
+obtained with these single cell technologies has great potential for
+improving our understanding of gene regulatory mechanisms.
+
+While there are many applications of single cell technology, one
+exciting area of research is investigating the innate immune response
+to infection at the resolution of single cells \citep{Satija2014,
+ Proserpio2016}. The gene expression differences I have observed in
+my bulk RNA-seq experiments of bacterial infection could have arisen
+from any combination of the following explanations: a global
+difference in the innate immune response to a pathogen, a difference
+in only a subset of cells, or a difference in the fraction of cells
+that are infected. Interestingly, initial studies of the innate immune
+response to bacterial infection have observed substantial
+heterogeneity among single cells \citep{Shalek2013, Avraham2015}.
+
+As with any new functional genomics technique, it is important to
+investigate and understand the technical biases to avoid during study
+design. The initial studies which investigated the technical noise in
+scRNA-seq were interested in differentiating between the biological
+and technical variation affect cell-to-cell differences in gene
+expression. On the other hand, scRNA-seq studies of gene expression
+differences across multiple conditions were generating data from many
+batches of single cell RNA-seq. Because many of the new technologies
+are limited to sorting cells from just one condition in each batch,
+many of these studies confounded the biological conditions of interest
+with the technical batch processing \citep{Hicks2015}. With this
+confounded study design with each biological condition being
+represented in only one batch, any technical variation will be
+contributed to differences between the biological conditions of
+interest. In Chapter \ref{ch:singleCellSeq}, I discuss my research
+that measured the technical variation in scRNA-seq introduced by batch
+processing and recommended an efficient study design to account for
+technical variation while minimizing replication \citep{Tung2016}.
