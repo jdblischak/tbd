@@ -70,7 +70,9 @@
 			IN CANDIDACY FOR THE DEGREE OF\\
 			\MakeUppercase{\@degree}\\
 			\ \\
-			DEPARTMENT OF \MakeUppercase{\@department}\\
+                        % My degree is being granted by the Committee on Genetics.
+			% DEPARTMENT OF \MakeUppercase{\@department}\\
+			COMMITTEE ON \MakeUppercase{\@department}\\
 			\vspace{0.8in}
 			BY\\
 			\MakeUppercase{\@author}\\
