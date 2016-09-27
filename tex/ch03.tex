@@ -116,9 +116,9 @@ between resistant and susceptible individuals in the infected state
 
 \begin{figure}[p]
 \centering
-\includegraphics[width=\linewidth]{img/ch03/limma.pdf}
-\caption{
-Differential expression analysis. The top panel contains the
+\includegraphics[width=5in]{img/ch03/limma.pdf}
+\caption[Differential expression analysis.]{
+\textbf{Differential expression analysis.} The top panel contains the
 distribution of unadjusted p-values after testing for differential
 expression between susceptible and resistant individuals in the (a)
 non-infected or (b) infected state. The bottom panel contains the
@@ -169,9 +169,9 @@ a role in MTB infection.
 
 \begin{figure}[ht]
 \centering
-\includegraphics[width=\linewidth]{img/ch03/gwas.pdf}
-\caption{
-Comparison of differential expression and The Gambia GWAS results. (a)
+\includegraphics[width=5in]{img/ch03/gwas.pdf}
+\caption[Comparison of differential expression and The Gambia GWAS results.]{
+\textbf{Comparison of differential expression and The Gambia GWAS results.} (a)
 The y-axis is the fold enrichment (y-axis) of genes assigned a SNP
 with p-value less than 0.05 from the GWAS in The Gambia
 \citep{Thye2010}. The x-axis is bins of genes with increasingly
@@ -230,10 +230,11 @@ TB (Fig. \ref{fig:classifier}b).
 
 \begin{figure}[ht]
 \centering
-\includegraphics[width=\linewidth]{img/ch03/classifier-svm.pdf}
-\caption{
-Classifying TB susceptible individuals using a support vector machine
-model. (a) The estimates of predicted probability of TB resistance
+\includegraphics[width=5in]{img/ch03/classifier-svm.pdf}
+\caption[Classifying TB susceptible individuals using a support vector machine
+model.]{
+\textbf{Classifying TB susceptible individuals using a support vector machine
+model.} (a) The estimates of predicted probability of TB resistance
 from the leave-one-out-cross-validation for individuals in the current
 study. The blue circles represent individuals known to be susceptible
 to TB, and orange those resistant to TB. The horizontal dashed red
@@ -633,9 +634,9 @@ project. JDB wrote the paper with input from all authors.
 
 \begin{figure}[ht]
 \centering
-\includegraphics[width=\linewidth]{img/ch03/processing.pdf}
-\caption{
-Batch processing. We designed the processing of the samples to
+\includegraphics[width=5in]{img/ch03/processing.pdf}
+\caption[Batch processing.]{
+\textbf{Batch processing.} We designed the processing of the samples to
 minimize the introduction of technical batch effects. Specifically, we
 attempted to balance the processing of samples obtained from
 susceptible and resistant individuals. In the diagram, each box
@@ -653,10 +654,11 @@ of that flow cell.
 
 \begin{figure}[ht]
 \centering
-\includegraphics[width=\linewidth]{img/ch03/gene-exp-distribution.pdf}
-\caption{
-Gene expression distributions before and after filtering genes and
-samples. The log\textsubscript{2} counts per million (cpm) of each
+\includegraphics[width=5in]{img/ch03/gene-exp-distribution.pdf}
+\caption[Gene expression distributions before and after filtering genes and
+samples.]{
+\textbf{Gene expression distributions before and after filtering genes and
+samples.} The log\textsubscript{2} counts per million (cpm) of each
 sample is plotted as a dashed gray line. The solid red line represents
 the median value across all the samples. The vertical solid blue line
 at $x = 0$ represents the cutoff used to filter lowly expressed genes
@@ -671,9 +673,9 @@ samples remaining after removing outliers.
 
 \begin{figure}[ht]
 \centering
-\includegraphics[width=\linewidth]{img/ch03/heatmap-all-samples.pdf}
-\caption{
-Heatmap of correlation matrix of samples. Each square represents the
+\includegraphics[width=5in]{img/ch03/heatmap-all-samples.pdf}
+\caption[Heatmap of correlation matrix of samples.]{
+\textbf{Heatmap of correlation matrix of samples.} Each square represents the
 Pearson correlation between the log\textsubscript{2} cpm expression
 values of two samples. Red indicates a low correlation of zero and
 white represents a high correlation of 1. The dendrogram displays the
@@ -688,9 +690,9 @@ r18-resist-infect.
 
 \begin{figure}[ht]
 \centering
-\includegraphics[width=\linewidth]{img/ch03/heatmap-no-outliers.pdf}
-\caption{
-Heatmap of correlation matrix after removing outliers. Each square
+\includegraphics[width=5in]{img/ch03/heatmap-no-outliers.pdf}
+\caption[Heatmap of correlation matrix after removing outliers.]{
+\textbf{Heatmap of correlation matrix after removing outliers.} Each square
 represents the Pearson correlation between the log\textsubscript{2}
 cpm expression values of two samples. Red indicates a low correlation
 of zero and white represents a high correlation of 1. The dendrogram
@@ -703,9 +705,9 @@ linkage method.
 
 \begin{figure}[ht]
 \centering
-\includegraphics[width=\linewidth]{img/ch03/outliers.pdf}
-\caption{
-Principal components analysis (PCA) to identify outliers. PC1 versus
+\includegraphics[width=5in]{img/ch03/outliers.pdf}
+\caption[Principal components analysis (PCA) to identify outliers.]{
+\textbf{Principal components analysis (PCA) to identify outliers.} PC1 versus
 PC2 (a), PC3 versus PC4 (b), and PC5 versus PC6 (c). Each sample is
 represented by its 3-letter ID. “s” stands for susceptible and “r” for
 resistant, and the text is colored on the basis of treatment status
@@ -722,10 +724,11 @@ non-infected and infected samples for PC1 only.
 
 \begin{figure}[ht]
 \centering
-\includegraphics[width=\linewidth]{img/ch03/batch-pca.pdf}
-\caption{
-Check for technical batch effects using principal components analysis
-(PCA). (a) PC1 versus PC2. The text labels are the individual
+\includegraphics[width=5in]{img/ch03/batch-pca.pdf}
+\caption[Check for technical batch effects using principal components analysis
+(PCA).]{
+\textbf{Check for technical batch effects using principal components analysis
+(PCA).} (a) PC1 versus PC2. The text labels are the individual
 identifiers. Purple indicates non-infected samples and green indicates
 infected. (b) PC3 versus PC4. The colors indicate the different
 infection batches. (c) PC5 versus PC6. The colors indicate the
@@ -738,9 +741,9 @@ correlations vary from 0 (white) to 1 (red).
 
 \begin{figure}[ht]
 \centering
-\includegraphics[width=\linewidth]{img/ch03/batch-infection.pdf}
-\caption{
-Check for confounding effect of infection batch. PC3 (a) and PC5 (b)
+\includegraphics[width=5in]{img/ch03/batch-infection.pdf}
+\caption[Check for confounding effect of infection batch.]{
+\textbf{Check for confounding effect of infection batch.} PC3 (a) and PC5 (b)
 varied by the date of infection. Non-infected samples are in purple
 and infected samples in green. Importantly, however, this technical
 variation arising from infection batch did not correlate with the
@@ -752,9 +755,9 @@ individuals are in orange and susceptible individuals in blue.
 
 \begin{figure}[ht]
 \centering
-\includegraphics[width=\linewidth]{img/ch03/limma-supp.pdf}
-\caption{
-Effect of treatment with MTB. The top panel contains the distribution
+\includegraphics[width=5in]{img/ch03/limma-supp.pdf}
+\caption[Effect of treatment with MTB.]{
+\textbf{Effect of treatment with MTB.} The top panel contains the distribution
 of unadjusted p-values after testing for differential expression
 between the non-infected and infected states in (a) resistant and (b)
 susceptible individuals. The bottom panel contains the corresponding
@@ -771,9 +774,9 @@ significantly differentially expressed at this false discovery rate.
 
 \begin{figure}[ht]
 \centering
-\includegraphics[width=\linewidth]{img/ch03/gwas-supp.pdf}
-\caption{
-Comparison of differential expression and Ghana GWAS results. (a) The
+\includegraphics[width=5in]{img/ch03/gwas-supp.pdf}
+\caption[Comparison of differential expression and Ghana GWAS results.]{
+\textbf{Comparison of differential expression and Ghana GWAS results.} (a) The
 y-axis is the fold enrichment (y-axis) of genes assigned a SNP with
 p-value less than 0.05 from the GWAS in Ghana \citep{Thye2010}. The
 x-axis is bins of genes with increasingly stringent effect size
@@ -794,9 +797,9 @@ the enrichment plot in (a).
 
 \begin{figure}[ht]
 \centering
-\includegraphics[width=\linewidth]{img/ch03/combined-distributions.pdf}
-\caption{
-Normalizing gene expression distributions. (left) The distribution of
+\includegraphics[width=5in]{img/ch03/combined-distributions.pdf}
+\caption[Normalizing gene expression distributions.]{
+\textbf{Normalizing gene expression distributions.} (left) The distribution of
 the median log2 cpm of the RNA-seq data from the current study in red
 compared to the distribution of the median gene expression levels of
 the microarray data from Barreiro et al., 2012 \citep{Barreiro2012} in
@@ -808,9 +811,9 @@ normalizing each sample to a standard normal distribution.
 
 \begin{figure}[ht]
 \centering
-\includegraphics[width=\linewidth]{img/ch03/combined-pca.pdf}
-\caption{
-Principal components analysis (PCA) of combined data sets. (a) PC1
+\includegraphics[width=5in]{img/ch03/combined-pca.pdf}
+\caption[Principal components analysis (PCA) of combined data sets.]{
+\textbf{Principal components analysis (PCA) of combined data sets.} (a) PC1
 versus PC2 of the combined data set of the RNA-seq data from the
 current study (red) and the microarray data from Barreiro et al., 2012
 \citep{Barreiro2012} (blue). The large circles are non-infected
@@ -823,10 +826,11 @@ that PC. (b) The same data after regressing the original PC1 in (a).
 
 \begin{figure}[ht]
 \centering
-\includegraphics[width=\linewidth]{img/ch03/classifier-compare.pdf}
-\caption{
-Comparing the classification results of different methods and number
-of input genes. We compared 3 different machine learning methods
+\includegraphics[width=5in]{img/ch03/classifier-compare.pdf}
+\caption[Comparing the classification results of different methods and number
+of input genes.]{
+\textbf{Comparing the classification results of different methods and number
+of input genes.} We compared 3 different machine learning methods
 (elastic net, support vector machine, random forest) and used 5
 different sets of input genes. The input genes (x-axis) were obtained
 by varying the q-value cutoff for differential expression between
@@ -840,9 +844,9 @@ resistant and susceptible individuals in the current study.
 
 \begin{figure}[ht]
 \centering
-\includegraphics[width=\linewidth]{img/ch03/classifier-en.pdf}
-\caption{
-Classifying TB susceptible individuals using an elastic net model. (a)
+\includegraphics[width=5in]{img/ch03/classifier-en.pdf}
+\caption[Classifying TB susceptible individuals using an elastic net model.]{
+\textbf{Classifying TB susceptible individuals using an elastic net model.} (a)
 The estimates of predicted probability of TB resistance from the
 leave-one-out-cross-validation for individuals in the current study.
 The blue circles represent individuals known to be susceptible to TB,
@@ -858,9 +862,9 @@ individuals \citep{Barreiro2012}.
 
 \begin{figure}[ht]
 \centering
-\includegraphics[width=\linewidth]{img/ch03/classifier-rf.pdf}
-\caption{
-Classifying TB susceptible individuals using a random forest model.
+\includegraphics[width=5in]{img/ch03/classifier-rf.pdf}
+\caption[Classifying TB susceptible individuals using a random forest model.]{
+\textbf{Classifying TB susceptible individuals using a random forest model.}
 (a) The estimates of predicted probability of TB resistance from the
 leave-one-out-cross-validation for individuals in the current study.
 The blue circles represent individuals known to be susceptible to TB,
@@ -876,9 +880,9 @@ a test set of independently collected healthy individuals
 
 \begin{figure}[ht]
 \centering
-\includegraphics[width=\linewidth]{img/ch03/classifier-exp.pdf}
-\caption{
-Comparing gene expression between the two studies. After normalization
+\includegraphics[width=5in]{img/ch03/classifier-exp.pdf}
+\caption[Comparing gene expression between the two studies.]{
+\textbf{Comparing gene expression between the two studies.} After normalization
 and batch-correction, the median expression levels of the 99 genes
 used in the classifier were similar between the samples in the current
 study and those in Barreiro et al., 2012 \citep{Barreiro2012}. The
