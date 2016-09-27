@@ -3,19 +3,19 @@
 \section{Human Genetics and the search for the genetic basis of human phenotypes}
 
 The field of Human Genetics aims to discover the genetic basis of the
-variation observed in human phenotypes. The difficulty of this goal
-depends on the genetic architecture of the phenotype. On the one hand
+variation observed in human phenotypes \citep{Strachan2011}. The difficulty of this goal
+depends on the genetic architecture of the phenotype \citep{DiRienzo2006, Bodmer2008, Schork2009}. On the one hand
 are monogenic traits (also referred to as Mendelian traits), which are
 caused by mutations in a single gene. Isolating the causal gene is
 relatively tractable. On the other hand are polygenic (or complex)
 traits, which are the result of many genes acting in
 concert. Furthermore, the genes can interact with each other in
-non-additive manner (gene-gene interactions, or epistasis) and the
+non-additive manner (gene-gene interactions, or epistasis) \citep{Cordell2009} and the
 environment can play a significant role (gene-environment
-interactions).
+interactions) \citep{Ober2011}.
 
 As an example, consider human height. A disabling mutation in just one
-gene, the growth hormone receptor (HGR), nullifies the effect of
+gene, the growth hormone receptor (GHR), nullifies the effect of
 growth hormone leading to very short stature and other metabolic
 abnormalities (Laron Syndrome). Because of its easy to identify
 phenotype and single gene origin, the genetic basis of Laron Syndrome
@@ -24,11 +24,11 @@ contrast, the considerable variability in height in the human
 population is not caused by rare mutations in a single or few genes,
 but instead is due to the aggregate effect of many mutations of small
 effect size interacting with each other and the environment
-(e.g. diet, pollution, etc.). Thus although height has been determined
+(e.g. diet, pollution, etc.) \citep{Lettre2011, Turchin2012}. Thus although height has been determined
 to be highly heritable, genetic studies involving hundreds of
 thousands of individuals that identified thousands of associated
 variants which affect height still only explain a small percentage of
-the heritable variation. Larger studies with increased power will only
+the heritable variation \citep{LangoAllen2010, Wood2014}. Larger studies with increased power will only
 continue to find associated variants with even smaller effect size (or
 otherwise they would have already been discovered), thus the genetic
 basis of a highly polygenic trait subject to millennia of natural
@@ -37,42 +37,42 @@ contribution to the height of an individual.
 
 The current state-of-the-art technique of mapping genetic variants
 that affect a polygenic trait is the genome-wide association study
-(GWAS). This technique was made possible by the sequencing of the
-human genome and the cataloging of the common genetic variation
+(GWAS) \citep{Hirschhorn2005}. This technique was made possible by the sequencing of the
+human genome \citep{Lander2001, Venter2001, HGP2004, Lander2011} and the cataloging of the common genetic variation
 segregating in the human population (the latter done via the
-International HapMap Project). For a GWAS, individuals are phenotyped
+International HapMap Project \citep{HapMap2005, HapMap2007, HapMap2010} and 1000 Genomes Project \citep{1KG2010, 1KG2012}). For a GWAS, individuals are phenotyped
 (e.g. height is measured) and genotyped at millions of common single
 nucleotide polymorphisms (SNPs).  Then each SNP is tested individually
 for an association with the trait measurements via a linear regression
-or related statistical technique. Similarly, for a binary trait such
+or related statistical technique \citep{Balding2006, Yang2014}. Similarly, for a binary trait such
 as cases with a disease versus controls without a disease, the
 phenotype is the presence or absence of a disease and each SNP is
 tested for association with a logistic regression or related
-statistical technique. GWAS have identified many genetic variants
+statistical technique \citep{Chang2015}. GWAS have identified many genetic variants
 affecting a diverse set of human polygenic traits, especially as the
 sample sizes for GWAS increased into the hundreds of
-thousands. Nevertheless, their results have several limitations.
+thousands \citep{Welter2014}. Nevertheless, their results have several limitations.
 
 As mentioned above, one of the main issues with GWAS results is the
-small effect size of the associated SNPs on the trait of interest. The
+small effect size of the associated SNPs on the trait of interest \citep{Manolio2009}. The
 hope of finding these SNPs is that they will be useful for predicting
 the trait (e.g. how likely are you to develop diabetes). However, with
 such small effect sizes, they have little predictive power and thus
-are generally not clinically actionable. These disappointing results
+are generally not clinically actionable \citep{Torres2013, Wray2013}. These disappointing results
 could be due to limitations in our knowledge when designing the study
 and modeling the data. For example, when recruiting study
 participants, it is impossible to record every possible environmental
 factor that could have contributed to each person’s trait
-value. Furthermore, in case-control studies, the controls will likely
+value \citep{Ober2011}. Furthermore, in case-control studies, the controls will likely
 include a subset of individuals that have yet to develop the
 disease. Similarly, when modeling the genetic associations, most
 models assume an isolated additive effect of each variant on the
-trait. This simplifying assumption is made such that the statistical
+trait \citep{Cordell2009}. This simplifying assumption is made such that the statistical
 test is tractable and interpretable. However, it is missing the
-contribution of any gene-gene or gene-environment interactions. On the
+contribution of any gene-gene or gene-environment interactions \citep{Lappalainen2011, Ackermann2012, Huang2012}. On the
 other hand, the disappointing results of GWAS may not be due to
 limitations of the approach, but simply reflect the actual biology of
-polygenic traits. Mutations with strong effect, such as those that
+polygenic traits \citep{DiRienzo2006, Bodmer2008, Schork2009}. Mutations with strong effect, such as those that
 disable the GHR and cause Laron Syndrome, are often disruptive to the
 complex network of biochemical reactions that sustain a living
 individual. For this reason, they face strong negative selection and
@@ -84,10 +84,10 @@ small effect could give rise to the large variation in phenotypes
 observed today, e.g. the difference in height between a 5 foot person
 and a 7 foot person. Supporting this view, when all SNPs assayed in an
 experiment are used to explain heritability, known as the “chip”
-heritability, this estimate is close to the observed
-heritability. This suggests that highly polygenic traits like human
-height are indeed the result of millions of variants of small effect
-size.
+heritability, this estimate is closer to the observed
+heritability (this has been demonstrated for height and other polygenic traits) \citep{Yang2010, Lee2011}. This suggests that highly polygenic traits like human
+height are indeed the result of thousands of variants of small effect
+size \citep{Wood2014}.
 
 Beyond the ability to predict a disease outcome or trait value,
 another goal of GWAS is to elucidate the underlying biological
@@ -95,11 +95,11 @@ mechanisms which ultimately determine the trait. This has proven
 difficult because most GWAS hits do not affect the protein-coding
 sequence of a gene, for which it would be straightforward to predict
 and test the effect this would have on gene function, but instead the
-associated SNPs are located in non-coding regions of the genome. It is
+associated SNPs are located in non-coding regions of the genome \citep{Hindorff2009, Manolio2009}. It is
 much more difficult to predict the effect of these variants because
 there is no simple code to translate changes in non-coding
 sequence. This has motivated the study of gene regulation in the field
-of Human Genetics.
+of Human Genetics \citep{Lappalainen2010, Lappalainen2015}.
 
 \section{Functional genomics and the investigation of the non-coding regions of the genome}
 
@@ -191,8 +191,8 @@ observed generally. That is, GWAS hits for given disease are more
 likely to be found in gene regulatory regions of the genome specific
 to tissues relevant to the disease pathogenesis. Furthermore,
 knowledge of these genomic annotations has been successfully used as
-prior information to increase the power to detect associations in a
-GWAS \citep{Wang2016}.
+prior information to increase the power to detect associations in
+GWAS \citep{Pickrell2014, Wang2016}.
 
 While knowing that an associated SNP is located in an enhancer region
 in a particular cell type is extremely helpful for generating testable
@@ -204,7 +204,7 @@ expression. A direct method for addressing these uncertainties is
 expression quantitative trait loci (eQTL) mapping (note that the name
 is a misnomer; early eQTL studies were performed using linkage in
 pedigrees, but current eQTL studies are tests of association in
-unrelated individuals like a typical GWAS). In this approach the
+unrelated individuals like a typical GWAS) \citep{Lappalainen2015}. In this approach the
 phenotype of interest is the expression level of a gene. To reduce the
 multiple testing burden (and also because regulatory variants are
 often closer to the gene they affect), most eQTL studies test for
