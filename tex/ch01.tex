@@ -9,17 +9,19 @@ are monogenic traits (also referred to as Mendelian traits), which are
 caused by mutations in a single gene. Isolating the causal gene is
 relatively tractable. On the other hand are polygenic (or complex)
 traits, which are the result of many genes acting in
-concert. Furthermore, the genes can interact with each other in
+concert. Furthermore, the genes can interact with each other in a
 non-additive manner (gene-gene interactions, or epistasis) \citep{Cordell2009} and the
-environment can play a significant role (gene-environment
+environment can also play a significant role (gene-environment
 interactions) \citep{Ober2011}.
 
 As an example, consider human height. A disabling mutation in just one
 gene, the growth hormone receptor (GHR), nullifies the effect of
 growth hormone leading to very short stature and other metabolic
-abnormalities (Laron Syndrome). Because of its easy to identify
+abnormalities (Laron Syndrome) \citep{Laron2011}. Because of its easy to identify
 phenotype and single gene origin, the genetic basis of Laron Syndrome
-was discovered in the late 1980s using a small number of pedigrees. In
+was discovered in the late 1980s using a candidate gene approach
+in a small number of pedigrees \citep{Amselem1989, Godowski1989, Shevah2011}
+(they knew the correct candidate gene from previous physiology experiments \citep{Eshet1984}). In
 contrast, the considerable variability in height in the human
 population is not caused by rare mutations in a single or few genes,
 but instead is due to the aggregate effect of many mutations of small
@@ -99,12 +101,12 @@ associated SNPs are located in non-coding regions of the genome \citep{Hindorff2
 much more difficult to predict the effect of these variants because
 there is no simple code to translate changes in non-coding
 sequence. This has motivated the study of gene regulation in the field
-of Human Genetics \citep{Lappalainen2010, Lappalainen2015}.
+of Human Genetics \citep{Lappalainen2010, Trynka2013, Lappalainen2015}.
 
 \section{Functional genomics and the investigation of the non-coding regions of the genome}
 
 Gene regulation refers to how cells control which genes are turned on
-and to what extent. This is critical because all cells in the human
+and to what extent \citep{Davidson2010, Natoli2010, Strachan2011, Ostuni2013, Tsankov2015}. This is critical because all cells in the human
 body contain the same genomic material (ignoring the complications of
 somatic recombination in certain immune cells and somatic mutations in
 general). Thus in order for a liver cell to function differently than
@@ -123,28 +125,28 @@ active in that cell type.
 
 Just as differences in gene regulation generates extreme diversity in
 cellular function among cells with identical genomes in a given
-organism, a long standing hypothesis is that differences among humans
+organism \citep{Natoli2010}, a long standing hypothesis is that differences among humans
 and the differences between humans and our closest evolutionary
 relatives, the great apes, are due to mutations that affect not the
 protein-coding sequence but instead mutations which affect the
-spatiotemporal expression of genes. This theory was originally
+spatiotemporal expression of genes \citep{Britten1969, King1975, Carroll2008}. This theory was originally
 proposed because of the high similarity of protein-coding sequences
-between humans and chimpanzees, and is supported by the finding of
-mainly non-coding SNPs from GWAS.
+between humans and chimpanzees \citep{King1975}, and is supported by the finding of
+mainly non-coding SNPs from GWAS \citep{Welter2014}.
 
 Understanding which transcription factors establish and maintain a
-given cellular identity is quite difficult. However, even without this
+given cellular identity is quite difficult \citep{Vaquerizas2009, Biggin2011, Zaret2016}. However, even without this
 knowledge, it is possible to learn about the regulatory state of a
-given cell type. First, it is possible to measure genome-wide gene
+given cell type \citep{Ho2014}. First, it is possible to measure genome-wide gene
 expression levels using technologies like microarrays or RNA
-sequencing (more on that below). Second, it is possible to interrogate
+sequencing (more on that below) \citep{Wang2009, Oshlack2010}. Second, it is possible to interrogate
 the non-coding regions of the genome by measuring chromatin
-marks. Chromatin marks are deposited by chromatin-remodeling enzymes
+marks \citep{Park2009, Landt2012}. Chromatin marks are deposited by chromatin-remodeling enzymes
 which are recruited by the transcription factors active in the
 cell. The most common are methylation of the cysteine base in CpG
 dinucleotides (DNA methylation) or chemical modification of the tails
 of the protein octamers (histones) which DNA is wrapped around. These
-marks signal the state of the region, e.g. active or repressed, and
+marks signal the state of the region, e.g. active or repressed, and may
 help to maintain the current state. Histone marks can be assayed with
 chromatin immunoprecipitation followed by sequencing (ChIP-seq), and
 DNA methylation can be assayed with specialized microarrays or
@@ -153,7 +155,7 @@ learn about the function of the non-coding SNPs discovered by GWAS.
 
 As an aside, it should be noted that there is a lot of confusion about
 the role of chromatin marks and their effect on gene
-expression. Chromatin marks are not causal. Instead, they are signs of
+expression \citep{Henikoff2011}. Chromatin marks are not causal. Instead, they are signs of
 a given chromatin state, and at best help maintain that state. As an
 analogy, consider viewing a stretch of highway from a helicopter. If
 you observe orange signs and barrels, you can conclude that this
@@ -171,17 +173,19 @@ activating chromatin marks, you can conclude that the nearby gene is
 expressed and that the chromatin marks are helping maintain this
 transcriptional activity. However, it is the result of transcription
 factors receiving input from outside the cell that caused these active
-chromatin marks to be established and the gene to be expressed.
+chromatin marks to be established and the gene to be expressed \citep{Natoli2010}.
 
 Thus using these chromatin marks enables the deciphering of the
-non-coding regions of the genome. While not as easy initially
-envisioning a readable “histone code,” much progress has been
-made. The ENCODE Project assayed the gene expression and many
+non-coding regions of the genome. While not as easily readable as the initially
+envisioned “histone code” \citep{Jenuwein2001}, much progress has been
+made. The ENCODE Project \citep{ENCODE2004, ENCODE2007, ENCODE2012, Kellis2014},
+Roadmap Epigenomics Project \citep{Roadmap2015}, and independent laboratories
+\citep{Mikkelsen2007} have assayed gene expression and many
 chromatin marks in a large variety of cell types. Using a hidden
 Markov model (HMM), they were able to define distinct regions of the
 genome in each of the cell types they collected. This now provides the
 context-specificity required to predict and test the effect of
-non-coding SNPs identified in GWAS. For example, a GWAS hit for type
+non-coding SNPs identified in GWAS \citep{Trynka2013}. For example, a GWAS hit for type
 II diabetes could be potentially affecting gene expression in the
 liver, adipose tissue, brain, or beta cells of the pancreas. If
 chromatin profiling reveals that SNP is located in an enhancer region
@@ -189,7 +193,7 @@ in only one of those tissues, that would inform the follow-up
 experiments to perform. Encouragingly, this sort of relationship is
 observed generally. That is, GWAS hits for given disease are more
 likely to be found in gene regulatory regions of the genome specific
-to tissues relevant to the disease pathogenesis. Furthermore,
+to tissues relevant to the disease pathogenesis \citep{Trynka2013}. Furthermore,
 knowledge of these genomic annotations has been successfully used as
 prior information to increase the power to detect associations in
 GWAS \citep{Pickrell2014, Wang2016}.
