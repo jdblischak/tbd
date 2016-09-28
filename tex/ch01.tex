@@ -10,9 +10,9 @@ caused by mutations in a single gene. Isolating the causal gene is
 relatively tractable. On the other hand are polygenic (or complex)
 traits, which are the result of many genes acting in
 concert. Furthermore, the genes can interact with each other in a
-non-additive manner (gene-gene interactions, or epistasis) \citep{Cordell2009} and the
+non-additive manner (gene-gene interactions, or epistasis) \citep{Cordell2009, Mechanic2012} and the
 environment can also play a significant role (gene-environment
-interactions) \citep{Ober2011}.
+interactions) \citep{Thomas2010, Ober2011}.
 
 As an example, consider human height. A disabling mutation in just one
 gene, the growth hormone receptor (GHR), nullifies the effect of
@@ -46,7 +46,7 @@ International HapMap Project \citep{HapMap2005, HapMap2007, HapMap2010} and 1000
 (e.g. height is measured) and genotyped at millions of common single
 nucleotide polymorphisms (SNPs).  Then each SNP is tested individually
 for an association with the trait measurements via a linear regression
-or related statistical technique \citep{Balding2006, Yang2014}. Similarly, for a binary trait such
+or related statistical technique \citep{Balding2006, Stephens2009, Yang2014}. Similarly, for a binary trait such
 as cases with a disease versus controls without a disease, the
 phenotype is the presence or absence of a disease and each SNP is
 tested for association with a logistic regression or related
@@ -71,10 +71,12 @@ disease. Similarly, when modeling the genetic associations, most
 models assume an isolated additive effect of each variant on the
 trait \citep{Cordell2009}. This simplifying assumption is made such that the statistical
 test is tractable and interpretable. However, it is missing the
-contribution of any gene-gene or gene-environment interactions \citep{Lappalainen2011, Ackermann2012, Huang2012}. On the
+contribution of any gene-gene or gene-environment interactions
+\citep{Cordell2009, Thomas2010, Lappalainen2011, Ackermann2012, Huang2012, Starr2016}. On the
 other hand, the disappointing results of GWAS may not be due to
 limitations of the approach, but simply reflect the actual biology of
-polygenic traits \citep{DiRienzo2006, Bodmer2008, Schork2009}. Mutations with strong effect, such as those that
+polygenic traits \citep{DiRienzo2006, Bodmer2008, Schork2009, Pritchard2010}.
+Mutations with strong effect, such as those that
 disable the GHR and cause Laron Syndrome, are often disruptive to the
 complex network of biochemical reactions that sustain a living
 individual. For this reason, they face strong negative selection and
@@ -101,7 +103,7 @@ associated SNPs are located in non-coding regions of the genome \citep{Hindorff2
 much more difficult to predict the effect of these variants because
 there is no simple code to translate changes in non-coding
 sequence. This has motivated the study of gene regulation in the field
-of Human Genetics \citep{Lappalainen2010, Trynka2013, Lappalainen2015}.
+of Human Genetics \citep{Lappalainen2010, Trynka2013, Civelek2014, Lappalainen2015}.
 
 \section{Functional genomics and the investigation of the non-coding regions of the genome}
 
@@ -139,7 +141,7 @@ given cellular identity is quite difficult \citep{Vaquerizas2009, Biggin2011, Za
 knowledge, it is possible to learn about the regulatory state of a
 given cell type \citep{Ho2014}. First, it is possible to measure genome-wide gene
 expression levels using technologies like microarrays or RNA
-sequencing (more on that below) \citep{Wang2009, Oshlack2010}. Second, it is possible to interrogate
+sequencing (more on that below) \citep{Wang2009, Oshlack2010, Waern2011}. Second, it is possible to interrogate
 the non-coding regions of the genome by measuring chromatin
 marks \citep{Park2009, Landt2012}. Chromatin marks are deposited by chromatin-remodeling enzymes
 which are recruited by the transcription factors active in the
@@ -178,12 +180,12 @@ chromatin marks to be established and the gene to be expressed \citep{Natoli2010
 Thus using these chromatin marks enables the deciphering of the
 non-coding regions of the genome. While not as easily readable as the initially
 envisioned “histone code” \citep{Jenuwein2001}, much progress has been
-made. The ENCODE Project \citep{ENCODE2004, ENCODE2007, ENCODE2012, Kellis2014},
+made. The ENCODE Project \citep{ENCODE2004, ENCODE2007, ENCODE2012, Ho2014, Kellis2014},
 Roadmap Epigenomics Project \citep{Roadmap2015}, and independent laboratories
 \citep{Mikkelsen2007} have assayed gene expression and many
 chromatin marks in a large variety of cell types. Using a hidden
-Markov model (HMM), they were able to define distinct regions of the
-genome in each of the cell types they collected. This now provides the
+Markov model (HMM), one group was able to define distinct regions of the
+genome in each of the cell types they collected \citep{Ernst2011}. This now provides the
 context-specificity required to predict and test the effect of
 non-coding SNPs identified in GWAS \citep{Trynka2013}. For example, a GWAS hit for type
 II diabetes could be potentially affecting gene expression in the
@@ -193,7 +195,7 @@ in only one of those tissues, that would inform the follow-up
 experiments to perform. Encouragingly, this sort of relationship is
 observed generally. That is, GWAS hits for given disease are more
 likely to be found in gene regulatory regions of the genome specific
-to tissues relevant to the disease pathogenesis \citep{Trynka2013}. Furthermore,
+to tissues relevant to the disease pathogenesis \citep{Ernst2011, Trynka2013, Farh2015, Roadmap2015}. Furthermore,
 knowledge of these genomic annotations has been successfully used as
 prior information to increase the power to detect associations in
 GWAS \citep{Pickrell2014, Wang2016}.
@@ -208,37 +210,37 @@ expression. A direct method for addressing these uncertainties is
 expression quantitative trait loci (eQTL) mapping (note that the name
 is a misnomer; early eQTL studies were performed using linkage in
 pedigrees, but current eQTL studies are tests of association in
-unrelated individuals like a typical GWAS) \citep{Lappalainen2015}. In this approach the
+unrelated individuals like a typical GWAS) \citep{Monks2004, Duan2008, Franke2009, Lappalainen2015, Pai2015}. In this approach the
 phenotype of interest is the expression level of a gene. To reduce the
 multiple testing burden (and also because regulatory variants are
-often closer to the gene they affect), most eQTL studies test for
+often closer to the gene they affect \citep{Battle2014}), most eQTL studies test for
 eQTLs nearby the transcription start site of each gene. To date, eQTL
-studies have been performed in many cell types. Reassuringly, eQTLs
+studies have been performed in many cell types \citep{Nica2011, GTEx2015}. Reassuringly, eQTLs
 are more likely to be GWAS associated SNPs, consistent with the idea
 that GWAS hits in non-coding regions are affecting gene
-expression. Furthermore, by combining eQTL results from many tissues
-collected by the GTEx Consortium with GWAS results, it is possible to
+expression \citep{Emilsson2008, Nica2010, Nicolae2010, Raj2013, GTEx2015}. Furthermore, by combining eQTL results from many tissues
+collected by the GTEx Consortium \citep{GTEx2013} with GWAS results, it is possible to
 determine the tissue(s) most affecting a given disease by finding
 which tissue is enriched for tissue-specific eQTLs that are also GWAS
 hits for the disease \citep{Ongen2016}.
 
-A common functional genomics technique is RNA sequencing (RNA-seq). It
+A common functional genomics technique is RNA sequencing (RNA-seq) \citep{Wang2009, Oshlack2010, Waern2011}. It
 is an efficient method for interrogating cellular function by
 measuring genome-wide gene expression levels. RNA-seq has multiple
 advantages over its predecessor, gene expression microarrays. For
 example, it is not as limited by genome annotations and has a higher
-dynamic range. Most importantly for Human Genetics applications, any
+dynamic range \citep{Marioni2008, Zhao2014}. Most importantly for Human Genetics applications, any
 polymorphisms present in the coding regions in a population being
 studied will be present in the RNA-seq reads. These can be used to
 verify the identity of the individual being sequenced (i.e. avoid
-sample swaps and contamination), and also to increase power in eQTL
+sample swaps and contamination) \citep{Jun2012}, and also to increase power in eQTL
 studies by comparing the allele-specific expression measurements to
-the eQTL effects.
+the eQTL effects \citep{Castel2015, VandeGeijn2015}.
 
 \section{Tuberculosis}
 
 A major subfield of Human Genetics focuses on understanding the
-genetic basis of susceptibility to infectious diseases. There are
+genetic basis of susceptibility to infectious diseases \citep{Casanova2007, Chapman2012, Novembre2012, Manry2013}. There are
 multiple reasons that infectious diseases are of particular
 interest. First, from a pragmatic standpoint, infectious diseases are
 a major public health concern, responsible for the deaths of millions
@@ -249,13 +251,13 @@ perspective, because hosts and pathogens engage in a constant
 co-evolutionary arms race, natural selection on any mutations
 affecting the response to a pathogen are strong and more likely to be
 detected via statistical tests (in contrast to the example of height
-above). Indeed, genome-wide scans of selection have found an
-enrichment of immune-related genes \citep{Fumagalli2014}. Third,
+above) \citep{Hamblin2002, Prugnolle2005, Novembre2012, Fumagalli2014, Mangano2014}. Indeed, genome-wide scans of selection have found an
+enrichment of immune-related genes \citep{Raj2013, Fumagalli2011, Fumagalli2014}. Third,
 because the immune system is responsible for fighting all pathogens it
 encounters but also results in less desirable functions like allergic
 reactions and auto-immune disorders, understanding the genetic basis
 of the susceptibility to one pathogen informs susceptibility to other
-pathogens and also other immune-based phenotypes of interest. As an
+pathogens and also other immune-based phenotypes of interest \citep{Vannberg2011, Raj2013}. As an
 example, a GWAS of the auto-immune disorder inflammatory bowel disease
 (IBD) found significant overlaps between the IDB susceptibility loci
 and not only other immune-related disorders, but also with
@@ -367,10 +369,14 @@ they are unable to detect the cell-to-cell heterogeneity due to
 stochastic noise, different subpopulations of cells, or differences in
 the surrounding environment. In recent years, many new technologies
 have been developed for assaying genome-wide measurements in single
-cells. Most enable measuring gene expression levels via single cell
+cells \citep{Liang2014, Macaulay2014, Saliba2014, Grun2015, Stegle2015, Bacher2016}.
+Most enable measuring gene expression levels via single cell
 RNA-seq (scRNA-seq), but techniques have also been developed to
-measure DNA methylation, chromatin accessibility, and protein levels
-\citep{Genshaft2016} in single cells. The increased resolution
+measure DNA methylation \citep{Smallwood2014, Angermueller2016},
+transcription factor binding \citep{Rotem2015},
+chromatin accessibility \citep{Buenrostro2015, Cusanovich2015},
+protein levels \citep{Genshaft2016}, and 3D genome architecture \citep{Nagano2013}
+in single cells. The increased resolution
 obtained with these single cell technologies has great potential for
 improving our understanding of gene regulatory mechanisms.
 
@@ -384,14 +390,15 @@ difference in the innate immune response to a pathogen, a difference
 in only a subset of cells, or a difference in the fraction of cells
 that are infected. Interestingly, initial studies of the innate immune
 response to bacterial infection have observed substantial
-heterogeneity among single cells \citep{Shalek2013, Avraham2015}.
+heterogeneity among single cells \citep{Shalek2013, Shalek2014, Avraham2015}.
 
 As with any new functional genomics technique, it is important to
 investigate and understand the technical biases to avoid during study
-design. The initial studies which investigated the technical noise in
+design \citep{Auer2010}. The initial studies which investigated the technical noise in
 scRNA-seq were interested in differentiating between the biological
 and technical variation affect cell-to-cell differences in gene
-expression. On the other hand, scRNA-seq studies of gene expression
+expression \citep{Brennecke2013, Grun2014, Islam2014, Ding2015, Vallejos2015}.
+On the other hand, scRNA-seq studies of gene expression
 differences across multiple conditions were generating data from many
 batches of single cell RNA-seq. Because many of the new technologies
 are limited to sorting cells from just one condition in each batch,
