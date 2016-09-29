@@ -396,7 +396,7 @@ identified response eQTLs to infection with MTB H37Rv
 \citep{Barreiro2012}. Since the response eQTLs were identified at 18
 hours post-infection, we investigated the distribution of genes
 associated with response eQTLs among the five patterns we found at that
-timepoint (Figure 5A). Only one gene associated with a response eQTL was
+timepoint (Fig. \ref{fig:response-eqtl}A). Only one gene associated with a response eQTL was
 also DE specifically in response to MTB (\emph{CMAS}). Otherwise, most
 of the response eQTL-associated genes were classified as either DE
 following infection with all bacteria or not DE in any infection. That a
@@ -423,7 +423,7 @@ classes, we subsampled genes from each and calculated the mean of the
 absolute values (and repeated this process 1000 times). We found that
 the expression level of genes associated with response eQTLs is altered
 to a larger degree (significantly higher effect size; \emph{P}
-\textless{} 2.2 x e\textsuperscript{-16}; Figure 5B) following infection
+\textless{} 2.2 x e\textsuperscript{-16}; Fig. \ref{fig:response-eqtl}B) following infection
 compared to the genes in the other two classes.
 
 \begin{figure}
@@ -520,7 +520,7 @@ vaccine before being diagnosed with CGD also develop the disease
 At 48 hours post-infection (Fig. \ref{fig:joint-48h}), the mycobacteria-specific
 response was enriched with genes annotated (based on GO) as having a
 role in ``response to vitamin D'' (Supplementary Table \ref{tab:ch02-s5}; Supplementary
-Figure \ref{fig:vitD}). Individuals with low circulating levels of vitamin D are
+Fig. \ref{fig:vitD}). Individuals with low circulating levels of vitamin D are
 more susceptible to developing tuberculosis \citep{Zodpey2007,
 Nnoaham2008}, and vitamin D has been investigated as a supplemental
 therapy for the treatment of tuberculosis, though with mixed results
@@ -645,7 +645,7 @@ To better understand the interaction between MTB and macrophages, we
 included in our study both virulent mycobacteria (MTB strains H37Rv and
 GC1237) and attenuated mycobacteria (heat-inactivated MTB H37Rv and the
 vaccine strain BCG). Overall, the response to infection with either
-virulent or attenuated mycobacteria was similar (Figures 3,4). This
+virulent or attenuated mycobacteria was similar (Fig. \ref{fig:joint-18h},\ref{fig:joint-48h}). This
 observation was unsurprising because it has been previously demonstrated
 that infections with inactivated pathogens (in fact, even individual
 pathogen components) are able to largely recapitulate the
@@ -694,7 +694,7 @@ response eQTLs in our study. Using the five expression patterns
 identified by the joint Bayesian analysis at 18 hours post-infection, we
 examined the distribution of response eQTL genes and discovered that
 these genes were not enriched in the mycobacteria-specific expression
-pattern (Figure 5A). Instead, many were differentially expressed across
+pattern (Fig. \ref{fig:response-eqtl}A). Instead, many were differentially expressed across
 all the infections (pattern ``All''). Thus, response eQTLs modulate the
 inter-individual response to infection with diverse types of bacteria.
 That said, one gene was both associated with a response eQTL and
@@ -899,7 +899,7 @@ gene across the eight bacteria. Second, we converted these mean
 estimates to their absolute values. Third, we subsampled 100 genes from
 each of the three categories (response eQTL, general eQTL, and non-eQTL
 genes) and calculated the mean of the absolute values. We performed this
-subsampling 1000 times (Figure 5B). Fourth, we performed t-tests to
+subsampling 1000 times (Fig. \ref{fig:response-eqtl}B). Fourth, we performed t-tests to
 compare the distribution of response eQTL genes to either that of the
 general eQTL genes or the non-eQTL genes.
 
@@ -930,128 +930,7 @@ performed the infection experiments. JDB extracted the RNA and analyzed
 the data. AM prepared the sequencing libraries. LBB and YG supervised
 the project. JDB and YG wrote the paper with input from all authors.
 
-\section{Additional Information}\label{ch02-additional-information}
-
-\textbf{Competing financial interests:} The authors declare no competing
-financial interests.
-
 \section{Supplementary Information}\label{ch02-supplementary-information}
-
-\subsection{Supplementary Tables}\label{ch02-supplementary-tables}
-
-\begin{table}
-\caption[Gene expression matrix.]{\textbf{Gene expression matrix.}
-  (see supplementary file associated with this dissertation)
-  Contains the batch-corrected log\textsubscript{2} counts per million
-  for the 12,728 Ensembl genes analyzed in this study for each of the
-  156 samples. The column names are in the format
-  ``individual.infection.time''. It can also be downloaded from
-  \url{http://giladlab.uchicago.edu} or
-  \url{https://bitbucket.org/jdblischak/tb-data}.}
-\label{tab:ch02-s1}
-\end{table}
-
-\begin{table}
-\caption[Differential expression results.]{\textbf{Differential
-    expression results.} (see supplementary file associated with
-  this dissertation) Contains the differential expression statistics
-  from limma. This includes the log\textsubscript{2} fold change
-  (logFC), average expression level (AveExpr), t-statistic (t),
-  p-value (P.Value), q-value (adj.P.Val), and log-odds (B). The column
-  names also contain the infection and timepoint for the given
-  comparison. It can also be downloaded from
-  \url{http://giladlab.uchicago.edu} or
-  \url{https://bitbucket.org/jdblischak/tb-data}.}
-\label{tab:ch02-s2}
-\end{table}
-
-\begin{table}
-\caption[Joint Bayesian analysis results.]{\textbf{Joint Bayesian
-    analysis results.} (see supplementary file associated with this
-  dissertation) Contains the assigned expression patterns for the
-  12,728 Ensembl genes analyzed in this study for each of the three
-  analyses in Figures \ref{fig:joint-all}, \ref{fig:joint-18h}, and
-  \ref{fig:joint-48h}. The columns ``full\_time\_course'',
-  ``time\_18h'', and ``time\_48h'' correspond to Figures
-  \ref{fig:joint-all}, \ref{fig:joint-18h}, and \ref{fig:joint-48h},
-  respectively.}
-\label{tab:ch02-s3}
-\end{table}
-
-\begin{table}
-\caption[Joint Bayesian analysis results with gene
-  descriptions.]{\textbf{Joint Bayesian analysis results with gene
-    descriptions.} (see supplementary file associated with this
-  dissertation) Contains the assigned expression patterns for the
-  12,728 Ensembl genes analyzed in this study for each of the three
-  analyses in Figures \ref{fig:joint-all}, \ref{fig:joint-18h}, and
-  \ref{fig:joint-48h}. It is the same information as Supplementary
-  Table \ref{tab:ch02-s3}, but with the genes from each pattern from each
-  of the three Figures in its own sheet of the workbook. Furthermore,
-  it contains the gene descriptions from Ensembl.}
-\label{tab:ch02-s4}
-\end{table}
-
-\begin{table}
-\caption[Gene ontology results.]{\textbf{Gene ontology results.} (see
-  supplementary file associated with this dissertation) Contains the
-  gene ontology results for each of the expression patterns for the
-  three analyses in Figures \ref{fig:joint-all}, \ref{fig:joint-18h},
-  and \ref{fig:joint-48h}.}
-\label{tab:ch02-s5}
-\end{table}
-
-\begin{table}
-\caption[RNA quality.]{\textbf{RNA quality.} (see supplementary file
-  associated with this dissertation) Contains the RNA Integrity Number
-  (RIN) and molarity (nmol/L) measured with a Bioanalyzer (Agilent)
-  for each of the 156 samples.}
-\label{tab:ch02-s6}
-\end{table}
-
-\begin{table}
-\caption[Number of differentially expressed genes from intersecting
-  gene lists.]{\textbf{Number of differentially expressed genes from
-    intersecting gene lists.} (see supplementary file associated with
-  this dissertation) Contains the results of intersecting lists of
-  differentially expressed genes for all pairwise comparisons (within
-  each of the three timepoints).}
-\label{tab:ch02-s7}
-\end{table}
-
-\begin{table}
-\caption[Number of differentially expressed genes from pairwise
-  tests.]{\textbf{Number of differentially expressed genes from
-    pairwise tests.} (see supplementary file associated with this
-  dissertation) Contains the number of differentially expressed genes
-  when performing all pairwise tests between bacterial infections for
-  each of the three timepoints.}
-\label{tab:ch02-s8}
-\end{table}
-
-\begin{table}
-\caption[Concordance in direction of effect for genes in each
-  expression pattern.]{\textbf{Concordance in direction of effect for
-    genes in each expression pattern.} (see supplementary file
-  associated with this dissertation) Cormotif does not distinguish
-  between the direction of the effect when assigning a gene to a given
-  expression pattern. For example, a gene that is upregulated in one
-  infection but downregulated in another is indistinguishable from a
-  gene that is upregulated in response to both infections. However, in
-  this data set, this is a rare effect. We calculated the percent
-  concordance for the genes in the expression patterns from the three
-  separate analyses. For example, for the expression pattern ``MTB'',
-  100\% would indicate the gene is regulated in the same direction in
-  the five mycobacterial infections, 80\% would indicate that the gene
-  is regulated in the same direction for four of the five
-  mycobacterial infections, etc. ``num\_concord'' is the number of
-  genes in that expression pattern that are 100\% concordant across
-  the infections. ``num\_discord'' is the number of genes in that
-  expression pattern that are not 100\%
-  concordant. ``mean\_perc\_concord'' is the mean percent concordance
-  of all the genes in that expression pattern.}
-\label{tab:ch02-s9}
-\end{table}
 
 \clearpage
 \subsection{Supplementary Figures}\label{ch02-supplementary-figures}
@@ -1146,7 +1025,7 @@ financial interests.
     maturation.} \emph{RAB22A}, \emph{RAP2A}, and \emph{ATP6V1D} are
   upregulated in response to infection with mycobacteria at 18 hours;
   whereas, \emph{RAB3A} and \emph{RAB33A} are downregulated (pattern
-  ``MTB'' in Figure \ref{fig:joint-18h}).}
+  ``MTB'' in Fig. \ref{fig:joint-18h}).}
 \label{fig:phago}
 \end{figure}
 
@@ -1156,10 +1035,10 @@ financial interests.
 \caption[Expression of genes involved in vitamin D
   signaling.]{\textbf{Expression of genes involved in vitamin D
     signaling.}  \emph{VDR} and \emph{CYP27B1} are upregulated at 48
-  hours post-infection with all bacteria (pattern ``All'' in Figure
+  hours post-infection with all bacteria (pattern ``All'' in Fig.
   \ref{fig:joint-48h}). \emph{PIM1} and \emph{CXCL10} are upregulated
   at 48 hours post-infection with the mycobacteria (pattern ``MTB'' in
-  Figure \ref{fig:joint-48h}).}
+  Fig. \ref{fig:joint-48h}).}
 \label{fig:vitD}
 \end{figure}
 
@@ -1251,9 +1130,126 @@ financial interests.
   components analysis (PCA). (A) PC1 is the expected batch effect
   between the two experiments. (B) Plotting PC2 versus PC3, the
   infected samples at 18 and 48 hours (when there is a strong
-  transcriptional response; see Figure 1A) from the two different
+  transcriptional response; see Fig. \ref{fig:differential-expression}A) from the two different
   studies cluster together. The quantile-normalized data from Tailleux
   et al., 2008 \citep{Tailleux2008} is available at
   \url{https://bitbucket.org/jdblischak/tb-data}.}
 \label{fig:tailleux2008}
 \end{figure}
+
+\clearpage
+\subsection{Supplementary Tables}\label{ch02-supplementary-tables}
+
+\begin{table}[h]
+\caption[Gene expression matrix.]{\textbf{Gene expression matrix.}
+  (see supplementary file associated with this dissertation)
+  Contains the batch-corrected log\textsubscript{2} counts per million
+  for the 12,728 Ensembl genes analyzed in this study for each of the
+  156 samples. The column names are in the format
+  ``individual.infection.time''. It can also be downloaded from
+  \url{http://giladlab.uchicago.edu} or
+  \url{https://bitbucket.org/jdblischak/tb-data}.}
+\label{tab:ch02-s1}
+\end{table}
+
+\begin{table}[h]
+\caption[Differential expression results.]{\textbf{Differential
+    expression results.} (see supplementary file associated with
+  this dissertation) Contains the differential expression statistics
+  from limma. This includes the log\textsubscript{2} fold change
+  (logFC), average expression level (AveExpr), t-statistic (t),
+  p-value (P.Value), q-value (adj.P.Val), and log-odds (B). The column
+  names also contain the infection and timepoint for the given
+  comparison. It can also be downloaded from
+  \url{http://giladlab.uchicago.edu} or
+  \url{https://bitbucket.org/jdblischak/tb-data}.}
+\label{tab:ch02-s2}
+\end{table}
+
+\begin{table}[h]
+\caption[Joint Bayesian analysis results.]{\textbf{Joint Bayesian
+    analysis results.} (see supplementary file associated with this
+  dissertation) Contains the assigned expression patterns for the
+  12,728 Ensembl genes analyzed in this study for each of the three
+  analyses in Fig. \ref{fig:joint-all}, \ref{fig:joint-18h}, and
+  \ref{fig:joint-48h}. The columns ``full\_time\_course'',
+  ``time\_18h'', and ``time\_48h'' correspond to Fig.
+  \ref{fig:joint-all}, \ref{fig:joint-18h}, and \ref{fig:joint-48h},
+  respectively.}
+\label{tab:ch02-s3}
+\end{table}
+
+\begin{table}[h]
+\caption[Joint Bayesian analysis results with gene
+  descriptions.]{\textbf{Joint Bayesian analysis results with gene
+    descriptions.} (see supplementary file associated with this
+  dissertation) Contains the assigned expression patterns for the
+  12,728 Ensembl genes analyzed in this study for each of the three
+  analyses in Fig. \ref{fig:joint-all}, \ref{fig:joint-18h}, and
+  \ref{fig:joint-48h}. It is the same information as Supplementary
+  Table \ref{tab:ch02-s3}, but with the genes from each pattern from each
+  of the three figures in its own sheet of the workbook. Furthermore,
+  it contains the gene descriptions from Ensembl.}
+\label{tab:ch02-s4}
+\end{table}
+
+\begin{table}[h]
+\caption[Gene ontology results.]{\textbf{Gene ontology results.} (see
+  supplementary file associated with this dissertation) Contains the
+  gene ontology results for each of the expression patterns for the
+  three analyses in Fig. \ref{fig:joint-all}, \ref{fig:joint-18h},
+  and \ref{fig:joint-48h}.}
+\label{tab:ch02-s5}
+\end{table}
+
+\begin{table}[h]
+\caption[RNA quality.]{\textbf{RNA quality.} (see supplementary file
+  associated with this dissertation) Contains the RNA Integrity Number
+  (RIN) and molarity (nmol/L) measured with a Bioanalyzer (Agilent)
+  for each of the 156 samples.}
+\label{tab:ch02-s6}
+\end{table}
+
+\begin{table}[h]
+\caption[Number of differentially expressed genes from intersecting
+  gene lists.]{\textbf{Number of differentially expressed genes from
+    intersecting gene lists.} (see supplementary file associated with
+  this dissertation) Contains the results of intersecting lists of
+  differentially expressed genes for all pairwise comparisons (within
+  each of the three timepoints).}
+\label{tab:ch02-s7}
+\end{table}
+
+\begin{table}[h]
+\caption[Number of differentially expressed genes from pairwise
+  tests.]{\textbf{Number of differentially expressed genes from
+    pairwise tests.} (see supplementary file associated with this
+  dissertation) Contains the number of differentially expressed genes
+  when performing all pairwise tests between bacterial infections for
+  each of the three timepoints.}
+\label{tab:ch02-s8}
+\end{table}
+
+\begin{table}[h]
+\caption[Concordance in direction of effect for genes in each
+  expression pattern.]{\textbf{Concordance in direction of effect for
+    genes in each expression pattern.} (see supplementary file
+  associated with this dissertation) Cormotif does not distinguish
+  between the direction of the effect when assigning a gene to a given
+  expression pattern. For example, a gene that is upregulated in one
+  infection but downregulated in another is indistinguishable from a
+  gene that is upregulated in response to both infections. However, in
+  this data set, this is a rare effect. We calculated the percent
+  concordance for the genes in the expression patterns from the three
+  separate analyses. For example, for the expression pattern ``MTB'',
+  100\% would indicate the gene is regulated in the same direction in
+  the five mycobacterial infections, 80\% would indicate that the gene
+  is regulated in the same direction for four of the five
+  mycobacterial infections, etc. ``num\_concord'' is the number of
+  genes in that expression pattern that are 100\% concordant across
+  the infections. ``num\_discord'' is the number of genes in that
+  expression pattern that are not 100\%
+  concordant. ``mean\_perc\_concord'' is the mean percent concordance
+  of all the genes in that expression pattern.}
+\label{tab:ch02-s9}
+\end{table}
