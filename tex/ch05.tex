@@ -102,8 +102,8 @@ expression patterns, conceptually similar to a clustering analysis.
 
 The Cormotif results for my study were informative. Most of the genes were
 either differentially expressed or not after infection with any of the
-bacteria. The two most interesting patterns in regards to understanding the
-innate immune response to MTB were MTB and Virulent.  The MTB pattern included
+bacteria (Fig. \ref{fig:joint-all}). The two most interesting patterns in regards to understanding the
+innate immune response to MTB were MTB and Virulent (Fig. \ref{fig:joint-18h},\ref{fig:joint-48h}).  The MTB pattern included
 those genes which had a high posterior probability of being differentially
 expressed to any of the MTB or closely related species and a medium posterior
 probability of being differentially expressed to \emph{M. smegmatis}, the
@@ -146,7 +146,7 @@ study) \citep{Kariuki2016}.
 
 It should be noted that this method also has its caveats. First, its strength of
 sharing information across the pairwise comparisons can also be a negative
-because it will not identify genes with unique expression patterns. While useful
+because it will not identify genes with unique expression patterns (Fig. \ref{fig:dusp14}). While useful
 for projects with the aim of broadly characterizing the genome-wide gene
 expression patterns for a given phenomenon, it is not well-suited for
 identifying outlier genes. Second, because the algorithm is not deterministic,
@@ -170,16 +170,16 @@ non-infected cells.
 There were 3 main conclusions from this work. First, the differences
 in gene expression levels between resistant and susceptible
 individuals were primarily present in the non-infected state and not 18
-hours post-infection with MTB. This suggests that these gene
+hours post-infection with MTB (Fig. \ref{fig:limma}). This suggests that these gene
 expression differences primarily affect the very early response to MTB
 infection. Second, we discovered that the effect sizes measured in our
 \emph{in vitro} experiment, whether comparing between resistant and
 susceptible individuals or between the infected and non-infected
 states, were negatively correlated with lower p-values from two genome
-wide association studies (GWAS) of TB susceptibility \citep{Thye2010}. This suggests
+wide association studies (GWAS) of TB susceptibility \citep{Thye2010} (Fig. \ref{fig:gwas}). This suggests
 that our \emph{in vitro} system is a useful model for investigating
 the genetic basis of TB susceptibility. Third, we trained a classifier
-based on the gene expression levels in the non-infected state. Using
+based on the gene expression levels in the non-infected state (Fig. \ref{fig:classifier}). Using
 the threshold required to obtain a 100\% false negative rate in the
 training data, we found that 11\% of healthy individuals from an
 independent study \citep{Barreiro2012} were predicted to be susceptible to TB, very close
@@ -221,7 +221,7 @@ than 0.01 in two GWAS studies of TB susceptibility. There were many
 differences between these studies (e.g. cell type, ethnicity of
 donors, timepoints RNA was collected post-infection), yet \emph{CCL1}
 was still a top hit in all three analyses. I believe this warrants
-further investigation. As an example, one could use CRISPR/Cas to
+further investigation. As an example, one could use CRISPR/Cas \citep{Du2016} to
 modify individual SNPs in THP-1 cells (a common cell line model of
 monocytes) and test for differences in the response to MTB
 infection. Another idea, since \emph{CCL1} is a secreted chemokine \citep{Miller1992},
@@ -260,13 +260,13 @@ bulk sequencing of 10,000 cells, and achieving a high correlation
 between the cell-to-cell variance in the gene expression levels across
 the subset of single cells and the cell-to-cell variance measured in
 all the single cells we collected for an individual (which ranged from
-142 to 221). Second, we observed technical variation introduced from
-the processing of the C1 batches. While this was expected, we also
+142 to 221) (Fig. \ref{fig:subsample}). Second, we observed technical variation introduced from
+the processing of the C1 batches (Fig. \ref{fig:batch}). While this was expected, we also
 observed unexpected aspects of this batch effect. The ERCC spike-in
 controls which were added to each well and could potentially be used
 to correct for this effect across C1 chips was affected not only by
 technical variation but also by the biological variation (differences
-between individuals). This entanglement of the technical and
+between individuals) (Fig. \ref{fig:ch04-s3}). This entanglement of the technical and
 biological sources of variation renders the spike-ins insufficient for
 modeling technical variation between C1 chips (however they can still
 be used to model technical variation between wells of the same C1
@@ -274,14 +274,14 @@ chip). This confounder occurred despite our use of unique molecular
 identifiers (UMIs) to account for the bias introduced by amplifying
 RNA from a small original source of just one cell \citep{Kivioja2011, Islam2014}. In fact, we found
 that the conversion of reads to unique molecules was affected by
-inter-individual differences. Third, even with our small sample size
+inter-individual differences (Fig. \ref{fig:batch}). Third, even with our small sample size
 of only three individuals, we were able to identify inter-individual
 differences in the cell-to-cell gene expression variance, or gene
-expression noise. This lends further support to the notion that gene
+expression noise (Fig. \ref{fig:variation}). This lends further support to the notion that gene
 expression noise is a relevant factor that can affect biological
 processes. Fourth, we demonstrated that we can use the single
 nucleotide polymorphisms (SNPs) present in the RNA-seq reads to
-identify the individual of origin for a given single cell \citep{Jun2012}. This
+identify the individual of origin for a given single cell \citep{Jun2012} (Fig. \ref{fig:ch04-s8}). This
 enables us to use a crossed-design where single cells from multiple
 individuals are included on the same C1 chip and later each well is
 assigned to each individual based on the RNA-seq reads obtained. Our
@@ -342,7 +342,7 @@ samples. During the batch processing, we ensured that the biological
 factors of interest (bacterial infection, timepoint, individual) were
 balanced to avoid introducing spurious signal. Furthermore, upon data
 exploration, we observed that the processing batch and the RNA quality
-score (RIN) were correlated with the first principal component. After
+score (RIN) were correlated with the first principal component (Fig. \ref{fig:pca}). After
 regressing these two variables, the first principal component was the
 effect of timepoint and the second PC was the effect of
 infection. Importantly, we obtained similar results whether we
@@ -353,24 +353,24 @@ technical variables.
 
 In Chapter \ref{ch:tb-suscept}, I once again designed the batch
 processing to balance the biological factors of interest
-(susceptibility status, treatment, individual). Conveniently, this
-project did not have large scale batch effects, likely due to the
+(susceptibility status, treatment, individual) (Fig. \ref{fig:process}). Conveniently, this
+project did not have large scale batch effects (Fig. \ref{fig:batch-effect}), likely due to the
 smaller overall sample size of 48. However, accounting for a batch
 effect was critical for training a classifier on the current data set
 and testing it on an independent data set \citep{Barreiro2012}.
 Not only were the studies
 performed years apart, but the gene expression levels were measured
 using different technologies. Thus I was only able to compare the two
-studies after normalizing each sample and removing the large batch
+studies after normalizing each sample (Fig. \ref{fig:combined-dist}) and removing the large batch
 effect by regressing the first principal component of the combined
-data set. Testing the classifier without accounting for the batch
+data set (Fig. \ref{fig:combined-pca}). Testing the classifier without accounting for the batch
 effect would have given poor results simply due to technical reasons.
 
 In Chapter \ref{ch:singleCellSeq}, one of the main motivations for the
 study was understanding the magnitude of the batch effect of
 collecting scRNA-seq on separate C1 chips. While the technical effect
 of C1 batch was smaller in magnitude compared to the biological effect
-of individual (assessed using variance components analysis), not
+of individual (assessed using variance components analysis) (Fig. \ref{fig:ch04-s3}), not
 including technical replicates would attribute the substantial
 technical effect to the biological effect. Just as we require
 replication for established genomic protocols, it is also necessary to
@@ -379,7 +379,7 @@ spike-ins appear to be affected by both biological and technical
 factors. Fortunately, we were able to devise a strategy to reduce the
 required number of C1 replicates by combining single cells from
 multiple individuals onto each C1 chip and then replicating the
-multiple individuals across multiple chips. This crossed design
+multiple individuals across multiple chips (Fig. \ref{fig:ch04-s8}). This crossed design
 accounts for batch effects while minimizing the required replication.
 
 In summary, technical batch effects need to be considered from the
