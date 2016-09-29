@@ -88,7 +88,7 @@ control analyses to remove non-expressed genes (Supplementary Fig.
 \ref{fig:gene}; Supplementary Table \ref{ch03-s2}), identify and remove outliers
 (Supplementary Fig. \ref{fig:heat-all}, \ref{fig:heat-filt},
 \ref{fig:outliers}), and check for confounding batch effects
-(Supplementary Fig. \ref{fig:batch}, \ref{fig:infection}). Ultimately
+(Supplementary Fig. \ref{fig:batch-effect}, \ref{fig:infection}). Ultimately
 6 samples failed the quality checks and were removed from all
 downstream analyses (Supplementary Fig. \ref{fig:outliers}).
 
@@ -464,7 +464,7 @@ mean for the non-infected and infected samples).
 
 After filtering lowly expressed genes and removing outliers, we
 performed the PCA again to check for any potential confounding
-technical batch effects (Supplementary Fig. \ref{fig:batch}).
+technical batch effects (Supplementary Fig. \ref{fig:batch-effect}).
 Reassuringly, the major sources of variation in the data were from the
 biological factors of interest. PC1 was strongly correlated with the
 effect of treatment, and PCs 2-6 were correlated with inter-individual
@@ -591,26 +591,25 @@ non-infected state across both studies (Supplementary Fig.
 \ref{fig:class-exp}).
 \subsection{Software implementation}
 
-We automated our analysis using Python (https://www.python.org/) and
+We automated our analysis using Python (\url{https://www.python.org/}) and
 Snakemake \citep{Koster2012}. Our processing pipeline used the general
 bioinformatics software FastQC
-(http://www.bioinformatics.babraham.ac.uk/projects/fastqc/), MultiQC
+(\url{http://www.bioinformatics.babraham.ac.uk/projects/fastqc/}), MultiQC
 \citep{Ewels2016}, samtools \citep{Li2009}, and bioawk
-(https://github.com/lh3/bioawk). We used R \citep{R2015} for all
+(\url{https://github.com/lh3/bioawk}). We used R \citep{R2015} for all
 statistics and data visualization. We obtained gene annotation
 information from the Ensembl \citep{Yates2016} and Lynx
 \citep{Sulakhe2016} databases. The computational resources were
 provided by the University of Chicago Research Computing Center. All
 code is available for viewing and reuse at
-https://github.com/jdblischak/tb-suscept.
+\url{https://github.com/jdblischak/tb-suscept}.
 \subsection{Data availability}
 
-The raw fastq files have been deposited in NCBI's Gene Expression
-Omnibus \citep{Edgar2002} and are accessible through GEO Series
-accession number GSEXXXXX (http://www.ncbi.nlm.nih.gov/geo/
-query/acc.cgi?acc=GSEXXXXX). The RNA-seq gene counts and other summary
+The raw fastq files will be deposited in NCBI's Gene Expression
+Omnibus \citep{Edgar2002} before official publication.
+The RNA-seq gene counts and other summary
 data sets are included as Supplementary Data and are also available
-for download at https://github.com/jdblischak/tb-suscept/data.
+for download at \url{https://github.com/jdblischak/tb-suscept/data}.
 \section{Acknowledgements}
 
 We thank T. Thye for sharing the GWAS data with us. This study was
@@ -736,7 +735,7 @@ different infection batches. (d) The Pearson correlation of PCs 1-6
 with each of the recorded biological and technical covariates. The
 correlations vary from 0 (white) to 1 (red).
 }
-\label{fig:batch}
+\label{fig:batch-effect}
 \end{figure}
 
 \begin{figure}[ht]
