@@ -5,7 +5,7 @@
 The field of Human Genetics aims to discover the genetic basis of the
 variation observed in human phenotypes \citep{Strachan2011}. The difficulty of this goal
 depends on the genetic architecture of the phenotype \citep{DiRienzo2006, Bodmer2008, Schork2009}. On the one hand
-are monogenic traits (also referred to as Mendelian traits), which are
+are monogenic (or Mendelian) traits, which are
 caused by mutations in a single gene. Isolating the causal gene is
 relatively tractable. On the other hand are polygenic (or complex)
 traits, which are the result of many genes acting in
@@ -17,14 +17,14 @@ interactions) \citep{Thomas2010, Ober2011}.
 As an example, consider human height. A disabling mutation in just one
 gene, the growth hormone receptor (GHR), nullifies the effect of
 growth hormone leading to very short stature and other metabolic
-abnormalities (Laron Syndrome) \citep{Laron2011}. Because of its easy to identify
+abnormalities (Laron Syndrome) \citep{Laron2011}. Because of its easily identifiable
 phenotype and single gene origin, the genetic basis of Laron Syndrome
 was discovered in the late 1980s using a candidate gene approach
 in a small number of pedigrees \citep{Amselem1989, Godowski1989, Shevah2011}
-(they knew the correct candidate gene from previous physiology experiments \citep{Eshet1984}). In
+(the correct candidate gene was known from previous physiology experiments \citep{Eshet1984}). In
 contrast, the considerable variability in height in the human
-population is not caused by rare mutations in a single or few genes,
-but instead is due to the aggregate effect of many mutations of small
+population is not caused by rare mutations in a single or a few genes,
+but instead is due to the aggregate effect of many mutations (or variants) of small
 effect size interacting with each other and the environment
 (e.g. diet, pollution, etc.) \citep{Lettre2011, Turchin2012}. Thus although height has been determined
 to be highly heritable, genetic studies involving hundreds of
@@ -37,13 +37,13 @@ basis of a highly polygenic trait subject to millennia of natural
 selection may unsatisfyingly be that most of the genome makes a minute
 contribution to the height of an individual.
 
-The current state-of-the-art technique of mapping genetic variants
+The current state-of-the-art technique for mapping genetic variants
 that affect a polygenic trait is the genome-wide association study
 (GWAS) \citep{Hirschhorn2005}. This technique was made possible by the sequencing of the
 human genome \citep{Lander2001, Venter2001, HGP2004, Lander2011} and the cataloging of the common genetic variation
 segregating in the human population (the latter done via the
 International HapMap Project \citep{HapMap2005, HapMap2007, HapMap2010} and 1000 Genomes Project \citep{1KG2010, 1KG2012}). For a GWAS, individuals are phenotyped
-(e.g. height is measured) and genotyped at millions of common single
+(e.g. height is measured) and genotyped at millions of common variants, referred to as single
 nucleotide polymorphisms (SNPs).  Then each SNP is tested individually
 for an association with the trait measurements via a linear regression
 or related statistical technique \citep{Balding2006, Stephens2009, Yang2014}. Similarly, for a binary trait such
@@ -81,13 +81,13 @@ disable the GHR and cause Laron Syndrome, are often disruptive to the
 complex network of biochemical reactions that sustain a living
 individual. For this reason, they face strong negative selection and
 are often rare in the population. In contrast, mutations with small
-effect on a trait are more likely to be neutral or slight favorable,
+effect on a trait are more likely to be neutral or slightly favorable,
 and thus are able to rise to higher allele frequencies in the
 population. Over millions of years of evolution, the many variants of
 small effect could give rise to the large variation in phenotypes
 observed today, e.g. the difference in height between a 5 foot person
 and a 7 foot person. Supporting this view, when all SNPs assayed in an
-experiment are used to explain heritability, known as the “chip”
+experiment are used to explain heritability, known as the ``chip''
 heritability, this estimate is closer to the observed
 heritability (this has been demonstrated for height and other polygenic traits) \citep{Yang2010, Lee2011}. This suggests that highly polygenic traits like human
 height are indeed the result of thousands of variants of small effect
@@ -116,17 +116,17 @@ a skin cell, the two cells must have different gene expression
 levels. These gene regulatory differences are established during
 development as an organism grows from an initial single
 cell. Signaling molecules, initially from the mother but subsequently
-produced by the offspring’s cells, bind to the receptors of a cell to
+produced by the offspring's cells, bind to the receptors of a cell to
 initiate signal transduction cascades that ultimately lead to
-activation of a transcription factor which binds to DNA at its
+activation of transcription factors which bind to DNA at their
 degenerate binding sites across the genome to modulate the expression
 of many genes. As development continues and cells differentiate into
 their final tissue type, the gene expression levels are maintained by
 the gene regulatory network established by the transcription factors
 active in that cell type.
 
-Just as differences in gene regulation generates extreme diversity in
-cellular function among cells with identical genomes in a given
+Just as differences in gene regulation generate extreme diversity in
+cellular function among cells with identical genomes in a single
 organism \citep{Natoli2010}, a long standing hypothesis is that differences among humans
 and the differences between humans and our closest evolutionary
 relatives, the great apes, are due to mutations that affect not the
@@ -141,7 +141,7 @@ given cellular identity is quite difficult \citep{Vaquerizas2009, Biggin2011, Za
 knowledge, it is possible to learn about the regulatory state of a
 given cell type \citep{Ho2014}. First, it is possible to measure genome-wide gene
 expression levels using technologies like microarrays or RNA
-sequencing (more on that below) \citep{Wang2009, Oshlack2010, Waern2011}. Second, it is possible to interrogate
+sequencing (RNA-seq; described in more detail below) \citep{Wang2009, Oshlack2010, Waern2011}. Second, it is possible to interrogate
 the non-coding regions of the genome by measuring chromatin
 marks \citep{Park2009, Landt2012}. Chromatin marks are deposited by chromatin-remodeling enzymes
 which are recruited by the transcription factors active in the
@@ -163,14 +163,14 @@ analogy, consider viewing a stretch of highway from a helicopter. If
 you observe orange signs and barrels, you can conclude that this
 section of the highway is a construction zone. Furthermore, because
 they notify the motorists to slow down and to merge into one lane, you
-can conclude that the constructions signs and barrels help this
+can conclude that the construction signs and barrels help this
 section to maintain the characteristics of a construction
 zone. However, you would not conclude that the signs and barrels
 caused this section of highway to be a construction zone. The decision
 to work on this section of road was made by local government officials
 and contractors after observing the conditions of the road and
 receiving complaints from citizens. In gene regulation, the chromatin
-marks are the constructions signs and barrels. If you observe
+marks are the construction signs and barrels. If you observe
 activating chromatin marks, you can conclude that the nearby gene is
 expressed and that the chromatin marks are helping maintain this
 transcriptional activity. However, it is the result of transcription
@@ -179,7 +179,7 @@ chromatin marks to be established and the gene to be expressed \citep{Natoli2010
 
 Thus using these chromatin marks enables the deciphering of the
 non-coding regions of the genome. While not as easily readable as the initially
-envisioned “histone code” \citep{Jenuwein2001}, much progress has been
+envisioned ``histone code'' \citep{Jenuwein2001}, much progress has been
 made. The ENCODE Project \citep{ENCODE2004, ENCODE2007, ENCODE2012, Ho2014, Kellis2014},
 Roadmap Epigenomics Project \citep{Roadmap2015}, and independent laboratories
 \citep{Mikkelsen2007} have assayed gene expression and many
@@ -224,7 +224,7 @@ determine the tissue(s) most affecting a given disease by finding
 which tissue is enriched for tissue-specific eQTLs that are also GWAS
 hits for the disease \citep{Ongen2016}.
 
-A common functional genomics technique is RNA sequencing (RNA-seq) \citep{Wang2009, Oshlack2010, Waern2011}. It
+A common functional genomics technique is RNA-seq \citep{Wang2009, Oshlack2010, Waern2011}. It
 is an efficient method for interrogating cellular function by
 measuring genome-wide gene expression levels. RNA-seq has multiple
 advantages over its predecessor, gene expression microarrays. For
@@ -246,7 +246,7 @@ interest. First, from a pragmatic standpoint, infectious diseases are
 a major public health concern, responsible for the deaths of millions
 annually. Thus any increased understanding of who is likely to be
 susceptible or potential drug targets has great potential to reduce
-human suffering worldwide. Second, from a more theoretical
+human suffering worldwide. Second, from a theoretical
 perspective, because hosts and pathogens engage in a constant
 co-evolutionary arms race, natural selection on any mutations
 affecting the response to a pathogen are strong and more likely to be
@@ -282,7 +282,7 @@ antibiotic therapy for such a prolonged period of time, multi-drug
 resistant strains of MTB have evolved as patients stop taking their
 medicine once their symptoms resolve \citep{Seung2015}. With the concurrent spread of
 human immunodeficiency virus (HIV), which weakens the immune system,
-MTB (and especially multi-drug resistance MTB) has the potential to
+MTB (and especially multi-drug resistant MTB) has the potential to
 kill many millions more in the future \citep{Bruchfeld2015}. International efforts to
 prevent the spread of MTB and reduce the number of cases of TB
 worldwide have successfully led to improvements in diagnosis and
@@ -359,7 +359,7 @@ genes likely harbor genetic variation underlying TB susceptibility. In
 Chapter \ref{ch:tb-suscept}, I discovered gene expression changes in
 DCs isolated from individuals known to be susceptible or resistant to
 TB. Furthermore, I used these gene expression differences to build a
-classifier to TB susceptibility. Both of these studies increased our
+classifier of TB susceptibility. Both of these studies increased our
 understanding of the role of the innate immune response in TB
 susceptibility, and more generally demonstrate the utility of a
 functional genomics approach to decipher polygenic traits.
@@ -394,13 +394,13 @@ difference in the innate immune response to a pathogen, a difference
 in only a subset of cells, or a difference in the fraction of cells
 that are infected. Interestingly, initial studies of the innate immune
 response to bacterial infection have observed substantial
-heterogeneity among single cells \citep{Shalek2013, Shalek2014, Avraham2015}.
+heterogeneity among single cells \citep{Shalek2013, Jaitin2014, Shalek2014, Avraham2015}.
 
 As with any new functional genomics technique, it is important to
 investigate and understand the technical biases to avoid during study
 design \citep{Auer2010, Leek2010, Gilad2015}. The initial studies which investigated the technical noise in
 scRNA-seq were interested in differentiating between the biological
-and technical variation affect cell-to-cell differences in gene
+and technical variation affecting cell-to-cell differences in gene
 expression \citep{Brennecke2013, Grun2014, Islam2014, Ding2015, Vallejos2015}.
 On the other hand, scRNA-seq studies of gene expression
 differences across multiple conditions were generating data from many
@@ -408,8 +408,8 @@ batches of single cell RNA-seq. Because many of the new technologies
 are limited to sorting cells from just one condition in each batch,
 many of these studies confounded the biological conditions of interest
 with the technical batch processing \citep{Hicks2015}. With this
-confounded study design with each biological condition being
-represented in only one batch, any technical variation will be
+confounded study design (each biological condition being
+represented in only one batch), any technical variation will be
 contributed to differences between the biological conditions of
 interest. In Chapter \ref{ch:singleCellSeq}, I discuss my research
 that measured the technical variation in scRNA-seq introduced by batch
