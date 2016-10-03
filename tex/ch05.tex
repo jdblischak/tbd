@@ -12,10 +12,10 @@ change in response to infection with \emph{Mycobacterium tuberculosis}
 (MTB) but not other bacteria, highlighting their potential importance
 for mycobacterial diseases \citep{Blischak2015}. In my second approach, I measured gene
 expression levels in innate immune cells from individuals either
-susceptible and resistant to develop active TB and devoped a
+susceptible or resistant to develop active TB and built a
 classifier to predict susceptibility to TB. These first two
-experiments measured gene expression levels in average across many
-cells, and thus they miss any cell-to-cell heterogeneity in the innate
+experiments measured average gene expression levels across many
+cells, and thus they missed any cell-to-cell heterogeneity in the innate
 immune system \citep{Satija2014, Proserpio2016}. In my third approach, I established principles for the
 effective design of studies to measure gene expression levels in
 single cells \citep{Tung2016}. Given the success of my first two experiments, I expect
@@ -25,25 +25,25 @@ measurements in single cells of the innate immune system.
 \section{A joint Bayesian model provides a general framework for analyzing functional genomics studies with many conditions}
 
 In Chapter \ref{ch:tb}, I described my work investigating the innate immune
-response to \emph{Mycobacterium tuberculosis} (MTB) \citep{Blischak2015}. It is
+response to MTB \citep{Blischak2015}. It is
 known that the innate immune response is important for fighting MTB
 infections \citep{Khan2016}. Alveolar macrophages are the primary target of MTB, and they
 initiate the formation of granulomas to sequester MTB \citep{Sia2015}. Furthermore, vaccines
 against TB have had limited efficacy \citep{Wang2013}. To identify human genes which are
-important for the response to MTB infection, we isolated macrophages from 6
+important for the response to MTB infection, we isolated macrophages from six
 healthy donors, infected them with MTB and other bacteria, and measured
 genome-wide gene expression levels using RNA-seq at 4, 18, and 48 hours
 post-infection.
 
-Previous studies had identified the genes which
+Previous studies had identified genes which
 are differentially expressed upon infection with MTB
 \citep{Ehrt2001, Ragno2001, Nau2002, Chaussabel2003, Volpe2006, Tailleux2008}, and some have
 even compared the differences between the reponse to strains of MTB
 that vary in their virulence \citep{Coscolla2010, Wu2012}. The first novelty of our study was to
 include many other bacteria in the infection experiments. Specifically, we
-included the following Mycobacteria: two strains of virulent MTB,
-avirulent (heat-inavtivated) MTB, the attentuated \emph{Mycobacterium
-  bovis} (used as a vaccine), and the avirulent \emph{Mycobacterium
+included the following mycobacteria: two strains of virulent MTB,
+avirulent (heat-inavtivated) MTB, Bacillus Calmette-Gu\'erin (BCG; attentuated \emph{Mycobacterium
+  bovis} used as a vaccine), and the avirulent \emph{Mycobacterium
   smegmatis}. The non-mycobacteria species we included were
 \emph{Yersinia pseudotuberculosis}, \emph{Salmonella typhimurium}, and
 \emph{Staphylococcus epidermidis}. This allowed us to distinguish
@@ -53,12 +53,16 @@ MTB.
 
 This novel study design comparing many bacterial infections to isolate
 the innate immune respone to MTB also posed analytical
-challenges. Standard differential expression analyses (or in general
+challenges. The goal was to identify differences between the innate immune response
+to each of the eight bacterial infections compared to the non-infected control condition.
+Standard differential expression analyses (or in general
 any large scale testing of thousands or more genomic features) are
 well-suited for experiments with a few conditions \citep{Oshlack2010, Anders2013, Ritchie2015}. For example, the
 most common approach is to perform pairwise differential expression
 tests and then overlap the lists of differentially expressed
-genes. These results are always biased by incomplete power \citep{Ding2010, Flutre2013}. Because
+genes. In this instance, that would have meant peforming eight
+pairwise tests to compare each bacterial infection to the control.
+These results are always biased by incomplete power \citep{Ding2010, Flutre2013}. Because
 hypothesis testing uses an arbitrary p-value threshold to determine
 statistical significance, a gene with a p-value below this threshold
 for one comparison but a p-value slightly above this threshold for a
@@ -72,15 +76,15 @@ comparisons also decreases the ability to interpret the results. A
 this approach breaks down with additional comparisons.
 
 Another approach would be to directly compare the effect of infection between
-two different groups of bacteria, e.g. compare the mycobacteria versus the
-non-mycobacteria or virulent versus non-virulent bacteria. The advantage of this
+two different groups of bacteria, e.g. compare the mean effect of infection  with mycobacteria versus the
+mean effect of infection with non-mycobacteria (or virulent versus non-virulent bacteria). The advantage of this
 approach is that it explicitly models the comparison and returns a p-value,
 unlike the Venn diagram overlap approach. However, there are two main
 downsides. First, statistical significance can be driven by outliers. For
-example, most of the most significantly differentially expressed between
+example, in my study most of the significantly differentially expressed genes between
 mycobacteria and non-mycobacteria were actually genes which were simply
 differentially expressed in response to infection with \emph{S. typhimurium} and
-\emph{S. epidermidis}. Second, this limits the results to the \emph{a priori}
+\emph{S. epidermidis}. Second, this limits the potential results to the \emph{a priori}
 ideas of the analyst and are not driven by the patterns in the actual data.
 
 On the other end of the spectrum, a very data-driven approach would be to use a
@@ -103,11 +107,11 @@ expression patterns, conceptually similar to a clustering analysis.
 The Cormotif results for my study were informative. Most of the genes were
 either differentially expressed or not after infection with any of the
 bacteria (Fig. \ref{fig:joint-all}). The two most interesting patterns in regards to understanding the
-innate immune response to MTB were MTB and Virulent (Fig. \ref{fig:joint-18h},\ref{fig:joint-48h}).  The MTB pattern included
+innate immune response to MTB were ``MTB'' and ``Virulent'' (Fig. \ref{fig:joint-18h},\ref{fig:joint-48h}).  The ``MTB'' pattern included
 those genes which had a high posterior probability of being differentially
-expressed to any of the MTB or closely related species and a medium posterior
-probability of being differentially expressed to \emph{M. smegmatis}, the
-nonvirulent mycobacteria. The Virulent pattern included genes which had a high
+expressed in response to infection with MTB or closely related species and a medium posterior
+probability of being differentially expressed in response to ifnection with \emph{M. smegmatis}, the
+nonvirulent mycobacteria. The ``Virulent'' pattern included genes which had a high
 posterior probability of being differentially expressed in response to infection
 with any of the bacteria except heat-inactivated MTB or BCG.
 
@@ -118,7 +122,7 @@ not other virulent bacteria. These genes are candidates for containing genetic
 variants which affect TB susceptibility. Furthermore, these genes could be
 targets for future functional studies of how the innate immune system fights MTB
 and also could give context to future results from genetic and functional
-genomics studies of MTB infection. More generally, our results are informative
+genomics studies of MTB infection. More generally, our methods are informative
 to all future functional genomics studies. We were only able to confidently
 isolate the effects of MTB infection by including multiple other bacterial
 infections as comparison. Had we only infected the macrophages with MTB and
@@ -163,11 +167,11 @@ investigate how the innate immune cells of susceptible individuals
 function compared to those of resistant individuals, we collected
 primary dendritic cells (DCs) from individuals that had recovered from
 TB (i.e. susceptible) and individuals that tested positive for latent
-MTB infections but had not developed TB (i.e. resistant). We infected
-the DCs with MTB and performed RNA-seq on the infected and
+TB infections but had not developed TB (i.e. resistant). We infected
+the DCs with MTB and performed RNA sequencing (RNA-seq) on the infected and
 non-infected cells.
 
-There were 3 main conclusions from this work. First, the differences
+There were three main conclusions from this work. First, the differences
 in gene expression levels between resistant and susceptible
 individuals were primarily present in the non-infected state and not 18
 hours post-infection with MTB (Fig. \ref{fig:limma}). This suggests that these gene
@@ -180,7 +184,7 @@ wide association studies (GWAS) of TB susceptibility \citep{Thye2010} (Fig. \ref
 that our \emph{in vitro} system is a useful model for investigating
 the genetic basis of TB susceptibility. Third, we trained a classifier
 based on the gene expression levels in the non-infected state (Fig. \ref{fig:classifier}). Using
-the threshold required to obtain a 100\% false negative rate in the
+the threshold required to obtain a 100\% sensitivity (zero false negatives) in the
 training data, we found that 11\% of healthy individuals from an
 independent study \citep{Barreiro2012} were predicted to be susceptible to TB, very close
 to the estimated population average of 10\% \citep{North2004, OGarra2013}. This suggests that
@@ -217,7 +221,7 @@ level specifically in response to infection with mycobacteria \citep{Blischak201
 Chapter \ref{ch:tb-suscept}, I found that \emph{CCL1} was one of two
 genes which had an effect size greater than 2 between susceptible and
 resistant individuals in the non-infected state and also a p-value less
-than 0.01 in two GWAS studies of TB susceptibility. There were many
+than 0.01 in two GWAS of TB susceptibility. There were many
 differences between these studies (e.g. cell type, ethnicity of
 donors, timepoints RNA was collected post-infection), yet \emph{CCL1}
 was still a top hit in all three analyses. I believe this warrants
@@ -232,15 +236,15 @@ response.
 \section{Incorporating lessons from single cell pilot study for future studies of the genetic basis of gene expression noise and the response to bacterial infection}
 
 In Chapter \ref{ch:singleCellSeq}, I described my work on single cell
-RNA sequencing (scRNA-seq) \citep{Tung2016}. scRNA-seq is a relatively
+RNA-seq (scRNA-seq) \citep{Tung2016}. scRNA-seq is a relatively
 new technique \citep{Liang2014, Macaulay2014, Saliba2014, Grun2015, Stegle2015, Bacher2016}
 that enables the investigation of gene regulatory
 changes at a much finer resolution than the bulk RNA-seq projects I
 performed in Chapters \ref{ch:tb} and \ref{ch:tb-suscept}. While this
 new technology is exciting, we must exercise the same caution as when
-performing any large-scale genomics experiment \citep{Auer2010}. Early studies of the
+performing any large-scale genomics experiment \citep{Auer2010, Leek2010, Gilad2015}. Early studies of the
 Fluidigm C1 system for scRNA-seq that focused on the technical sources
-of variation largely focused on the variation from well to well within
+of variation largely focused on the variation from well-to-well within
 just one C1 chip \citep{Brennecke2013, Grun2014, Islam2014, Ding2015, Vallejos2015}
 ; whereas, the studies investigating biological
 phenomena tended to use multiple C1 chips without addressing the
@@ -248,7 +252,7 @@ obvious confounding batch effects (this problem is nicely highlighted
 by \citep{Hicks2015}). Before conducting large scale scRNA-seq
 experiments, we first aimed to better understand the technical factors
 affecting the design of such studies. To do so, we performed scRNA-seq
-of three C1 chip replicates of three HapMap citep{HapMap2005} Yoruba individuals.
+of three C1 chip replicates of three HapMap \citep{HapMap2005} Yoruba individuals.
 
 From these data, we learned many important lessons. First, by
 performing subsampling analyses, we determined that sequencing
@@ -342,12 +346,12 @@ samples. During the batch processing, we ensured that the biological
 factors of interest (bacterial infection, timepoint, individual) were
 balanced to avoid introducing spurious signal. Furthermore, upon data
 exploration, we observed that the processing batch and the RNA quality
-score (RIN) were correlated with the first principal component (Fig. \ref{fig:pca}). After
-regressing these two variables, the first principal component was the
+score (RIN) were correlated with the first principal component (PC) (Fig. \ref{fig:pca}). After
+regressing these two variables, the first PC was the
 effect of timepoint and the second PC was the effect of
-infection. Importantly, we obtained similar results whether we
-protected the variables of interest in the linear model or not when
-regressing the technical variables. This was a result of the careful
+infection. Importantly, we obtained similar results with or without
+protecting the variables of interest in the linear model when
+regressing out the technical variables. This was a result of the careful
 planning of the batch processing to avoid confounding biological and
 technical variables.
 
@@ -362,7 +366,7 @@ Not only were the studies
 performed years apart, but the gene expression levels were measured
 using different technologies. Thus I was only able to compare the two
 studies after normalizing each sample (Fig. \ref{fig:combined-dist}) and removing the large batch
-effect by regressing the first principal component of the combined
+effect by regressing the first PC of the combined
 data set (Fig. \ref{fig:combined-pca}). Testing the classifier without accounting for the batch
 effect would have given poor results simply due to technical reasons.
 
