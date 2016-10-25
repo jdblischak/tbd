@@ -28,3 +28,12 @@ download from my GitHub repo [singleCellSeq][]. I cloned the repo,
 copied the files, and then manually renamed them.
 
 [singleCellSeq]: https://github.com/jdblischak/singleCellSeq
+
+## Combining into zip file
+
+I have to upload the files manually to the online submission system,
+so I zipped them all into one file.
+
+```
+zip -r tables.zip table-*
+```
