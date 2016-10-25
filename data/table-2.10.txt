@@ -1,0 +1,14 @@
+analysis	pattern	num_concord	num_discord	mean_perc_concord
+full_time_course	All	513	225	95.55
+full_time_course	18 & 48 h	1792	134	98.9
+full_time_course	48 h	1091	113	98.13
+full_time_course	18 h	3035	166	99.18
+full_time_course	Yers-Salm	514	900	80.06
+time_18h	All	4361	63	99.71
+time_18h	MTB	164	13	98.53
+time_18h	Virulent	1132	33	99.36
+time_18h	Yers-Salm	1692	2	99.94
+time_48h	All	3208	110	99.36
+time_48h	MTB	266	22	98.47
+time_48h	Virulent	14	0	100
+time_48h	Yers-Salm	1580	2	99.94
