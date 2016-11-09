@@ -57,7 +57,7 @@ architecture, it may be informative to examine differences between
 susceptible and resistant individuals at a higher level of
 organization, e.g. gene regulatory networks. Using this approach,
 previous studies have characterized gene expression profiles in innate
-immune cells isolated from individuals known be susceptible or
+immune cells isolated from individuals known to be susceptible or
 resistant to infectious diseases, including tuberculosis
 \citep{Thuong2008} and acute rheumatic fever \citep{Bryant2014}.
 
@@ -644,11 +644,11 @@ project. JDB wrote the paper with input from all authors.
 minimize the introduction of technical batch effects. Specifically, we
 attempted to balance the processing of samples obtained from
 susceptible and resistant individuals. In the diagram, each box
-represents a batch. “Infection” labels the batches of the infection
-experiments, “Arrival” labels the batch shipments of cell lysates
-arrived in Chicago, USA from Paris, France, “Extraction” labels the
-batches of RNA extraction, “Master Mix” labels the batches of library
-preparation, and “Sequencing” labels the batches of flow cells. Each
+represents a batch. ``Infection'' labels the batches of the infection
+experiments, ``Arrival'' labels the batch shipments of cell lysates
+arrived in Chicago, USA from Paris, France, ``Extraction'' labels the
+batches of RNA extraction, ``Master Mix'' labels the batches of library
+preparation, and ``Sequencing'' labels the batches of flow cells. Each
 master mix listed in a flow cell batch was sequenced on only one lane
 of that flow cell.
 }
@@ -713,7 +713,7 @@ linkage method.
 \caption[Principal components analysis (PCA) to identify outliers.]{
 \textbf{Principal components analysis (PCA) to identify outliers.} PC1 versus
 PC2 (a), PC3 versus PC4 (b), and PC5 versus PC6 (c). Each sample is
-represented by its 3-letter ID. “s” stands for susceptible and “r” for
+represented by its 3-letter ID. ``s'' stands for susceptible and ``r'' for
 resistant, and the text is colored on the basis of treatment status
 (purple is non-infected; green is infected). The value is parentheses
 in each axis is the percentage of total variation accounted for by
@@ -903,15 +903,15 @@ dashed red line is the 1:1 line.
 (see supplementary file associated with this dissertation)
 Contains information on the 50 samples. Most
 variables describe the batch processing steps outlined in
-Supplementary Fig. \ref{fig:process}. “id” is a unique identifier for
-each sample, “individual” is the individual identifier (“s” =
-susceptible, “r” = resistant), “status” is the susceptibility status,
-“treatment” is if the sample was infected or non-infected, “infection”
-is the date of the infection experiment (12 total), “arrival” is the
-identifier for the arrival batch (4 total), “extraction” is the batch
-for RNA extraction (5 total), “master\_mix” is the batch for library
-preparation (3 total), “rin” is the RNA Integrity Number from the
-Agilent Bioanalyzer, and “outlier” is a Boolean variable indicating if
+Supplementary Fig. \ref{fig:process}. ``id'' is a unique identifier for
+each sample, ``individual'' is the individual identifier (``s'' =
+susceptible, ``r'' = resistant), ``status'' is the susceptibility status,
+``treatment'' is if the sample was infected or non-infected, ``infection''
+is the date of the infection experiment (12 total), ``arrival'' is the
+identifier for the arrival batch (4 total), ``extraction'' is the batch
+for RNA extraction (5 total), ``master\_mix'' is the batch for library
+preparation (3 total), ``rin'' is the RNA Integrity Number from the
+Agilent Bioanalyzer, and ``outlier'' is a Boolean variable indicating if
 the sample was identified as an outlier (Supplementary Fig.
 \ref{fig:outliers}) and removed from the analysis. (tds)
 }
@@ -926,10 +926,10 @@ Contains the gene expression counts for the
 11,336 genes after filtering lowly expressed genes for all 50 samples
 (Supplementary Fig. \ref{fig:gene}). Each row is a gene labeled with
 its Ensembl gene ID. Each column is a sample. Each sample is labeled
-according to the pattern “x\#\#-status-treatment”, where x is “r” for
-resistant or “s” for susceptible, \#\# is the ID number, status is
-“resist” for resistant or “suscep” for susceptible, and treatment is
-“noninf” for non-infected or “infect” for infected. (tds)
+according to the pattern ``x\#\#-status-treatment'', where x is ``r'' for
+resistant or ``s'' for susceptible, \#\# is the ID number, status is
+``resist'' for resistant or ``suscep'' for susceptible, and treatment is
+``noninf'' for non-infected or ``infect'' for infected. (tds)
 }
 \label{ch03-s2}
 \end{table}
@@ -940,22 +940,22 @@ resistant or “s” for susceptible, \#\# is the ID number, status is
 (see supplementary file associated with this dissertation)
 Contains the results of the differential
 expression analysis with limma (Fig. \ref{fig:limma}). The workbook
-contains 4 sheets corresponding to the 4 tests performed. “status\_ni”
+contains 4 sheets corresponding to the 4 tests performed. ``status\_ni''
 is the test between resistant and susceptible individuals in the
-non-infected state, “status\_ii” is the test between resistant and
-susceptible individuals in the infected state, “treat\_resist” is the
+non-infected state, ``status\_ii'' is the test between resistant and
+susceptible individuals in the infected state, ``treat\_resist'' is the
 test between the non-infected and infected states for resistant
-individuals, and “treat\_suscep” is the test between the non-infected
+individuals, and ``treat\_suscep'' is the test between the non-infected
 and infected states for susceptible individuals. Each sheet has the
-same columns. “id” is the Ensembl gene ID, “gene” is the gene name,
-“logFC” is the log fold change from limma, “AveExpr” is the average
-log expression from limma, “t” is the t-statistic from limma,
-“P.Value” is the p-value from limma, “adj.P.Val” is the adjusted
-p-value from limma, “qvalue” is the q-value calculated with adaptive
-shrinkage, “chr” is the chromosome where the gene is located,
-“description” is the description of the gene from Ensembl, “phenotype”
-is the associated phenotype(s) assigned my Ensembl, “go\_id” is the
-associated GO term(s) assigned by Ensembl, and “go\_description” is
+same columns. ``id'' is the Ensembl gene ID, ``gene'' is the gene name,
+``logFC'' is the log fold change from limma, ``AveExpr'' is the average
+log expression from limma, ``t'' is the t-statistic from limma,
+``P.Value'' is the p-value from limma, ``adj.P.Val'' is the adjusted
+p-value from limma, ``qvalue'' is the q-value calculated with adaptive
+shrinkage, ``chr'' is the chromosome where the gene is located,
+``description'' is the description of the gene from Ensembl, ``phenotype''
+is the associated phenotype(s) assigned my Ensembl, ``go\_id'' is the
+associated GO term(s) assigned by Ensembl, and ``go\_description'' is
 the corresponding name(s) of the GO term(s). (xlsx)
 }
 \label{ch03-s3}
@@ -966,23 +966,23 @@ the corresponding name(s) of the GO term(s). (xlsx)
 \textbf{Data for combined analysis of gene expression data and GWAS results.}
 (see supplementary file associated with this dissertation)
 Contains the results of the GWAS comparison
-analysis (Fig. \ref{fig:gwas}). The first sheet “input-data” contains
+analysis (Fig. \ref{fig:gwas}). The first sheet ``input-data'' contains
 the data for the 10,260 genes which were assigned a SNP in the studies
-from The Gambia and Ghana. “gwas\_p\_ghana” is the minimum p-value
-from the GWAS in Ghana, “gwas\_p\_gambia” is the minimum p-value from
-the GWAS in The Gambia, and “n\_snps” is the number of GWAS SNPs
+from The Gambia and Ghana. ``gwas\_p\_ghana'' is the minimum p-value
+from the GWAS in Ghana, ``gwas\_p\_gambia'' is the minimum p-value from
+the GWAS in The Gambia, and ``n\_snps'' is the number of GWAS SNPs
 within 50 kb of the transcription start site. The columns status\_ni,
 status\_ii, treat\_resist, and treat\_suscep refer to the tests
 described for Supplementary Table \ref{ch03-s3} and contain the absolute log fold
 changes for each comparison. All the other gene annotation columns are
 the same as described for Supplementary Table \ref{ch03-s3}. The second sheet
-“top-genes” contains the results of stringently filtering the combined
-differential expression and GWAS results. “GWAS P cutoff” is the
-p-value cutoff used for both the The Gambia and Ghana GWAS, “Effect
-size cutoff” is the cutoff of the absolute log fold change for the
+``top-genes'' contains the results of stringently filtering the combined
+differential expression and GWAS results. ``GWAS P cutoff'' is the
+p-value cutoff used for both the The Gambia and Ghana GWAS, ``Effect
+size cutoff'' is the cutoff of the absolute log fold change for the
 test between susceptible and resistant individuals in the non-infected
-state (Fig. \ref{fig:limma}a), “Number of genes” is the number of
-genes which satisfied these thresholds, and “Names” is the
+state (Fig. \ref{fig:limma}a), ``Number of genes'' is the number of
+genes which satisfied these thresholds, and ``Names'' is the
 corresponding official gene names (sorted alphabetically). (xlsx)
 }
 \label{ch03-s4}
@@ -995,17 +995,17 @@ corresponding official gene names (sorted alphabetically). (xlsx)
 Contains the results of the classifier analysis.
 Specifically it contains the results from the support vector machine
 using the genes with a qvalue less than 0.05 (Fig.
-\ref{fig:classifier}). The sheet “gene-list” contains information
+\ref{fig:classifier}). The sheet ``gene-list'' contains information
 about the genes used for the classifier (the columns are described in
-the section for Supplementary Table \ref{ch03-s3}). The sheet “training-input”
+the section for Supplementary Table \ref{ch03-s3}). The sheet ``training-input''
 contains the input gene expression data for training the model. The
-sheet “training-results” contains the results of the
+sheet ``training-results'' contains the results of the
 leave-one-out-cross-validation when training the model on the samples
-from the current study.  The sheet “testing-input” contains the input
+from the current study.  The sheet ``testing-input'' contains the input
 gene expression data for testing the model. The sheet
-“testing-results” contains the results from testing the model on the
+``testing-results'' contains the results from testing the model on the
 samples from Barreiro et al., 2012 \citep{Barreiro2012}. The column
-“prob\_tb\_resist” is the probability of being resistant to TB
+``prob\_tb\_resist'' is the probability of being resistant to TB
 assigned by the model. (xlsx)
 }
 \label{ch03-s5}
