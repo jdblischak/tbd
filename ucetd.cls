@@ -67,6 +67,7 @@
 			\vspace{0.8in}
 			A DISSERTATION SUBMITTED TO\\
 			THE FACULTY OF THE DIVISION OF THE \MakeUppercase{\@division}\\
+                        AND THE PRITZKER SCHOOL OF MEDICINE\\
 			IN CANDIDACY FOR THE DEGREE OF\\
 			\MakeUppercase{\@degree}\\
 			\ \\
