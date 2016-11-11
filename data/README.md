@@ -35,5 +35,9 @@ I have to upload the files manually to the online submission system,
 so I zipped them all into one file.
 
 ```
-zip -r tables.zip table-*
+cd data
+mkdir dissertation-blischak-tables
+cp table-* dissertation-blischak-tables
+zip -r dissertation-blischak-tables.zip dissertation-blischak-tables
+rm -r dissertation-blischak-tables
 ```
