@@ -133,7 +133,7 @@ from the biological variation across single cells of different
 individuals. We were also able to estimate how well scRNA-seq data can
 recapitulate the RNA-seq results from population bulk samples.
 
-\begin{figure}[htbp]
+\begin{figure}
 \centering
 \includegraphics[trim=0 .5in 0 0,clip,width=5in]{img/ch04/Figure01.jpeg}
 \caption[Experimental design and quality control of
@@ -227,7 +227,7 @@ is noticeably lower for genes that are expressed at lower levels (Fig.
 Grun2014} as they underscore the importance of using UMIs in single
 cell gene expression studies.
 
-\begin{figure}[htbp]
+\begin{figure}
 \centering
 \includegraphics[trim=0 .3in 0 0,clip,width=5in]{img/ch04/Figure02.jpeg}
 \caption[The effect of sequencing depth and cell
@@ -330,7 +330,7 @@ the ERCC spike in data. Based on these analyses, we concluded that ERCC
 spike-in controls cannot be used to effectively account for the batch
 effect associated with independent C1 preparations.
 
-\begin{figure}[htbp]
+\begin{figure}
 \centering
 \includegraphics[trim=0 .5in 0 0,clip,width=5in]{img/ch04/Figure03.jpeg}
 \caption[Batch effect of scRNA-seq data using the C1
@@ -387,7 +387,7 @@ was previously termed a correction for the UMI `collision probability'
 count exceeded 1,024 (the theoretical number of UMI sequences) -- this
 step resulted in the exclusion of data from 6 mitochondrial genes.
 
-\begin{figure}[htbp]
+\begin{figure}
 \centering
 \includegraphics[trim=0 .5in 0 0,clip,width=5in]{img/ch04/Figure04.jpeg}
 \caption[Normalization and removal of technical
@@ -488,7 +488,7 @@ regulatory noise estimates differ between individuals, we found two
 pluripotency genes, \emph{KLF4} and \emph{DPPA2} (Supplementary Fig.
 \ref{fig:ch04-s7}).
 
-\begin{figure}[htbp]
+\begin{figure}
 \centering
 \includegraphics[trim=0 .5in 0 0,clip,width=5in]{img/ch04/Figure05.jpeg}
 \caption[Cell-to-cell variation in gene expression.]{\textbf{Cell-to-cell variation in gene expression.}
@@ -1122,7 +1122,7 @@ draft. All authors reviewed the final manuscript.
 
 \clearpage
 
-\begin{figure}[htbp]
+\begin{figure}[!htb]
 \centering
 \includegraphics[trim=0 .5in 0 0,clip,width=5in]{img/ch04/Figure06.jpeg}
 \caption[Removal of low quality
@@ -1138,7 +1138,7 @@ based on the 95th percentile of the samples with no cells.}
 \label{fig:ch04-s1}
 \end{figure}
 
-\begin{figure}[htbp]
+\begin{figure}[!htb]
 \centering
 \includegraphics[trim=0 3.5in 0 0,clip,width=5in]{img/ch04/Figure07.jpeg}
 \caption[Removal of samples with
@@ -1156,7 +1156,7 @@ number of cells observed in each cell capture site.}
 \label{fig:ch04-s2}
 \end{figure}
 
-\begin{figure}[htbp]
+\begin{figure}[!htb]
 \centering
 \includegraphics[trim=0 9in 0 0,clip,width=5in]{img/ch04/Figure08.jpeg}
 \caption[Sources of cell-to-cell
@@ -1170,7 +1170,7 @@ before normalization and batch correction. Endogenous genes are shown in
 \label{fig:ch04-s3}
 \end{figure}
 
-\begin{figure}[htbp]
+\begin{figure}[!htb]
 \centering
 \includegraphics[trim=0 10.5in 0 0,clip,width=5in]{img/ch04/Figure09.jpeg}
 \caption[The gene-specific dropout
@@ -1185,7 +1185,7 @@ predicted values using locally weighted scatterplot smoothing (LOESS).}
 \label{fig:ch04-s4}
 \end{figure}
 
-\begin{figure}[htbp]
+\begin{figure}[!htb]
 \centering
 \includegraphics[trim=0 3.5in 0 0,clip,width=5in]{img/ch04/Figure10.jpeg}
 \caption[Permutation-based
@@ -1204,7 +1204,7 @@ was detected as expressed.}
 \label{fig:ch04-s5}
 \end{figure}
 
-\begin{figure}[htbp]
+\begin{figure}[!htb]
 \centering
 \includegraphics[trim=0 .5in 0 0,clip,width=5in]{img/ch04/Figure11.jpeg}
 \caption[Inter-individual differences
@@ -1224,7 +1224,7 @@ blue).}
 \label{fig:ch04-s6}
 \end{figure}
 
-\begin{figure}[htbp]
+\begin{figure}[!htb]
 \centering
 \includegraphics[trim=0 .5in 0 0,clip,width=5in]{img/ch04/Figure12.jpeg}
 \caption[Cell-to-cell variation of
@@ -1238,7 +1238,7 @@ in red, NA19101 in green, and NA19239 in blue).}
 \label{fig:ch04-s7}
 \end{figure}
 
-\begin{figure}[htbp]
+\begin{figure}[!htb]
 \centering
 \includegraphics[trim=0 10in 0 0,clip,width=5in]{img/ch04/Figure13.jpeg}
 \caption[Proposed study design for
@@ -1252,7 +1252,7 @@ their RNA sequencing reads.}
 \label{fig:ch04-s8}
 \end{figure}
 
-\begin{figure}[htbp]
+\begin{figure}[!htb]
 \centering
 \includegraphics[trim=0 8.5in 0 0,clip,width=5in]{img/ch04/Figure14.jpeg}
 \caption[The proportion of genes
@@ -1266,7 +1266,7 @@ low expression. The three colors represent the three individuals
 \label{fig:ch04-s9}
 \end{figure}
 
-\begin{figure}[htbp]
+\begin{figure}[!htb]
 \centering
 \includegraphics[trim=0 3in 0 0,clip,width=5in]{img/ch04/Figure15.jpeg}
 \caption[Coefficients of variation
@@ -1290,7 +1290,7 @@ counts for each individual.}
 \clearpage
 \subsection{Supplementary Tables}\label{ch04-supplementary-tables}
 
-\begin{table}[!ht]
+\begin{table}[!htb]
 \centering
 \includegraphics[trim=0 2.5in 0 0,clip,width=5in]{img/ch04/Figure16.jpeg}
 \caption[Data collection.]{\textbf{Data collection.} (A) iPSCs were
@@ -1305,14 +1305,14 @@ counts for each individual.}
 \end{table}
 \clearpage
 
-\begin{table}[!ht]
+\begin{table}[!htb]
 \caption[High quality single cell samples.]{\textbf{High quality single cell
 samples.} (see supplementary file associated with this dissertation)
 List of the 564 high quality single cell samples.}
 \label{tab:ch04-s2}
 \end{table}
 
-\begin{table}[!ht]
+\begin{table}[!htb]
 \caption[Genes associated with inter-individual differences in regulatory noise.]{
 \textbf{Genes associated with inter-individual differences in regulatory noise.}
  (see supplementary file associated with this dissertation) List of
@@ -1323,7 +1323,7 @@ List of the 564 high quality single cell samples.}
 \label{tab:ch04-s3}
 \end{table}
 
-\begin{table}[!ht]
+\begin{table}[!htb]
 \caption[Gene ontology analysis of the genes associated with inter-individual
  differences in regulatory noise.]{\textbf{Gene ontology analysis of the
  genes associated with inter-individual differences in regulatory noise.}

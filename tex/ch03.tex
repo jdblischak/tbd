@@ -119,7 +119,7 @@ and susceptible individuals in the non-infected state at a q-value of
 between resistant and susceptible individuals in the infected state
 (q-value of 10\%).
 
-\begin{figure}[p]
+\begin{figure}
 \centering
 \includegraphics[width=5in]{img/ch03/limma.pdf}
 \caption[Differential expression analysis.]{
@@ -172,7 +172,7 @@ stringent; see Supplementary Table \ref{ch03-s4} for the results with various
 cutoffs). Interestingly, these two genes were previously shown to play
 a role in MTB infection.
 
-\begin{figure}[ht]
+\begin{figure}
 \centering
 \includegraphics[width=5in]{img/ch03/gwas.pdf}
 \caption[Comparison of differential expression and The Gambia GWAS results.]{
@@ -233,7 +233,7 @@ as susceptible to TB. This result is intriguing similar to the
 estimate that roughly 10\% of the general population is susceptible to
 TB (Fig. \ref{fig:classifier}b).
 
-\begin{figure}[ht]
+\begin{figure}
 \centering
 \includegraphics[width=5in]{img/ch03/classifier-svm.pdf}
 \caption[Classifying TB susceptible individuals using a support vector machine
@@ -630,13 +630,12 @@ experiments. MM extracted the RNA and prepared the sequencing
 libraries. JDB analyzed the results. LBB and YG supervised the
 project. JDB wrote the paper with input from all authors.
 
-\clearpage\newpage
+%\clearpage\newpage
 \section{Supplementary Information}\label{ch03-supplementary-information}
 
 \subsection{Supplementary Figures}
 
-
-\begin{figure}[ht]
+\begin{figure}[!htb]
 \centering
 \includegraphics[width=5in]{img/ch03/processing.pdf}
 \caption[Batch processing.]{
@@ -656,7 +655,7 @@ of that flow cell.
 \end{figure}
 
 
-\begin{figure}[ht]
+\begin{figure}[!htb]
 \centering
 \includegraphics[width=5in]{img/ch03/gene-exp-distribution.pdf}
 \caption[Gene expression distributions before and after filtering genes and
@@ -675,7 +674,7 @@ samples remaining after removing outliers.
 \label{fig:gene}
 \end{figure}
 
-\begin{figure}[ht]
+\begin{figure}[!htb]
 \centering
 \includegraphics[width=5in]{img/ch03/heatmap-all-samples.pdf}
 \caption[Heatmap of correlation matrix of samples.]{
@@ -692,7 +691,7 @@ r18-resist-infect.
 \label{fig:heat-all}
 \end{figure}
 
-\begin{figure}[ht]
+\begin{figure}[!htb]
 \centering
 \includegraphics[width=5in]{img/ch03/heatmap-no-outliers.pdf}
 \caption[Heatmap of correlation matrix after removing outliers.]{
@@ -707,7 +706,7 @@ linkage method.
 \end{figure}
 
 
-\begin{figure}[ht]
+\begin{figure}[!htb]
 \centering
 \includegraphics[width=5in]{img/ch03/outliers.pdf}
 \caption[Principal components analysis (PCA) to identify outliers.]{
@@ -726,7 +725,7 @@ non-infected and infected samples for PC1 only.
 \end{figure}
 
 
-\begin{figure}[ht]
+\begin{figure}[!htb]
 \centering
 \includegraphics[width=5in]{img/ch03/batch-pca.pdf}
 \caption[Check for technical batch effects using principal components analysis
@@ -743,7 +742,7 @@ correlations vary from 0 (white) to 1 (red).
 \label{fig:batch-effect}
 \end{figure}
 
-\begin{figure}[ht]
+\begin{figure}[!htb]
 \centering
 \includegraphics[width=5in]{img/ch03/batch-infection.pdf}
 \caption[Check for confounding effect of infection batch.]{
@@ -757,7 +756,7 @@ individuals are in orange and susceptible individuals in blue.
 \label{fig:infection}
 \end{figure}
 
-\begin{figure}[ht]
+\begin{figure}[!htb]
 \centering
 \includegraphics[width=5in]{img/ch03/limma-supp.pdf}
 \caption[Effect of treatment with MTB.]{
@@ -776,7 +775,7 @@ significantly differentially expressed at this false discovery rate.
 \label{fig:limma-supp}
 \end{figure}
 
-\begin{figure}[ht]
+\begin{figure}[!htb]
 \centering
 \includegraphics[width=5in]{img/ch03/gwas-supp.pdf}
 \caption[Comparison of differential expression and Ghana GWAS results.]{
@@ -799,7 +798,7 @@ the enrichment plot in (a).
 \label{fig:gwas-supp}
 \end{figure}
 
-\begin{figure}[ht]
+\begin{figure}[!htb]
 \centering
 \includegraphics[width=5in]{img/ch03/combined-distributions.pdf}
 \caption[Normalizing gene expression distributions.]{
@@ -813,7 +812,7 @@ normalizing each sample to a standard normal distribution.
 \label{fig:combined-dist}
 \end{figure}
 
-\begin{figure}[ht]
+\begin{figure}[!htb]
 \centering
 \includegraphics[width=5in]{img/ch03/combined-pca.pdf}
 \caption[Principal components analysis (PCA) of combined data sets.]{
@@ -828,7 +827,7 @@ that PC. (b) The same data after regressing the original PC1 in (a).
 \label{fig:combined-pca}
 \end{figure}
 
-\begin{figure}[ht]
+\begin{figure}[!htb]
 \centering
 \includegraphics[width=5in]{img/ch03/classifier-compare.pdf}
 \caption[Comparing the classification results of different methods and number
@@ -846,7 +845,7 @@ resistant and susceptible individuals in the current study.
 \label{fig:class-compare}
 \end{figure}
 
-\begin{figure}[ht]
+\begin{figure}[!htb]
 \centering
 \includegraphics[width=5in]{img/ch03/classifier-en.pdf}
 \caption[Classifying TB susceptible individuals using an elastic net model.]{
@@ -864,7 +863,7 @@ individuals \citep{Barreiro2012}.
 \label{fig:class-en}
 \end{figure}
 
-\begin{figure}[ht]
+\begin{figure}[!htb]
 \centering
 \includegraphics[width=5in]{img/ch03/classifier-rf.pdf}
 \caption[Classifying TB susceptible individuals using a random forest model.]{
@@ -882,7 +881,7 @@ a test set of independently collected healthy individuals
 \label{fig:class-rf}
 \end{figure}
 
-\begin{figure}[ht]
+\begin{figure}[!htb]
 \centering
 \includegraphics[width=5in]{img/ch03/classifier-exp.pdf}
 \caption[Comparing gene expression between the two studies.]{
@@ -895,10 +894,10 @@ dashed red line is the 1:1 line.
 \label{fig:class-exp}
 \end{figure}
 
-\clearpage\newpage
+\clearpage
 \subsection{Supplementary Data}
 
-\begin{table}[h]
+\begin{table}[!htb]
 \caption[Sample information.]{\textbf{Sample information.}
 (see supplementary file associated with this dissertation)
 Contains information on the 50 samples. Most
@@ -918,7 +917,7 @@ the sample was identified as an outlier (Supplementary Fig.
 \label{ch03-s1}
 \end{table}
 
-\begin{table}[h]
+\begin{table}[!htb]
 \caption[Gene expression matrix.]{
 \textbf{Gene expression matrix.}
 (see supplementary file associated with this dissertation)
@@ -934,7 +933,7 @@ resistant or ``s'' for susceptible, \#\# is the ID number, status is
 \label{ch03-s2}
 \end{table}
 
-\begin{table}[h]
+\begin{table}[!htb]
 \caption[Differential expression results.]{
 \textbf{Differential expression results.}
 (see supplementary file associated with this dissertation)
@@ -961,7 +960,7 @@ the corresponding name(s) of the GO term(s). (xlsx)
 \label{ch03-s3}
 \end{table}
 
-\begin{table}[h]
+\begin{table}[!htb]
 \caption[Data for combined analysis of gene expression data and GWAS results.]{
 \textbf{Data for combined analysis of gene expression data and GWAS results.}
 (see supplementary file associated with this dissertation)
@@ -988,7 +987,7 @@ corresponding official gene names (sorted alphabetically). (xlsx)
 \label{ch03-s4}
 \end{table}
 
-\begin{table}[h]
+\begin{table}[!htb]
 \caption[Classifier results.]{
 \textbf{Classifier results.}
 (see supplementary file associated with this dissertation)
