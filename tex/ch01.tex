@@ -3,93 +3,104 @@
 \section{Human Genetics and the search for the genetic basis of human phenotypes}
 
 The field of Human Genetics aims to discover the genetic basis of the
-variation observed in human phenotypes \citep{Strachan2011}. The difficulty of this goal
-depends on the genetic architecture of the phenotype \citep{DiRienzo2006, Bodmer2008, Schork2009}. On the one hand
-are monogenic (or Mendelian) traits, which are
-caused by mutations in a single gene. Isolating the causal gene is
-relatively tractable. On the other hand are polygenic (or complex)
-traits, which are the result of many genes acting in
-concert. Furthermore, the genes can interact with each other in a
-non-additive manner (gene-gene interactions, or epistasis) \citep{Cordell2009, Mechanic2012} and the
+variation observed in human phenotypes \citep{Strachan2011}. The
+difficulty of this goal depends on the genetic architecture of the
+phenotype \citep{DiRienzo2006, Bodmer2008, Schork2009}. On the one
+hand are monogenic (or Mendelian) traits, which are caused by
+mutations in a single gene. Isolating the causal gene is relatively
+tractable. On the other hand are polygenic (or complex) traits, which
+are the result of many genes acting in concert. Furthermore, the genes
+can interact with each other in a non-additive manner (gene-gene
+interactions, or epistasis) \citep{Cordell2009, Mechanic2012} and the
 environment can also play a significant role (gene-environment
 interactions) \citep{Thomas2010, Ober2011}.
 
 As an example, consider human height. A disabling mutation in just one
 gene, the growth hormone receptor (GHR), nullifies the effect of
 growth hormone leading to very short stature and other metabolic
-abnormalities (Laron Syndrome) \citep{Laron2011}. Because of its easily identifiable
-phenotype and single gene origin, the genetic basis of Laron Syndrome
-was discovered in the late 1980s using a candidate gene approach
-in a small number of pedigrees \citep{Amselem1989, Godowski1989, Shevah2011}
-(the correct candidate gene was known from previous physiology experiments \citep{Eshet1984}). In
-contrast, the considerable variability in height in the human
-population is not caused by rare mutations in a single or a few genes,
-but instead is due to the aggregate effect of many mutations (or variants) of small
-effect size interacting with each other and the environment
-(e.g. diet, pollution, etc.) \citep{Lettre2011, Turchin2012}. Thus although height has been determined
-to be highly heritable, genetic studies involving hundreds of
-thousands of individuals that identified thousands of associated
+abnormalities (Laron Syndrome) \citep{Laron2011}. Because of its
+easily identifiable phenotype and single gene origin, the genetic
+basis of Laron Syndrome was discovered in the late 1980s using a
+candidate gene approach in a small number of pedigrees
+\citep{Amselem1989, Godowski1989, Shevah2011} (the correct candidate
+gene was known from previous physiology experiments
+\citep{Eshet1984}). In contrast, the considerable variability in
+height in the human population is not caused by rare mutations in a
+single or a few genes, but instead is due to the aggregate effect of
+many mutations (or variants) of small effect size interacting with
+each other and the environment (e.g. diet, pollution, etc.)
+\citep{Lettre2011, Turchin2012}. Thus although height has been
+determined to be highly heritable, genetic studies involving hundreds
+of thousands of individuals that identified thousands of associated
 variants which affect height still only explain a small percentage of
-the heritable variation \citep{LangoAllen2010, Wood2014}. Larger studies with increased power will only
-continue to find associated variants with even smaller effect size (or
-otherwise they would have already been discovered), thus the genetic
-basis of a highly polygenic trait
-may unsatisfyingly be that many variants across the genome make a minute
-contribution to the height of an individual.
+the heritable variation \citep{LangoAllen2010, Wood2014}. Larger
+studies with increased power will only continue to find associated
+variants with even smaller effect size (or otherwise they would have
+already been discovered), thus the genetic basis of a highly polygenic
+trait may unsatisfyingly be that many variants across the genome make
+a minute contribution to the height of an individual.
 
 The current state-of-the-art technique for mapping genetic variants
 that affect a polygenic trait is the genome-wide association study
-(GWAS) \citep{Hirschhorn2005}. This technique was made possible by the sequencing of the
-human genome \citep{Lander2001, Venter2001, HGP2004, Lander2011} and the cataloging of the common genetic variation
+(GWAS) \citep{Hirschhorn2005}. This technique was made possible by the
+sequencing of the human genome \citep{Lander2001, Venter2001, HGP2004,
+  Lander2011} and the cataloging of the common genetic variation
 segregating in the human population (the latter done via the
-International HapMap Project \citep{HapMap2005, HapMap2007, HapMap2010} and 1000 Genomes Project \citep{1KG2010, 1KG2012}). For a GWAS, individuals are phenotyped
-(e.g. height is measured) and genotyped at millions of common variants, referred to as single
+International HapMap Project \citep{HapMap2005, HapMap2007,
+  HapMap2010} and 1000 Genomes Project \citep{1KG2010, 1KG2012}). For
+a GWAS, individuals are phenotyped (e.g. height is measured) and
+genotyped at millions of common variants, referred to as single
 nucleotide polymorphisms (SNPs).  Then each SNP is tested individually
 for an association with the trait measurements via a linear regression
-or related statistical technique \citep{Balding2006, Stephens2009, Yang2014}. Similarly, for a binary trait such
-as cases with a disease versus controls without a disease, the
-phenotype is the presence or absence of a disease and each SNP is
-tested for association with a logistic regression or related
-statistical technique \citep{Chang2015}. GWAS have identified many genetic variants
-affecting a diverse set of human polygenic traits, especially as the
-sample sizes for GWAS increased into the hundreds of
-thousands \citep{Welter2014}. Nevertheless, their results have several limitations.
+or related statistical technique \citep{Balding2006, Stephens2009,
+  Yang2014}. Similarly, for a binary trait such as cases with a
+disease versus controls without a disease, the phenotype is the
+presence or absence of a disease and each SNP is tested for
+association with a logistic regression or related statistical
+technique \citep{Chang2015}. GWAS have identified many genetic
+variants affecting a diverse set of human polygenic traits, especially
+as the sample sizes for GWAS increased into the hundreds of thousands
+\citep{Welter2014}. Nevertheless, their results have several
+limitations.
 
 As mentioned above, one of the main issues with GWAS results is the
-small effect size of the associated SNPs on the trait of interest \citep{Manolio2009}. The
-hope of finding these SNPs is that they will be useful for predicting
-the trait (e.g. how likely are you to develop diabetes). However, with
-such small effect sizes, they have little predictive power and thus
-are generally not clinically actionable \citep{Torres2013, Wray2013}. These disappointing results
-could be due to limitations in our knowledge when designing the study
-and modeling the data. For example, when recruiting study
-participants, it is impossible to record every possible environmental
-factor that could have contributed to each person's trait
-value \citep{Ober2011}. Furthermore, in case-control studies, the controls will likely
-include a subset of individuals that have yet to develop the
-disease. Similarly, when modeling the genetic associations, most
-models assume an isolated additive effect of each variant on the
-trait \citep{Cordell2009}. This simplifying assumption is made such that the statistical
-test is tractable and interpretable. However, it is missing the
-contribution of any gene-gene or gene-environment interactions
-\citep{Cordell2009, Thomas2010, Lappalainen2011, Ackermann2012, Huang2012, Starr2016}. On the
-other hand, the disappointing results of GWAS may not be due to
-limitations of the approach, but simply reflect the actual biology of
-polygenic traits \citep{DiRienzo2006, Bodmer2008, Schork2009, Pritchard2010}.
-Mutations with strong effect, such as those that
-disable the GHR and cause Laron Syndrome, are often disruptive to the
-complex network of biochemical reactions that sustain a living
-individual. For this reason, they face strong negative selection and
-are often rare in the population. In contrast, mutations with small
-effect on a trait are more likely to be neutral or slightly favorable,
-and thus are able to rise to higher allele frequencies in the
-population. Over millions of years of evolution, the many variants of
-small effect could give rise to the large variation in phenotypes
-observed today, e.g. the difference in height between a 5 foot person
-and a 7 foot person. Supporting this view, when all SNPs assayed in an
-experiment are used to explain heritability, known as the ``chip''
-heritability, this estimate is closer to the observed
-heritability (this has been demonstrated for height and other polygenic traits) \citep{Yang2010, Lee2011}. This suggests that highly polygenic traits like human
+small effect size of the associated SNPs on the trait of interest
+\citep{Manolio2009}. The hope of finding these SNPs is that they will
+be useful for predicting the trait (e.g. how likely are you to develop
+diabetes). However, with such small effect sizes, they have little
+predictive power and thus are generally not clinically actionable
+\citep{Torres2013, Wray2013}. These disappointing results could be due
+to limitations in our knowledge when designing the study and modeling
+the data. For example, when recruiting study participants, it is
+impossible to record every possible environmental factor that could
+have contributed to each person's trait value
+\citep{Ober2011}. Furthermore, in case-control studies, the controls
+will likely include a subset of individuals that have yet to develop
+the disease. Similarly, when modeling the genetic associations, most
+models assume an isolated additive effect of each variant on the trait
+\citep{Cordell2009}. This simplifying assumption is made such that the
+statistical test is tractable and interpretable. However, it is
+missing the contribution of any gene-gene or gene-environment
+interactions \citep{Cordell2009, Thomas2010, Lappalainen2011,
+  Ackermann2012, Huang2012, Starr2016}. On the other hand, the
+disappointing results of GWAS may not be due to limitations of the
+approach, but simply reflect the actual biology of polygenic traits
+\citep{DiRienzo2006, Bodmer2008, Schork2009, Pritchard2010}.
+Mutations with strong effect, such as those that disable the GHR and
+cause Laron Syndrome, are often disruptive to the complex network of
+biochemical reactions that sustain a living individual. For this
+reason, they face strong negative selection and are often rare in the
+population. In contrast, mutations with small effect on a trait are
+more likely to be neutral or slightly favorable, and thus are able to
+rise to higher allele frequencies in the population. Over millions of
+years of evolution, the many variants of small effect could give rise
+to the large variation in phenotypes observed today, e.g. the
+difference in height between a 5 foot person and a 7 foot
+person. Supporting this view, when all SNPs assayed in an experiment
+are used to explain heritability, known as the ``chip'' heritability,
+this estimate is closer to the observed heritability (this has been
+demonstrated for height and other polygenic traits) \citep{Yang2010,
+  Lee2011}. This suggests that highly polygenic traits like human
 height are indeed the result of thousands of variants of small effect
 size \citep{Wood2014}.
 
@@ -99,72 +110,78 @@ mechanisms which ultimately determine the trait. This has proven
 difficult because most GWAS hits do not affect the protein-coding
 sequence of a gene, for which it would be straightforward to predict
 and test the effect this would have on gene function, but instead the
-associated SNPs are located in non-coding regions of the genome \citep{Hindorff2009, Manolio2009}. It is
-much more difficult to predict the effect of these variants because
-there is no simple code to translate changes in non-coding
-sequence. This has motivated the study of gene regulation in the field
-of Human Genetics \citep{Lappalainen2010, Trynka2013, Civelek2014, Lappalainen2015}.
+associated SNPs are located in non-coding regions of the genome
+\citep{Hindorff2009, Manolio2009}. It is much more difficult to
+predict the effect of these variants because there is no simple code
+to translate changes in non-coding sequence. This has motivated the
+study of gene regulation in the field of Human Genetics
+\citep{Lappalainen2010, Trynka2013, Civelek2014, Lappalainen2015}.
 
 \section{Functional genomics and the investigation of the non-coding regions of the genome}
 
 Gene regulation refers to how cells control which genes are turned on
-and to what extent \citep{Davidson2010, Natoli2010, Strachan2011, Ostuni2013, Tsankov2015}. This is critical because all cells in the human
-body contain the same genomic material (ignoring the complications of
-somatic recombination in certain immune cells and somatic mutations in
-general). Thus in order for a liver cell to function differently than
-a skin cell, the two cells must have different gene expression
-levels. These gene regulatory differences are established during
-development as an organism grows from an initial single
-cell. Signaling molecules, initially from the mother but subsequently
-produced by the offspring's cells, bind to the receptors of a cell to
-initiate signal transduction cascades that ultimately lead to
-activation of transcription factors which bind to DNA at their
-degenerate binding sites across the genome to modulate the expression
-of many genes. As development continues and cells differentiate into
-their final tissue type, the gene expression levels are maintained by
-the gene regulatory network established by the transcription factors
-active in that cell type.
+and to what extent \citep{Davidson2010, Natoli2010, Strachan2011,
+  Ostuni2013, Tsankov2015}. This is critical because all cells in the
+human body contain the same genomic material (ignoring the
+complications of somatic recombination in certain immune cells and
+somatic mutations in general). Thus in order for a liver cell to
+function differently than a skin cell, the two cells must have
+different gene expression levels. These gene regulatory differences
+are established during development as an organism grows from an
+initial single cell. Signaling molecules, initially from the mother
+but subsequently produced by the offspring's cells, bind to the
+receptors of a cell to initiate signal transduction cascades that
+ultimately lead to activation of transcription factors which bind to
+DNA at their degenerate binding sites across the genome to modulate
+the expression of many genes. As development continues and cells
+differentiate into their final tissue type, the gene expression levels
+are maintained by the gene regulatory network established by the
+transcription factors active in that cell type.
 
 Just as differences in gene regulation generate extreme diversity in
 cellular function among cells with identical genomes in a single
-organism \citep{Natoli2010}, a long standing hypothesis is that differences among humans
-and the differences between humans and our closest evolutionary
-relatives, the great apes, are due to mutations that affect not the
-protein-coding sequence but instead mutations which affect the
-spatiotemporal expression of genes \citep{Britten1969, King1975, Carroll2008}. This theory was originally
+organism \citep{Natoli2010}, a long standing hypothesis is that
+differences among humans and the differences between humans and our
+closest evolutionary relatives, the great apes, are due to mutations
+that affect not the protein-coding sequence but instead mutations
+which affect the spatiotemporal expression of genes
+\citep{Britten1969, King1975, Carroll2008}. This theory was originally
 proposed because of the high similarity of protein-coding sequences
-between humans and chimpanzees \citep{King1975}, and is supported by the finding of
-mainly non-coding SNPs from GWAS \citep{Welter2014}.
+between humans and chimpanzees \citep{King1975}, and is supported by
+the finding of mainly non-coding SNPs from GWAS \citep{Welter2014}.
 
 Understanding which transcription factors establish and maintain a
-given cellular identity is quite difficult \citep{Vaquerizas2009, Biggin2011, Zaret2016}. However, even without this
-knowledge, it is possible to learn about the regulatory state of a
-given cell type \citep{Ho2014}. First, it is possible to measure genome-wide gene
+given cellular identity is quite difficult \citep{Vaquerizas2009,
+  Biggin2011, Zaret2016}. However, even without this knowledge, it is
+possible to learn about the regulatory state of a given cell type
+\citep{Ho2014}. First, it is possible to measure genome-wide gene
 expression levels using technologies like microarrays or RNA
-sequencing (RNA-seq; described in more detail below) \citep{Wang2009, Oshlack2010, Waern2011}. Second, it is possible to interrogate
-the non-coding regions of the genome by measuring chromatin
-marks \citep{Park2009, Landt2012}. Chromatin marks are deposited by chromatin-remodeling enzymes
-which are recruited by the transcription factors active in the
-cell. The most common are methylation of the cysteine base in CpG
-dinucleotides (DNA methylation) or chemical modification of the tails
-of the protein octamers (histones) which DNA is wrapped around. These
-marks signal the state of the region, e.g. active or repressed, and may
-help to maintain the current state. Histone marks can be assayed with
-chromatin immunoprecipitation followed by sequencing (ChIP-seq), and
-DNA methylation can be assayed with specialized microarrays or
-bisulphite sequencing. Using these technologies, it is possible to
-learn about the function of the non-coding SNPs discovered by GWAS.
+sequencing (RNA-seq; described in more detail below) \citep{Wang2009,
+  Oshlack2010, Waern2011}. Second, it is possible to interrogate the
+non-coding regions of the genome by measuring chromatin marks
+\citep{Park2009, Landt2012}. Chromatin marks are deposited by
+chromatin-remodeling enzymes which are recruited by the transcription
+factors active in the cell. The most common are methylation of the
+cysteine base in CpG dinucleotides (DNA methylation) or chemical
+modification of the tails of the protein octamers (histones) which DNA
+is wrapped around. These marks signal the state of the region,
+e.g. active or repressed, and may help to maintain the current
+state. Histone marks can be assayed with chromatin immunoprecipitation
+followed by sequencing (ChIP-seq), and DNA methylation can be assayed
+with specialized microarrays or bisulphite sequencing. Using these
+technologies, it is possible to learn about the function of the
+non-coding SNPs discovered by GWAS.
 
 As an aside, it should be noted that there is a lot of confusion about
-the role of chromatin marks and their effect on gene
-expression \citep{Henikoff2011}. Chromatin marks are not causal. Instead, they are signs of
-a given chromatin state, and at best help maintain that state. As an
-analogy, consider viewing a stretch of highway from a helicopter. If
-you observe orange signs and barrels, you can conclude that this
-section of the highway is a construction zone. Furthermore, because
-they notify the motorists to slow down and to merge into one lane, you
-can conclude that the construction signs and barrels help this
-section to maintain the characteristics of a construction
+the role of chromatin marks and their effect on gene expression
+\citep{Henikoff2011}. Chromatin marks are not causal. Instead, they
+are signs of a given chromatin state, and at best help maintain that
+state. As an analogy, consider viewing a stretch of highway from a
+helicopter. If you observe orange signs and barrels, you can conclude
+that this section of the highway is a construction zone. Furthermore,
+because they notify the motorists to slow down and to merge into one
+lane, you can conclude that the construction signs and barrels help
+this section to maintain the characteristics of a construction
 zone. However, you would not conclude that the signs and barrels
 caused this section of highway to be a construction zone. The decision
 to work on this section of road was made by local government officials
@@ -175,30 +192,33 @@ activating chromatin marks, you can conclude that the nearby gene is
 expressed and that the chromatin marks are helping maintain this
 transcriptional activity. However, it is the result of transcription
 factors receiving input from outside the cell that caused these active
-chromatin marks to be established and the gene to be expressed \citep{Natoli2010}.
+chromatin marks to be established and the gene to be expressed
+\citep{Natoli2010}.
 
 Thus using these chromatin marks enables the deciphering of the
-non-coding regions of the genome. While not as easily readable as the initially
-envisioned ``histone code'' \citep{Jenuwein2001}, much progress has been
-made. The ENCODE Project \citep{ENCODE2004, ENCODE2007, ENCODE2012, Ho2014, Kellis2014},
-Roadmap Epigenomics Project \citep{Roadmap2015}, and independent laboratories
-\citep{Mikkelsen2007} have assayed gene expression and many
-chromatin marks in a large variety of cell types. Using a hidden
-Markov model (HMM), one group was able to define distinct regions of the
-genome in each of the cell types they collected \citep{Ernst2011}. This now provides the
-context-specificity required to predict and test the effect of
-non-coding SNPs identified in GWAS \citep{Trynka2013}. For example, a GWAS hit for type
-II diabetes could be potentially affecting gene expression in the
-liver, adipose tissue, brain, or beta cells of the pancreas. If
-chromatin profiling reveals that SNP is located in an enhancer region
-in only one of those tissues, that would inform the follow-up
-experiments to perform. Encouragingly, this sort of relationship is
-observed generally. That is, GWAS hits for given disease are more
-likely to be found in gene regulatory regions of the genome specific
-to tissues relevant to the disease pathogenesis \citep{Ernst2011, Trynka2013, Farh2015, Roadmap2015}. Furthermore,
+non-coding regions of the genome. While not as easily readable as the
+initially envisioned ``histone code'' \citep{Jenuwein2001}, much
+progress has been made. The ENCODE Project \citep{ENCODE2004,
+  ENCODE2007, ENCODE2012, Ho2014, Kellis2014}, Roadmap Epigenomics
+Project \citep{Roadmap2015}, and independent laboratories
+\citep{Mikkelsen2007} have assayed gene expression and many chromatin
+marks in a large variety of cell types. Using a hidden Markov model
+(HMM), one group was able to define distinct regions of the genome in
+each of the cell types they collected \citep{Ernst2011}. This now
+provides the context-specificity required to predict and test the
+effect of non-coding SNPs identified in GWAS \citep{Trynka2013}. For
+example, a GWAS hit for type II diabetes could be potentially
+affecting gene expression in the liver, adipose tissue, brain, or beta
+cells of the pancreas. If chromatin profiling reveals that SNP is
+located in an enhancer region in only one of those tissues, that would
+inform the follow-up experiments to perform. Encouragingly, this sort
+of relationship is observed generally. That is, GWAS hits for given
+disease are more likely to be found in gene regulatory regions of the
+genome specific to tissues relevant to the disease pathogenesis
+\citep{Ernst2011, Trynka2013, Farh2015, Roadmap2015}. Furthermore,
 knowledge of these genomic annotations has been successfully used as
-prior information to increase the power to detect associations in
-GWAS \citep{Pickrell2014, Wang2016}.
+prior information to increase the power to detect associations in GWAS
+\citep{Pickrell2014, Wang2016}.
 
 While knowing that an associated SNP is located in an enhancer region
 in a particular cell type is extremely helpful for generating testable
@@ -207,143 +227,158 @@ usually assumed that a variant is affecting the most nearby gene,
 there is no guarantee this is true. And even if that assumption is
 true, it is unknown which allele is associated with higher
 expression. A direct method for addressing these uncertainties is
-expression quantitative trait loci (eQTL) mapping
-(early eQTL studies were performed using linkage in
-pedigrees, but current eQTL studies are tests of association in
-unrelated individuals like a typical GWAS) \citep{Monks2004, Duan2008, Franke2009, Lappalainen2015, Pai2015}. In this approach the
-phenotype of interest is the expression level of a gene. To reduce the
-multiple testing burden (and also because regulatory variants are
-often closer to the gene they affect \citep{Battle2014}), most eQTL studies test for
-eQTLs nearby the transcription start site of each gene. To date, eQTL
-studies have been performed in many cell types \citep{Nica2011, GTEx2015}. Reassuringly, eQTLs
-are more likely to be GWAS-associated SNPs, consistent with the idea
-that GWAS hits in non-coding regions are affecting gene
-expression \citep{Emilsson2008, Nica2010, Nicolae2010, Raj2013, GTEx2015}. Furthermore, by combining eQTL results from many tissues
-collected by the GTEx Consortium \citep{GTEx2013} with GWAS results, it is possible to
-determine the tissue(s) most affecting a given disease by finding
-which tissue is enriched for tissue-specific eQTLs that are also GWAS
-hits for the disease \citep{Ongen2016}.
+expression quantitative trait loci (eQTL) mapping (early eQTL studies
+were performed using linkage in pedigrees, but current eQTL studies
+are tests of association in unrelated individuals like a typical GWAS)
+\citep{Monks2004, Duan2008, Franke2009, Lappalainen2015, Pai2015}. In
+this approach the phenotype of interest is the expression level of a
+gene. To reduce the multiple testing burden (and also because
+regulatory variants are often closer to the gene they affect
+\citep{Battle2014}), most eQTL studies test for eQTLs nearby the
+transcription start site of each gene. To date, eQTL studies have been
+performed in many cell types \citep{Nica2011, GTEx2015}. Reassuringly,
+eQTLs are more likely to be GWAS-associated SNPs, consistent with the
+idea that GWAS hits in non-coding regions are affecting gene
+expression \citep{Emilsson2008, Nica2010, Nicolae2010, Raj2013,
+  GTEx2015}. Furthermore, by combining eQTL results from many tissues
+collected by the GTEx Consortium \citep{GTEx2013} with GWAS results,
+it is possible to determine the tissue(s) most affecting a given
+disease by finding which tissue is enriched for tissue-specific eQTLs
+that are also GWAS hits for the disease \citep{Ongen2016}.
 
-A common functional genomics technique is RNA-seq \citep{Wang2009, Oshlack2010, Waern2011}. It
-is an efficient method for interrogating cellular function by
-measuring genome-wide gene expression levels. RNA-seq has multiple
-advantages over its predecessor, gene expression microarrays. For
-example, it is not as limited by genome annotations and has a higher
-dynamic range \citep{Marioni2008, Zhao2014}. Most importantly for Human Genetics applications, any
+A common functional genomics technique is RNA-seq \citep{Wang2009,
+  Oshlack2010, Waern2011}. It is an efficient method for interrogating
+cellular function by measuring genome-wide gene expression
+levels. RNA-seq has multiple advantages over its predecessor, gene
+expression microarrays. For example, it is not as limited by genome
+annotations and has a higher dynamic range \citep{Marioni2008,
+  Zhao2014}. Most importantly for Human Genetics applications, any
 polymorphisms present in the coding regions in a population being
 studied will be present in the RNA-seq reads. These can be used to
 verify the identity of the individual being sequenced (i.e. avoid
-sample swaps and contamination) \citep{Jun2012}, and also to increase power in eQTL
-studies by comparing the allele-specific expression measurements to
-the eQTL effects \citep{Castel2015, VandeGeijn2015}.
+sample swaps and contamination) \citep{Jun2012}, and also to increase
+power in eQTL studies by comparing the allele-specific expression
+measurements to the eQTL effects \citep{Castel2015, VandeGeijn2015}.
 
 \section{Tuberculosis and the genetic basis of susceptibility}
 
 A major subfield of Human Genetics focuses on understanding the
-genetic basis of susceptibility to infectious diseases \citep{Casanova2007, Chapman2012, Novembre2012, Manry2013}. There are
+genetic basis of susceptibility to infectious diseases
+\citep{Casanova2007, Chapman2012, Novembre2012, Manry2013}. There are
 multiple reasons that infectious diseases are of particular
 interest. First, from a pragmatic standpoint, infectious diseases are
 a major public health concern, responsible for the deaths of millions
 annually. Thus any increased understanding of who is likely to be
 susceptible or potential drug targets has great potential to reduce
-human suffering worldwide. Second, from a theoretical
-perspective, because hosts and pathogens engage in a constant
-co-evolutionary arms race, natural selection on any mutations
-affecting the response to a pathogen are strong and more likely to be
-detected via statistical tests (in contrast to the example of height
-above) \citep{Hamblin2002, Prugnolle2005, Novembre2012, Fumagalli2014, Mangano2014}. Indeed, genome-wide scans of selection have found an
-enrichment of immune-related genes \citep{Raj2013, Fumagalli2011, Fumagalli2014}. Third,
-because the immune system is responsible for fighting all pathogens it
-encounters but also results in less desirable functions like allergic
-reactions and auto-immune disorders, understanding the genetic basis
-of the susceptibility to one pathogen informs susceptibility to other
-pathogens and also other immune-based phenotypes of interest \citep{Vannberg2011, Raj2013}. As an
-example, a GWAS of the auto-immune disorder inflammatory bowel disease
-(IBD) found significant overlaps between the IDB susceptibility loci
-and not only other immune-related disorders, but also with
-susceptibility loci for infection with \emph{Mycobacterium leprae}
-(which causes leprosy) \citep{Jostins2012}.
+human suffering worldwide. Second, from a theoretical perspective,
+because hosts and pathogens engage in a constant co-evolutionary arms
+race, natural selection on any mutations affecting the response to a
+pathogen are strong and more likely to be detected via statistical
+tests (in contrast to the example of height above) \citep{Hamblin2002,
+  Prugnolle2005, Novembre2012, Fumagalli2014, Mangano2014}. Indeed,
+genome-wide scans of selection have found an enrichment of
+immune-related genes \citep{Raj2013, Fumagalli2011,
+  Fumagalli2014}. Third, because the immune system is responsible for
+fighting all pathogens it encounters but also results in less
+desirable functions like allergic reactions and auto-immune disorders,
+understanding the genetic basis of the susceptibility to one pathogen
+informs susceptibility to other pathogens and also other immune-based
+phenotypes of interest \citep{Vannberg2011, Raj2013}. As an example, a
+GWAS of the auto-immune disorder inflammatory bowel disease (IBD)
+found significant overlaps between the IDB susceptibility loci and not
+only other immune-related disorders, but also with susceptibility loci
+for infection with \emph{Mycobacterium leprae} (which causes leprosy)
+\citep{Jostins2012}.
 
 My dissertation research addresses susceptibility to a different
 mycobacterium, \emph{Mycobacterium tuberculosis} (MTB), which causes
 tuberculosis (TB). TB has been an extremely deadly disease throughout
-human history and continues to this day \citep{Glaziou2015}. Specifically, the latest
-statistics released by the World Health Organization estimated that in
-2014 there were 9.6 million new cases of TB and 1.5 million deaths
-caused by TB \citep{WHO2015a, WHO2015b}. TB is contracted by inhaling
-MTB in air droplets \citep{Nardell2016}. If uncontained, MTB proliferates in the lungs
-(and also sometimes spreads to other organs) leading to coughing,
-weight loss, and degradation of the lung tissue (and any other organ
-it colonizes) \citep{Loddenkemper2016}. The induced coughing is how MTB spreads to other hosts,
-and thus it is very contagious. 70\% of untreated individuals die from
-TB \citep{WHO2015a}. The current treatment regimen involves 6 months of cocktail
-antibiotic therapy \citep{Sotgiu2015}. Because of the difficulty of adhering to intense
-antibiotic therapy for such a prolonged period of time, multi-drug
-resistant strains of MTB have evolved as patients stop taking their
-medicine once their symptoms resolve \citep{Seung2015}. With the concurrent spread of
-human immunodeficiency virus (HIV), which weakens the immune system,
-MTB (and especially multi-drug resistant MTB) has the potential to
-kill many millions more in the future \citep{Bruchfeld2015}. International efforts to
-prevent the spread of MTB and reduce the number of cases of TB
-worldwide have successfully led to improvements in diagnosis and
-treatment of TB and stimulated further research \citep{Glaziou2015, WHO2015a}. Unfortunately
-progress is slow; the incidence rate of TB has decreased by an average
-of only 1.5\% every year since 2000 \citep{WHO2015a}.
+human history and continues to this day
+\citep{Glaziou2015}. Specifically, the latest statistics released by
+the World Health Organization estimated that in 2014 there were 9.6
+million new cases of TB and 1.5 million deaths caused by TB
+\citep{WHO2015a, WHO2015b}. TB is contracted by inhaling MTB in air
+droplets \citep{Nardell2016}. If uncontained, MTB proliferates in the
+lungs (and also sometimes spreads to other organs) leading to
+coughing, weight loss, and degradation of the lung tissue (and any
+other organ it colonizes) \citep{Loddenkemper2016}. The induced
+coughing is how MTB spreads to other hosts, and thus it is very
+contagious. 70\% of untreated individuals die from TB
+\citep{WHO2015a}. The current treatment regimen involves 6 months of
+cocktail antibiotic therapy \citep{Sotgiu2015}. Because of the
+difficulty of adhering to intense antibiotic therapy for such a
+prolonged period of time, multi-drug resistant strains of MTB have
+evolved as patients stop taking their medicine once their symptoms
+resolve \citep{Seung2015}. With the concurrent spread of human
+immunodeficiency virus (HIV), which weakens the immune system, MTB
+(and especially multi-drug resistant MTB) has the potential to kill
+many millions more in the future \citep{Bruchfeld2015}. International
+efforts to prevent the spread of MTB and reduce the number of cases of
+TB worldwide have successfully led to improvements in diagnosis and
+treatment of TB and stimulated further research \citep{Glaziou2015,
+  WHO2015a}. Unfortunately progress is slow; the incidence rate of TB
+has decreased by an average of only 1.5\% every year since 2000
+\citep{WHO2015a}.
 
 TB is an ancient disease. It is estimated that MTB began infecting
 humans before the out-of-Africa migration \cite{Comas2013}. This
 provides an explanation for the peculiar combination of features of
 MTB transmission. On the one hand, because MTB induces coughing and
 spreads through aerosol transmission, its ability to quickly spread
-throughout a population is typical of so-called ``crowd diseases'' which
-emerged when humans began living in dense populations
-(e.g. smallpox) \citep{Wolfe2007}. On the other hand, only approximately 10\% of
-individuals infected with MTB will go on to develop active TB, with
-the most critical window within the first 2 years \citep{North2004, OGarra2013}. The majority of
-individuals will have what is called a latent TB infection, in which
-MTB persists in a dormant state inside alveolar macrophages \citep{Barry2009, Munoz2015}. This
-suggests an adaptation to a low density population where it would be
-disastrous for a pathogen to kill the entire population.
+throughout a population is typical of so-called ``crowd diseases''
+which emerged when humans began living in dense populations
+(e.g. smallpox) \citep{Wolfe2007}. On the other hand, only
+approximately 10\% of individuals infected with MTB will go on to
+develop active TB, with the most critical window within the first 2
+years \citep{North2004, OGarra2013}. The majority of individuals will
+have what is called a latent TB infection, in which MTB persists in a
+dormant state inside alveolar macrophages \citep{Barry2009,
+  Munoz2015}. This suggests an adaptation to a low density population
+where it would be disastrous for a pathogen to kill the entire
+population.
 
 Given that only approximately 10\% of individuals are susceptible to
-TB and that this variation is heritable \citep{Kallmann1943, Comstock1978, Cobat2010, Moller2010},
-there has been much interest in understanding its genetic
-basis. Being able to predict who is susceptible to TB would inform who
-to monitor most closely after a TB outbreak and also reduce the need
-of treating individuals with latent TB infections (the current
-standard is to give 3 months of antibiotic therapy to a latently
-infected individual \citep{Munoz2015}). Unfortunately, multiple GWAS to date have only
-identified a few loci with small effect size
-\citep{Thye2010, Mahasirimongkol2012, Thye2012, Png2012, Chimusa2014, Curtis2015, Sobota2016}.
-Thus they are not useful
-for predicting TB susceptibility. These results suggest that TB
-susceptibility is also a highly polygenic disease, perhaps because of
-its long evolutionary history with humans. Encouragingly, however, some
-of these GWAS signals have identified genes potentially important for
-fighting TB susceptibility. A recent GWAS in a Russian population
-identified associated SNPs nearby the gene \emph{ASAP1}, and further
-functional experiments revealed that decreased expression of
-\emph{ASAP1} leads to decreased migration of dendritic cells (DCs)
-\citep{Curtis2015}.
+TB and that this variation is heritable \citep{Kallmann1943,
+  Comstock1978, Cobat2010, Moller2010}, there has been much interest
+in understanding its genetic basis. Being able to predict who is
+susceptible to TB would inform who to monitor most closely after a TB
+outbreak and also reduce the need of treating individuals with latent
+TB infections (the current standard is to give 3 months of antibiotic
+therapy to a latently infected individual
+\citep{Munoz2015}). Unfortunately, multiple GWAS to date have only
+identified a few loci with small effect size \citep{Thye2010,
+  Mahasirimongkol2012, Thye2012, Png2012, Chimusa2014, Curtis2015,
+  Sobota2016}.  Thus they are not useful for predicting TB
+susceptibility. These results suggest that TB susceptibility is also a
+highly polygenic disease, perhaps because of its long evolutionary
+history with humans. Encouragingly, however, some of these GWAS
+signals have identified genes potentially important for fighting TB
+susceptibility. A recent GWAS in a Russian population identified
+associated SNPs nearby the gene \emph{ASAP1}, and further functional
+experiments revealed that decreased expression of \emph{ASAP1} leads
+to decreased migration of dendritic cells (DCs) \citep{Curtis2015}.
 
 Because the small number of GWAS hits to date suggest a highly
 polygenic architecture, and furthermore since most hits have been in
 non-coding regions, there has been motivation to use functional
-genomics techniques on innate immune cells \citep{Thuong2008, Barreiro2012, Pacis2015}.
-When MTB enters the lungs,
-the first immune cells it encounters are the alveolar
-macrophages \citep{Tailleux2008, Ernst2012, Sia2015}. Importantly, these are the cells that MTB persists inside
-during a latent infection. Another important part of the innate immune
-response to MTB is the DC. DCs phagocytose MTB in the lungs and then
-subsequently travel to the draining lymph nodes to stimulate T cell
-maturation \citep{Tailleux2008, Ernst2012, Sia2015}. Thus DCs are a critical connection between innate and
-adaptive immunity. The adaptive immune response is necessary for
-fighting an MTB infection \citep{Flynn1992}. However, most functional genomics studies
-of MTB infection focus on innate immune cells because 1) 
-MTB replicates inside macrophages \citep{Sia2015} (not DCs however \citep{Tailleux2003}) , 2) the adaptive immune response does
-not begin until well after MTB has time to propagate \citep{Khan2016}, and 3) attempts
-to prime the adaptive immune response via vaccinations have been
-largely unsuccessful \citep{Wang2013}.
+genomics techniques on innate immune cells \citep{Thuong2008,
+  Barreiro2012, Pacis2015}.  When MTB enters the lungs, the first
+immune cells it encounters are the alveolar macrophages
+\citep{Tailleux2008, Ernst2012, Sia2015}. Importantly, these are the
+cells that MTB persists inside during a latent infection. Another
+important part of the innate immune response to MTB is the DC. DCs
+phagocytose MTB in the lungs and then subsequently travel to the
+draining lymph nodes to stimulate T cell maturation
+\citep{Tailleux2008, Ernst2012, Sia2015}. Thus DCs are a critical
+connection between innate and adaptive immunity. The adaptive immune
+response is necessary for fighting an MTB infection
+\citep{Flynn1992}. However, most functional genomics studies of MTB
+infection focus on innate immune cells because 1) MTB replicates
+inside macrophages \citep{Sia2015} (not DCs however
+\citep{Tailleux2003}) , 2) the adaptive immune response does not begin
+until well after MTB has time to propagate \citep{Khan2016}, and 3)
+attempts to prime the adaptive immune response via vaccinations have
+been largely unsuccessful \citep{Wang2013}.
 
 Focusing on innate immune cells, both the chromatin profiling and eQTL
 mapping strategies described above have been used to study MTB
@@ -354,15 +389,16 @@ were identified that were specific either to MTB-infected or
 non-infected DCs \citep{Barreiro2012}. My dissertation work continued
 this functional genomics approach. In Chapter \ref{ch:tb}, I
 identified gene expression changes in macrophages infected with MTB
-and related mycobacteria, but not other bacterial pathogens \citep{Blischak2015}. These
-genes likely harbor genetic variation underlying TB susceptibility. In
-Chapter \ref{ch:tb-suscept}, I discovered gene expression changes in
-DCs isolated from individuals known to be susceptible or resistant to
-TB. Furthermore, I used these gene expression differences to build a
-classifier of TB susceptibility. Both of these studies increased our
-understanding of the role of the innate immune response in TB
-susceptibility, and more generally demonstrate the utility of a
-functional genomics approach to decipher polygenic traits.
+and related mycobacteria, but not other bacterial pathogens
+\citep{Blischak2015}. These genes likely harbor genetic variation
+underlying TB susceptibility. In Chapter \ref{ch:tb-suscept}, I
+discovered gene expression changes in DCs isolated from individuals
+known to be susceptible or resistant to TB. Furthermore, I used these
+gene expression differences to build a classifier of TB
+susceptibility. Both of these studies increased our understanding of
+the role of the innate immune response in TB susceptibility, and more
+generally demonstrate the utility of a functional genomics approach to
+decipher polygenic traits.
 
 
 \section{Single cell sequencing technology and the future of functional genomics}
@@ -373,45 +409,47 @@ they are unable to detect the cell-to-cell heterogeneity due to
 stochastic noise, different subpopulations of cells, or differences in
 the surrounding environment. In recent years, many new technologies
 have been developed for assaying genome-wide measurements in single
-cells \citep{Liang2014, Macaulay2014, Saliba2014, Grun2015, Stegle2015, Bacher2016}.
-Most enable measuring gene expression levels via single cell
-RNA-seq (scRNA-seq), but techniques have also been developed to
-measure DNA methylation \citep{Smallwood2014, Angermueller2016},
-transcription factor binding \citep{Rotem2015},
+cells \citep{Liang2014, Macaulay2014, Saliba2014, Grun2015,
+  Stegle2015, Bacher2016}.  Most enable measuring gene expression
+levels via single cell RNA-seq (scRNA-seq), but techniques have also
+been developed to measure DNA methylation \citep{Smallwood2014,
+  Angermueller2016}, transcription factor binding \citep{Rotem2015},
 chromatin accessibility \citep{Buenrostro2015, Cusanovich2015},
-protein levels \citep{Genshaft2016}, and 3D genome architecture \citep{Nagano2013}
-in single cells. The increased resolution
-obtained with these single cell technologies has great potential for
-improving our understanding of gene regulatory mechanisms.
+protein levels \citep{Genshaft2016}, and 3D genome architecture
+\citep{Nagano2013} in single cells. The increased resolution obtained
+with these single cell technologies has great potential for improving
+our understanding of gene regulatory mechanisms.
 
 While there are many applications of single cell technology, one
 exciting area of research is investigating the innate immune response
 to infection at the resolution of single cells \citep{Satija2014,
- Proserpio2016}. The gene expression differences I have observed in
+  Proserpio2016}. The gene expression differences I have observed in
 my bulk RNA-seq experiments of bacterial infection could have arisen
 from any combination of the following explanations: a global
 difference in the innate immune response to a pathogen, a difference
 in only a subset of cells, or a difference in the fraction of cells
 that are infected. Interestingly, initial studies of the innate immune
 response to bacterial infection have observed substantial
-heterogeneity among single cells \citep{Shalek2013, Jaitin2014, Shalek2014, Avraham2015}.
+heterogeneity among single cells \citep{Shalek2013, Jaitin2014,
+  Shalek2014, Avraham2015}.
 
 As with any new functional genomics technique, it is important to
 investigate and understand the technical biases to avoid during study
-design \citep{Auer2010, Leek2010, Gilad2015}. The initial studies which investigated the technical noise in
-scRNA-seq were interested in differentiating between the biological
-and technical variation affecting cell-to-cell differences in gene
-expression \citep{Brennecke2013, Grun2014, Islam2014, Ding2015, Vallejos2015}.
-On the other hand, scRNA-seq studies of gene expression
-differences across multiple conditions were generating data from many
-batches of single cell RNA-seq. Because many of the new technologies
-are limited to sorting cells from just one condition in each batch,
-many of these studies confounded the biological conditions of interest
-with the technical batch processing \citep{Hicks2015}. With this
-confounded study design (each biological condition being
-represented in only one batch), any technical variation will be
-contributed to differences between the biological conditions of
-interest. In Chapter \ref{ch:singleCellSeq}, I discuss my research
-that measured the technical variation in scRNA-seq introduced by batch
-processing and recommended an efficient study design to account for
-technical variation while minimizing replication \citep{Tung2016}.
+design \citep{Auer2010, Leek2010, Gilad2015}. The initial studies
+which investigated the technical noise in scRNA-seq were interested in
+differentiating between the biological and technical variation
+affecting cell-to-cell differences in gene expression
+\citep{Brennecke2013, Grun2014, Islam2014, Ding2015, Vallejos2015}.
+On the other hand, scRNA-seq studies of gene expression differences
+across multiple conditions were generating data from many batches of
+single cell RNA-seq. Because many of the new technologies are limited
+to sorting cells from just one condition in each batch, many of these
+studies confounded the biological conditions of interest with the
+technical batch processing \citep{Hicks2015}. With this confounded
+study design (each biological condition being represented in only one
+batch), any technical variation will be contributed to differences
+between the biological conditions of interest. In Chapter
+\ref{ch:singleCellSeq}, I discuss my research that measured the
+technical variation in scRNA-seq introduced by batch processing and
+recommended an efficient study design to account for technical
+variation while minimizing replication \citep{Tung2016}.
